@@ -3,6 +3,11 @@
         {
             "source": "/(.*)",
             "destination": "/"
+        },
+        {
+            "source": "/qr",
+            "destination": "/pdfs/CartaDia.pdf"
         }
+
     ]
 }

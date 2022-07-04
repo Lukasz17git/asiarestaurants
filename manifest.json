@@ -1,20 +1,20 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ASIA RESTAURANTS",
+  "name": "ASIA RESTAURANTS ASIA ORIENTAL TASTE",
   "icons": [
     {
-      "src": "logo0.webp",
+      "src": "LogoRedIcon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo00.webp",
+      "src": "LogoRedIcon.png",
       "sizes": "80x80 64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#F7F5F5",
-  "background_color": "#1d1d1b"
+  "theme_color": "#c9ab81",
+  "background_color": "#01090B"
 }
