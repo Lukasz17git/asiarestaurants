@@ -1,6 +1,5 @@
 {
   "rewrites":  [
-{"source": "/qr", "destination": "/pdfs/CartaNoche.pdf"},
     {"source": "/(.*)", "destination": "/"}
   ]
 }
