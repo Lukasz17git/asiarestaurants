@@ -1,7 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.f52f5911.css",
-    "main.js": "/static/js/main.00de468f.js",
+    "main.css": "/static/css/main.1951253f.css",
+    "main.js": "/static/js/main.630b95fb.js",
+    "static/js/326.7649a784.chunk.js": "/static/js/326.7649a784.chunk.js",
+    "static/js/118.44cc0045.chunk.js": "/static/js/118.44cc0045.chunk.js",
+    "static/js/102.7b596e36.chunk.js": "/static/js/102.7b596e36.chunk.js",
     "static/media/main.jpg": "/static/media/main.fefc68df617f6c381c99.jpg",
     "static/media/OpenSans-CondLight.ttf": "/static/media/OpenSans-CondLight.3146149b4a13c79fc740.ttf",
     "static/media/Afterglow.ttf": "/static/media/Afterglow.4bb53175e9bf1ae8cfbd.ttf",
@@ -73,10 +76,8 @@
     "static/media/meal12.png": "/static/media/meal12.9ef361d4d4e9bf3eec88.png",
     "static/media/meal15.png": "/static/media/meal15.2b6188d85e8a491a57c3.png",
     "static/media/meal24.png": "/static/media/meal24.fa65a3dd2eca959663d5.png",
-    "static/media/iconCena.svg": "/static/media/iconCena.da841bef0984bc2eda1f.svg",
     "static/media/AsianHiro.ttf": "/static/media/AsianHiro.617e796833a0d036f0b7.ttf",
     "static/media/italyIcon.svg": "/static/media/italyIcon.47b3ffd5dde96cc15201.svg",
-    "static/media/iconAlmuerzo.svg": "/static/media/iconAlmuerzo.e8647974ed56bc81c50e.svg",
     "static/media/spainIcon.svg": "/static/media/spainIcon.1749588f5f95c72fa693.svg",
     "static/media/WhatsAppIcon.svg": "/static/media/WhatsAppIcon.a980e2c5dafae3e8da54.svg",
     "static/media/decoration.svg": "/static/media/decoration.1c832fac5c2c53d33467.svg",
@@ -85,11 +86,14 @@
     "static/media/WaveLong.svg": "/static/media/WaveLong.9b39559bdacbd28493ce.svg",
     "static/media/WaveShort.svg": "/static/media/WaveShort.822de93a326825152ced.svg",
     "static/media/menuIcon.svg": "/static/media/menuIcon.c0f0e98c8037d6601c6f.svg",
-    "main.f52f5911.css.map": "/static/css/main.f52f5911.css.map",
-    "main.00de468f.js.map": "/static/js/main.00de468f.js.map"
+    "main.1951253f.css.map": "/static/css/main.1951253f.css.map",
+    "main.630b95fb.js.map": "/static/js/main.630b95fb.js.map",
+    "326.7649a784.chunk.js.map": "/static/js/326.7649a784.chunk.js.map",
+    "118.44cc0045.chunk.js.map": "/static/js/118.44cc0045.chunk.js.map",
+    "102.7b596e36.chunk.js.map": "/static/js/102.7b596e36.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f52f5911.css",
-    "static/js/main.00de468f.js"
+    "static/css/main.1951253f.css",
+    "static/js/main.630b95fb.js"
   ]
 }
