@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c200f1f0.css",
+    "main.css": "/static/css/main.3a0624e3.css",
     "main.js": "/static/js/main.00de468f.js",
     "static/media/main.jpg": "/static/media/main.fefc68df617f6c381c99.jpg",
     "static/media/OpenSans-CondLight.ttf": "/static/media/OpenSans-CondLight.3146149b4a13c79fc740.ttf",
@@ -82,14 +82,14 @@
     "static/media/decoration.svg": "/static/media/decoration.1c832fac5c2c53d33467.svg",
     "index.html": "/index.html",
     "static/media/arrow.svg": "/static/media/arrow.d11f7d898a510c0f01b3.svg",
-    "static/media/WaveLong.svg": "/static/media/WaveLong.cdb4526ef143689a21a2.svg",
-    "static/media/WaveShort.svg": "/static/media/WaveShort.a1361259b5bf9efa96e7.svg",
+    "static/media/WaveLong.svg": "/static/media/WaveLong.9b39559bdacbd28493ce.svg",
+    "static/media/WaveShort.svg": "/static/media/WaveShort.822de93a326825152ced.svg",
     "static/media/menuIcon.svg": "/static/media/menuIcon.c0f0e98c8037d6601c6f.svg",
-    "main.c200f1f0.css.map": "/static/css/main.c200f1f0.css.map",
+    "main.3a0624e3.css.map": "/static/css/main.3a0624e3.css.map",
     "main.00de468f.js.map": "/static/js/main.00de468f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c200f1f0.css",
+    "static/css/main.3a0624e3.css",
     "static/js/main.00de468f.js"
   ]
 }
