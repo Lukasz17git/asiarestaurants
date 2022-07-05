@@ -3,12 +3,12 @@
   "name": "ASIA RESTAURANTS ASIA ORIENTAL TASTE",
   "icons": [
     {
-      "src": "LogoRedIcon.png",
+      "src": "LogoRedIcon.webp",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     },
     {
-      "src": "LogoRedIcon.png",
+      "src": "LogoRedIcon.webp",
       "sizes": "80x80 64x64 32x32 24x24 16x16",
       "type": "image/png"
     }
