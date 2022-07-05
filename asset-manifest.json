@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a0624e3.css",
+    "main.css": "/static/css/main.f52f5911.css",
     "main.js": "/static/js/main.00de468f.js",
     "static/media/main.jpg": "/static/media/main.fefc68df617f6c381c99.jpg",
     "static/media/OpenSans-CondLight.ttf": "/static/media/OpenSans-CondLight.3146149b4a13c79fc740.ttf",
@@ -64,7 +64,7 @@
     "static/media/LogoRedIcon.png": "/static/media/LogoRedIcon.326f0b8b2fa1eeeed601.png",
     "static/media/meal19.png": "/static/media/meal19.a876f164f4161c634210.png",
     "static/media/meal18.png": "/static/media/meal18.2e3d1e26cdf56db6b9da.png",
-    "static/media/restaurantBackground.svg": "/static/media/restaurantBackground.25a242f747a860a4137f.svg",
+    "static/media/restaurantBackground.svg": "/static/media/restaurantBackground.117fe34b2b157b0fe9c9.svg",
     "static/media/meal16.png": "/static/media/meal16.5fd47ea613eca6b183da.png",
     "static/media/meal13.png": "/static/media/meal13.6e03062dd7e0f2cd89e5.png",
     "static/media/meal17.png": "/static/media/meal17.886b1fd42a75f7ae4ef5.png",
@@ -85,11 +85,11 @@
     "static/media/WaveLong.svg": "/static/media/WaveLong.9b39559bdacbd28493ce.svg",
     "static/media/WaveShort.svg": "/static/media/WaveShort.822de93a326825152ced.svg",
     "static/media/menuIcon.svg": "/static/media/menuIcon.c0f0e98c8037d6601c6f.svg",
-    "main.3a0624e3.css.map": "/static/css/main.3a0624e3.css.map",
+    "main.f52f5911.css.map": "/static/css/main.f52f5911.css.map",
     "main.00de468f.js.map": "/static/js/main.00de468f.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a0624e3.css",
+    "static/css/main.f52f5911.css",
     "static/js/main.00de468f.js"
   ]
 }
