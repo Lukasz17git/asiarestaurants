@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/LogoRedIcon.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F7F5F5" />
+  <meta name="Asia Restaurants" content="Restaurante Asiatico y Japones" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/LogoRedIcon.webp" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/LogoRedIcon.webp" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Asia Restaurants</title>
+  <style>
+    @font-face {
+      font-family: 'Italianno';
+      src: local('Italiano'), url('./Fonts/Italianno.woff2') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'AsianHiro';
+      src: local('AsianHiro'), url('./Fonts/AsianHiro.woff2') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'CondLight';
+      src: local('CondLight'), url('./Fonts/OpenSans.woff2') format('truetype');
+    }
+
+    .home .front {
+      background-image: url('main.webp');
+    }
+  </style>
+  <link rel="stylesheet" href="qr.css">
+</head>
+
+<body>
+  <div style="opacity: 0">
+    <span style="font-family: 'AsianHiro', Arial, sans-serif;"></span>
+    <span style="font-family: 'Italianno', Arial, sans-serif;"></span>
+    <span style="font-family: 'CondLight', Arial, sans-serif;"></span>
+  </div>
+  <noscript>Necesitas habilitar JavaScript para poder visualizar esta pagina.</noscript>
+  <div style="visibility: hidden;width: 0;height: 0;background: url('main.webp');"></div>
+  <div id="root">
+    <div className="App">
+      <div className='qr'>
+        <div className='logo'>
+          <Link to='/' />
+        </div>
+        <div className='cartas'>
+          <div className='carta'>
+            <div className='carta-bg'>
+              <div className='carta-title'>Menú Dia</div>
+              <div className='carta-button'>
+                <a href='./pdfs/CartaDia.pdf' target='blank'>
+                  Ver Carta
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className='carta'>
+            <div className='carta-bg'>
+              <div className='carta-title'>Menú Noche</div>
+              <div className='carta-button'>
+                <a href='./pdfs/CartaNoche.pdf' target='blank'>
+                  Ver Carta
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className='carta'>
+            <div className='carta-bg'>
+              <div className='carta-title'>Carta Dulces</div>
+              <div className='carta-button'>
+                <a href='' target='blank'>
+                  Ver Carta
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className='carta'>
+            <div className='carta-bg'>
+              <div className='carta-title'>Carta Vinos</div>
+              <div className='carta-button'>
+                <a href='./pdfs/CartaVinos.pdf' target='blank'>
+                  Ver Carta
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className='carta'>
+            <div className='carta-bg'>
+              <div className='carta-title'>Carta Pedidos</div>
+              <div className='carta-button'>
+                <a href='./pdfs/CartaLlevar.pdf' target='blank'>
+                  Ver Carta
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
