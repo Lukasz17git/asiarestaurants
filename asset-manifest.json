@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.e3e09ca0.css",
-    "main.js": "/static/js/main.52501021.js",
+    "main.css": "/static/css/main.6af675b2.css",
+    "main.js": "/static/js/main.cc5ed86c.js",
     "static/media/OpenSans-CondLight.ttf": "/static/media/OpenSans-CondLight.3146149b4a13c79fc740.ttf",
     "static/media/Afterglow.ttf": "/static/media/Afterglow.4bb53175e9bf1ae8cfbd.ttf",
     "static/media/Italianno.ttf": "/static/media/Italianno.af758e9e36a2222b1130.ttf",
     "static/media/asiaRavenna.webp": "/static/media/asiaRavenna.2a0b8add6180b654e428.webp",
     "static/media/asiaCorreggio.webp": "/static/media/asiaCorreggio.5483a52b1b1ba0370cae.webp",
-    "static/media/asiaOrientalTaste.webp": "/static/media/asiaOrientalTaste.5483a52b1b1ba0370cae.webp",
     "static/media/asiaReggioEmilia.webp": "/static/media/asiaReggioEmilia.91636415a80d8316773b.webp",
     "static/media/cherry2.webp": "/static/media/cherry2.1fc3697bb76c737b139e.webp",
     "static/media/takeAway.webp": "/static/media/takeAway.ba4241a0714ab8c378a9.webp",
@@ -47,11 +46,11 @@
     "static/media/meal28.webp": "/static/media/meal28.ba6d5c81bd94a4d85bc3.webp",
     "static/media/AsianHiro.ttf": "/static/media/AsianHiro.617e796833a0d036f0b7.ttf",
     "static/media/meal3.webp": "/static/media/meal3.e6b2d2c582a5d8886924.webp",
-    "static/media/cartaDulces.webp": "/static/media/cartaDulces.fc8da04f1bc24463e391.webp",
     "static/media/cartaVinos.webp": "/static/media/cartaVinos.fc8da04f1bc24463e391.webp",
     "static/media/meal4.webp": "/static/media/meal4.d60dbd963079a901a72f.webp",
     "static/media/home15.webp": "/static/media/home15.e5ca7b7ea6886deb6015.webp",
     "static/media/meal7.webp": "/static/media/meal7.190de1ce94517e7a434f.webp",
+    "static/media/cartaDulces.webp": "/static/media/cartaDulces.6badb22968f5cc7dd820.webp",
     "static/media/meal9.webp": "/static/media/meal9.0c34729a1301dfb05f32.webp",
     "static/media/meal23.webp": "/static/media/meal23.ccd3cf0d9079867c1e98.webp",
     "static/media/meal2.webp": "/static/media/meal2.117c3bb3b235e0f88148.webp",
@@ -59,6 +58,7 @@
     "static/media/meal1.webp": "/static/media/meal1.b080e01196214601a5c3.webp",
     "static/media/meal21.webp": "/static/media/meal21.e19294fc721ca27237a9.webp",
     "static/media/home10.webp": "/static/media/home10.9ebe99f2db4094b9a39e.webp",
+    "static/media/asiaOrientalTaste.webp": "/static/media/asiaOrientalTaste.7bd2c89d22657dec0a62.webp",
     "static/media/meal20.webp": "/static/media/meal20.37e2baf396ffaa39d1f0.webp",
     "static/media/meal19.webp": "/static/media/meal19.2295f80ec3a8481cb564.webp",
     "static/media/meal11.webp": "/static/media/meal11.17dfec1146c3f92e13ff.webp",
@@ -76,18 +76,21 @@
     "static/media/meal24.webp": "/static/media/meal24.7621cbd0bc7f0f65c903.webp",
     "static/media/italyIcon.svg": "/static/media/italyIcon.47b3ffd5dde96cc15201.svg",
     "static/media/spainIcon.svg": "/static/media/spainIcon.1749588f5f95c72fa693.svg",
+    "static/media/instagramIcon.svg": "/static/media/instagramIcon.2523681ed0eecd48779b.svg",
     "index.html": "/index.html",
     "static/media/WhatsAppIcon.svg": "/static/media/WhatsAppIcon.a980e2c5dafae3e8da54.svg",
     "static/media/decoration.svg": "/static/media/decoration.1c832fac5c2c53d33467.svg",
     "static/media/arrow.svg": "/static/media/arrow.d11f7d898a510c0f01b3.svg",
+    "static/media/twitterIcon.svg": "/static/media/twitterIcon.2438eb744c79fc12dd45.svg",
+    "static/media/facebookIcon.svg": "/static/media/facebookIcon.07bb8bf76801fb34a7fa.svg",
     "static/media/WaveLong.svg": "/static/media/WaveLong.9b39559bdacbd28493ce.svg",
     "static/media/WaveShort.svg": "/static/media/WaveShort.822de93a326825152ced.svg",
     "static/media/menuIcon.svg": "/static/media/menuIcon.c0f0e98c8037d6601c6f.svg",
-    "main.e3e09ca0.css.map": "/static/css/main.e3e09ca0.css.map",
-    "main.52501021.js.map": "/static/js/main.52501021.js.map"
+    "main.6af675b2.css.map": "/static/css/main.6af675b2.css.map",
+    "main.cc5ed86c.js.map": "/static/js/main.cc5ed86c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3e09ca0.css",
-    "static/js/main.52501021.js"
+    "static/css/main.6af675b2.css",
+    "static/js/main.cc5ed86c.js"
   ]
 }
