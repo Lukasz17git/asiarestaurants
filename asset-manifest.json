@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e9a36be.css",
-    "main.js": "/static/js/main.86ef7930.js",
-    "static/media/OpenSans-CondLight.ttf": "/static/media/OpenSans-CondLight.3146149b4a13c79fc740.ttf",
+    "main.css": "/static/css/main.98e6e83b.css",
+    "main.js": "/static/js/main.74c97323.js",
     "static/media/Afterglow.ttf": "/static/media/Afterglow.4bb53175e9bf1ae8cfbd.ttf",
-    "static/media/Italianno.ttf": "/static/media/Italianno.af758e9e36a2222b1130.ttf",
+    "static/media/texture.svg": "/static/media/texture.8712e4dd91a4fcb93bfe.svg",
     "static/media/asiaRavenna.webp": "/static/media/asiaRavenna.2a0b8add6180b654e428.webp",
     "static/media/asiaCorreggio.webp": "/static/media/asiaCorreggio.5483a52b1b1ba0370cae.webp",
     "static/media/asiaReggioEmilia.webp": "/static/media/asiaReggioEmilia.91636415a80d8316773b.webp",
@@ -22,7 +21,6 @@
     "static/media/home3.webp": "/static/media/home3.8efa91b85cffc54d7942.webp",
     "static/media/home9.webp": "/static/media/home9.7d31d6e030c1945dac38.webp",
     "static/media/_uramaki.webp": "/static/media/_uramaki.924ef54e0230e594a9df.webp",
-    "static/media/main.webp": "/static/media/main.73591562aae782554add.webp",
     "static/media/home18.webp": "/static/media/home18.8bd5569fb25c33404c28.webp",
     "static/media/restaurantBackground.svg": "/static/media/restaurantBackground.117fe34b2b157b0fe9c9.svg",
     "static/media/home5.webp": "/static/media/home5.0803878d4417c332eb2b.webp",
@@ -44,7 +42,6 @@
     "static/media/home16.webp": "/static/media/home16.af1c2d2b3aa5857fcaa9.webp",
     "static/media/meal10.webp": "/static/media/meal10.e0dd9bdbc474a91e99f1.webp",
     "static/media/meal28.webp": "/static/media/meal28.ba6d5c81bd94a4d85bc3.webp",
-    "static/media/AsianHiro.ttf": "/static/media/AsianHiro.617e796833a0d036f0b7.ttf",
     "static/media/meal3.webp": "/static/media/meal3.e6b2d2c582a5d8886924.webp",
     "static/media/cartaVinos.webp": "/static/media/cartaVinos.fc8da04f1bc24463e391.webp",
     "static/media/meal4.webp": "/static/media/meal4.d60dbd963079a901a72f.webp",
@@ -73,24 +70,22 @@
     "static/media/meal15.webp": "/static/media/meal15.4b531c34b679170f5645.webp",
     "static/media/LogoRedIcon.webp": "/static/media/LogoRedIcon.42f185d4d0f88f21aa3d.webp",
     "static/media/meal26.webp": "/static/media/meal26.e389197ad3624b1952b8.webp",
-    "static/media/meal24.webp": "/static/media/meal24.7621cbd0bc7f0f65c903.webp",
     "static/media/italyIcon.svg": "/static/media/italyIcon.47b3ffd5dde96cc15201.svg",
     "static/media/spainIcon.svg": "/static/media/spainIcon.1749588f5f95c72fa693.svg",
     "static/media/instagramIcon.svg": "/static/media/instagramIcon.2523681ed0eecd48779b.svg",
     "index.html": "/index.html",
     "static/media/WhatsAppIcon.svg": "/static/media/WhatsAppIcon.a980e2c5dafae3e8da54.svg",
-    "static/media/decoration.svg": "/static/media/decoration.1c832fac5c2c53d33467.svg",
     "static/media/arrow.svg": "/static/media/arrow.d11f7d898a510c0f01b3.svg",
     "static/media/twitterIcon.svg": "/static/media/twitterIcon.2438eb744c79fc12dd45.svg",
     "static/media/facebookIcon.svg": "/static/media/facebookIcon.07bb8bf76801fb34a7fa.svg",
     "static/media/WaveLong.svg": "/static/media/WaveLong.9b39559bdacbd28493ce.svg",
     "static/media/WaveShort.svg": "/static/media/WaveShort.822de93a326825152ced.svg",
     "static/media/menuIcon.svg": "/static/media/menuIcon.c0f0e98c8037d6601c6f.svg",
-    "main.6e9a36be.css.map": "/static/css/main.6e9a36be.css.map",
-    "main.86ef7930.js.map": "/static/js/main.86ef7930.js.map"
+    "main.98e6e83b.css.map": "/static/css/main.98e6e83b.css.map",
+    "main.74c97323.js.map": "/static/js/main.74c97323.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e9a36be.css",
-    "static/js/main.86ef7930.js"
+    "static/css/main.98e6e83b.css",
+    "static/js/main.74c97323.js"
   ]
 }
