@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.da42682b.css",
-    "main.js": "/static/js/main.74c97323.js",
+    "main.css": "/static/css/main.7d8a6691.css",
+    "main.js": "/static/js/main.619e3676.js",
     "static/media/Afterglow.ttf": "/static/media/Afterglow.4bb53175e9bf1ae8cfbd.ttf",
     "static/media/texture.svg": "/static/media/texture.8712e4dd91a4fcb93bfe.svg",
     "static/media/asiaRavenna.webp": "/static/media/asiaRavenna.2a0b8add6180b654e428.webp",
@@ -81,11 +81,11 @@
     "static/media/WaveLong.svg": "/static/media/WaveLong.9b39559bdacbd28493ce.svg",
     "static/media/WaveShort.svg": "/static/media/WaveShort.822de93a326825152ced.svg",
     "static/media/menuIcon.svg": "/static/media/menuIcon.c0f0e98c8037d6601c6f.svg",
-    "main.da42682b.css.map": "/static/css/main.da42682b.css.map",
-    "main.74c97323.js.map": "/static/js/main.74c97323.js.map"
+    "main.7d8a6691.css.map": "/static/css/main.7d8a6691.css.map",
+    "main.619e3676.js.map": "/static/js/main.619e3676.js.map"
   },
   "entrypoints": [
-    "static/css/main.da42682b.css",
-    "static/js/main.74c97323.js"
+    "static/css/main.7d8a6691.css",
+    "static/js/main.619e3676.js"
   ]
 }
