@@ -1,6 +1,6 @@
 {
-  "short_name": "ASIA RESTAURANTS",
-  "name": "ASIA RESTAURANTS ASIA ORIENTAL TASTE",
+  "short_name": "Asia Oriental Taste",
+  "name": "Asia Oriental Taste - Asia Restaurants",
   "icons": [
     {
       "src": "LogoRedIcon.webp",
@@ -16,5 +16,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#c9ab81",
-  "background_color": "#01090B"
+  "background_color": "#121518"
 }
