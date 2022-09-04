@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bebf7a7d.css",
-    "main.js": "/static/js/main.f1c778e2.js",
+    "main.css": "/static/css/main.654b5eda.css",
+    "main.js": "/static/js/main.43167e60.js",
     "static/media/Afterglow.ttf": "/static/media/Afterglow.4bb53175e9bf1ae8cfbd.ttf",
     "static/media/texture.svg": "/static/media/texture.8712e4dd91a4fcb93bfe.svg",
     "static/media/asiaRavenna.webp": "/static/media/asiaRavenna.2a0b8add6180b654e428.webp",
@@ -81,11 +81,11 @@
     "static/media/WaveLong.svg": "/static/media/WaveLong.9b39559bdacbd28493ce.svg",
     "static/media/WaveShort.svg": "/static/media/WaveShort.822de93a326825152ced.svg",
     "static/media/menuIcon.svg": "/static/media/menuIcon.c0f0e98c8037d6601c6f.svg",
-    "main.bebf7a7d.css.map": "/static/css/main.bebf7a7d.css.map",
-    "main.f1c778e2.js.map": "/static/js/main.f1c778e2.js.map"
+    "main.654b5eda.css.map": "/static/css/main.654b5eda.css.map",
+    "main.43167e60.js.map": "/static/js/main.43167e60.js.map"
   },
   "entrypoints": [
-    "static/css/main.bebf7a7d.css",
-    "static/js/main.f1c778e2.js"
+    "static/css/main.654b5eda.css",
+    "static/js/main.43167e60.js"
   ]
 }
