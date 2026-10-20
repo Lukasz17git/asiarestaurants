@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Qr = () => {
    const language = 'es'
-   const { day, night, pedidos, vinos } = qrData
+   const { day, night, pedidos, dulces, vinos } = qrData
    const cartas = [day, night, pedidos, vinos]
    const button = {
       es: 'Ver Carta',

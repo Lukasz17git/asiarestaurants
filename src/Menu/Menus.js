@@ -115,7 +115,6 @@ const Menus = () => {
             <div className='carta-bg'>
               <div className='carta-title'>{dulcesTitle[language]}</div>
               <div className='carta-button'>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid -- no desserts PDF, so no href */}
                 <a target='blank' >
                   {dulcesButton[language]}
                 </a>

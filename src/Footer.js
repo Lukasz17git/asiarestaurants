@@ -7,9 +7,10 @@ const Footer = () => {
   }
   const instagram = 'https://www.instagram.com/asiavilafranca/'
   const facebook = 'https://www.facebook.com/profile.php?id=100082102034055'
+  const twitter = ''
   const openInstagram = () => window.open(instagram, '_blank')
   const openFacebook = () => window.open(facebook, '_blank')
-  // No Twitter account, so the button does nothing
+  // const openTwitter = () => window.open(twitter, '_blank')
   const openTwitter = () => { }
 
   return (
