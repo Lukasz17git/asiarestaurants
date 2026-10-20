@@ -34,7 +34,7 @@ const Footer = () => {
           <div className='text' >Twitter</div>
         </div>
       </div>
-      <div className='copy font3'>© 2022 Asia Restaurants. All Rights Reserved</div>
+      <div className='copy font3'>© 2026 Asia Restaurants. All Rights Reserved</div>
     </div>
   )
 }
