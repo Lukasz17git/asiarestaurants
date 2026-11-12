@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Qr = () => {
    const language = 'es'
-   const { day, night, pedidos, dulces, vinos } = qrData
+   const { day, night, pedidos, vinos } = qrData
    const cartas = [day, night, pedidos, vinos]
    const button = {
       es: 'Ver Carta',
@@ -22,7 +22,7 @@ const Qr = () => {
                   <div className='carta-bg'>
                      <div className='carta-title'>{carta[language]}</div>
                      <div className='carta-button'>
-                        <a href={carta.pdf} target='blank'>
+                        <a href={carta.pdf} target='_blank' rel='noreferrer'>
                            {button[language]}
                         </a>
                      </div>

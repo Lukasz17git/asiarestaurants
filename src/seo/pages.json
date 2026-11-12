@@ -1,0 +1,119 @@
+{
+  "es": {
+    "ogLocale": "es_ES",
+    "notFoundTitle": "Página no encontrada | Asia Oriental Taste",
+    "about": "Asia Oriental Taste es un restaurante de cocina china y japonesa de la línea Asia Restaurants, en {address} (Barcelona). Tenemos más de {dishCount} platos en {sectionCount} secciones: dim sum, tempura, sushi (uramaki, nigiri, hosomaki, temaki, gunkan), sashimi, tartar, poke, ramen, tallarines, arroz, pato, marisco, teppan yaki, platos veganos y spicy pot. Menú mediodía a {lunchMenuPrice} y menú noche a {dinnerMenuPrice}. Teléfono y WhatsApp: {phoneWithoutPrefix}.",
+    "javascriptNotice": "Esta web necesita JavaScript para verse completa.",
+    "menuName": "Carta de Asia Oriental Taste",
+    "pages": {
+      "/": {
+        "title": "Asia Oriental Taste | Restaurante chino y japonés en Vilafranca del Penedès",
+        "heading": "Restaurante asiático en Vilafranca del Penedès",
+        "description": "Restaurante de cocina china y japonesa en Vilafranca del Penedès: más de 200 platos de sushi, dim sum, wok y ramen. Reserva mesa, pide online o a domicilio.",
+        "linkText": "Inicio"
+      },
+      "/menu": {
+        "title": "Carta y menús | Asia Oriental Taste, Vilafranca del Penedès",
+        "heading": "Carta y menús de Asia Oriental Taste",
+        "description": "Más de {dishCount} platos chinos y japoneses en {sectionCount} secciones. Menú mediodía a {lunchMenuPrice} ({lunchMenuHours}) y menú noche a {dinnerMenuPrice} ({dinnerMenuHours}).",
+        "linkText": "Carta y menús"
+      },
+      "/pedidos": {
+        "title": "Comida china y japonesa a domicilio en Vilafranca | Asia Oriental Taste",
+        "heading": "Pide online",
+        "description": "Pide sushi, wok, dim sum y ramen a domicilio o para recoger en Vilafranca del Penedès: elige tus platos y envía el pedido por WhatsApp.",
+        "linkText": "Pedir a domicilio o para llevar"
+      },
+      "/reservar": {
+        "title": "Reservar mesa | Asia Oriental Taste, Vilafranca del Penedès",
+        "heading": "Reserva tu mesa",
+        "description": "Reserva mesa en Asia Oriental Taste, restaurante chino y japonés en {street}, Vilafranca del Penedès. Abierto {openingText}.",
+        "linkText": "Reservar mesa"
+      },
+      "/restaurant": {
+        "title": "Nuestros restaurantes | Asia Restaurants",
+        "heading": "Asia Restaurantes: Vilafranca del Penedès, Reggio Emilia, Ravenna y Correggio",
+        "description": "Asia Restaurants, con pasión y cuidadoso detalle desde el 2006: Asia Oriental Taste en {street}, Vilafranca del Penedès, y tres restaurantes en Italia. Teléfono: {phoneWithoutPrefix}.",
+        "linkText": "Nuestros restaurantes"
+      }
+    }
+  },
+  "ca": {
+    "ogLocale": "ca_ES",
+    "notFoundTitle": "Pàgina no trobada | Asia Oriental Taste",
+    "about": "Asia Oriental Taste és un restaurant de cuina xinesa i japonesa de la línia Asia Restaurants, al {address} (Barcelona). Tenim més de {dishCount} plats en {sectionCount} seccions: dim sum, tempura, sushi (uramaki, nigiri, hosomaki, temaki, gunkan), sashimi, tàrtar, poke, ramen, tallarines, arròs, ànec, marisc, teppan yaki, plats vegans i spicy pot. Menú migdia a {lunchMenuPrice} i menú vespre a {dinnerMenuPrice}. Telèfon i WhatsApp: {phoneWithoutPrefix}.",
+    "javascriptNotice": "Aquesta web necessita JavaScript per veure's completa.",
+    "menuName": "Carta d'Asia Oriental Taste",
+    "pages": {
+      "/": {
+        "title": "Asia Oriental Taste | Restaurant xinès i japonès a Vilafranca del Penedès",
+        "heading": "Restaurant asiàtic a Vilafranca del Penedès",
+        "description": "Restaurant de cuina xinesa i japonesa a Vilafranca del Penedès: més de 200 plats de sushi, dim sum, wok i ramen. Reserva taula, demana online o a domicili.",
+        "linkText": "Inici"
+      },
+      "/menu": {
+        "title": "Carta i menús | Asia Oriental Taste, Vilafranca del Penedès",
+        "heading": "Carta i menús d'Asia Oriental Taste",
+        "description": "Més de {dishCount} plats xinesos i japonesos en {sectionCount} seccions. Menú migdia a {lunchMenuPrice} ({lunchMenuHours}) i menú vespre a {dinnerMenuPrice} ({dinnerMenuHours}).",
+        "linkText": "Carta i menús"
+      },
+      "/pedidos": {
+        "title": "Menjar xinès i japonès a domicili a Vilafranca | Asia Oriental Taste",
+        "heading": "Demana online",
+        "description": "Demana sushi, wok, dim sum i ramen a domicili o per recollir a Vilafranca del Penedès: tria els teus plats i envia la comanda per WhatsApp.",
+        "linkText": "Demanar a domicili o per emportar"
+      },
+      "/reservar": {
+        "title": "Reservar taula | Asia Oriental Taste, Vilafranca del Penedès",
+        "heading": "Reserva la teva taula",
+        "description": "Reserva taula a Asia Oriental Taste, restaurant xinès i japonès al {street}, Vilafranca del Penedès. Obert {openingText}.",
+        "linkText": "Reservar taula"
+      },
+      "/restaurant": {
+        "title": "Els nostres restaurants | Asia Restaurants",
+        "heading": "Asia Restaurants: Vilafranca del Penedès, Reggio Emilia, Ravenna i Correggio",
+        "description": "Asia Restaurants, amb passió i cura del detall des del 2006: Asia Oriental Taste al {street}, Vilafranca del Penedès, i tres restaurants a Itàlia. Telèfon: {phoneWithoutPrefix}.",
+        "linkText": "Els nostres restaurants"
+      }
+    }
+  },
+  "en": {
+    "ogLocale": "en_GB",
+    "notFoundTitle": "Page not found | Asia Oriental Taste",
+    "about": "Asia Oriental Taste is a Chinese and Japanese restaurant of the Asia Restaurants group, at {address} (Barcelona). We have more than {dishCount} dishes in {sectionCount} sections: dim sum, tempura, sushi (uramaki, nigiri, hosomaki, temaki, gunkan), sashimi, tartare, poke, ramen, noodles, rice, duck, seafood, teppanyaki, vegan dishes and spicy pot. Lunch menu for {lunchMenuPrice} and dinner menu for {dinnerMenuPrice}. Phone and WhatsApp: {phoneWithoutPrefix}.",
+    "javascriptNotice": "This website needs JavaScript to be seen in full.",
+    "menuName": "Asia Oriental Taste menu",
+    "pages": {
+      "/": {
+        "title": "Asia Oriental Taste | Chinese and Japanese restaurant in Vilafranca del Penedès",
+        "heading": "Asian restaurant in Vilafranca del Penedès",
+        "description": "Chinese and Japanese restaurant in Vilafranca del Penedès: more than 200 dishes of sushi, dim sum, wok and ramen. Book a table, order online or for delivery.",
+        "linkText": "Home"
+      },
+      "/menu": {
+        "title": "Menu and set menus | Asia Oriental Taste, Vilafranca del Penedès",
+        "heading": "Asia Oriental Taste menu and set menus",
+        "description": "More than {dishCount} Chinese and Japanese dishes in {sectionCount} sections. Lunch menu for {lunchMenuPrice} ({lunchMenuHours}) and dinner menu for {dinnerMenuPrice} ({dinnerMenuHours}).",
+        "linkText": "Menu and set menus"
+      },
+      "/pedidos": {
+        "title": "Chinese and Japanese food delivery in Vilafranca | Asia Oriental Taste",
+        "heading": "Order online",
+        "description": "Order sushi, wok, dim sum and ramen for delivery or pick-up in Vilafranca del Penedès: choose your dishes and send the order by WhatsApp.",
+        "linkText": "Order for delivery or takeaway"
+      },
+      "/reservar": {
+        "title": "Book a table | Asia Oriental Taste, Vilafranca del Penedès",
+        "heading": "Book your table",
+        "description": "Book a table at Asia Oriental Taste, a Chinese and Japanese restaurant at {street}, Vilafranca del Penedès. Open {openingText}.",
+        "linkText": "Book a table"
+      },
+      "/restaurant": {
+        "title": "Our restaurants | Asia Restaurants",
+        "heading": "Asia Restaurants: Vilafranca del Penedès, Reggio Emilia, Ravenna and Correggio",
+        "description": "Asia Restaurants, with passion and careful detail since 2006: Asia Oriental Taste at {street}, Vilafranca del Penedès, and three restaurants in Italy. Phone: {phoneWithoutPrefix}.",
+        "linkText": "Our restaurants"
+      }
+    }
+  }
+}

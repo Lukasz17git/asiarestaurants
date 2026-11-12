@@ -1,59 +1,39 @@
 import React from 'react'
-import asiaCorreggio from '../images/restaurants/asiaCorreggio.webp'
-import asiaRavenna from '../images/restaurants/asiaRavenna.webp'
-import asiaReggioEmilia from '../images/restaurants/asiaReggioEmilia.webp'
-import asiaOrientalTaste from '../images/restaurants/asiaOrientalTaste.webp'
-import gold from '../generateGold'
+import { t } from '../language'
 
-const Restaurant = ({ data }) => {
-    const language = 'es'
-    const restaurant = {
-        es: 'Restaurante',
-        cat: 'Restaurante'
-    }
-    const streetLabel = {
-        es: 'C:',
-        cat: 'C:'
-    }
-    const phoneLabel = {
-        es: 'Tlf:',
-        cat: 'Tlf'
-    }
-    const whatsappLabel = {
-        es: 'Háblanos',
-        cat: 'Hablanos'
-    }
-    const images = { asiaCorreggio, asiaRavenna, asiaReggioEmilia, asiaOrientalTaste }
+// One <span> per word, so the gold gradient covers each word and not the whole line
+const toGoldWords = (text) => text.split(' ').map((word, index) => <span key={index}>{index > 0 && ' '}{word}</span>)
 
-    const { name, country, street, phone, maps, whatsapp, image, description } = data
-    const openWhatsApp = () => window.open(whatsapp, '_blank')
+// One restaurant: title, description, photo, address, WhatsApp and map; isFlipped puts the photo on the right
+const Restaurant = ({ restaurant, isFlipped }) => {
+    const { id, name, country, street, phone, maps, whatsapp, photo, description } = restaurant
 
     return (
-        <div className='section'>
-            <div className='title'>{gold(restaurant[language] + ' ' + name)}</div>
-            <div className='description'>{description[language]}</div>
+        <section id={id} className={isFlipped ? 'restaurant is-flipped' : 'restaurant'}>
+            <h2 className='title'>{toGoldWords(`${t({ es: 'Restaurante', ca: 'Restaurant', en: 'Restaurant' })} ${name}`)}</h2>
+            <p className='description'>{t(description)}</p>
             <div className='section-container'>
                 <div className='wrapper1'>
-                    <img alt='restaurant' src={images[image]} />
+                    <img alt={name} src={photo} loading='lazy' />
                 </div>
                 <div className='wrapper2'>
                     <div className='info'>
-                        <div className={'country ' + country} />
+                        <div className={`country ${country}`} />
                         <div className='wrapper'>
-                            <div className='street'>{streetLabel[language] + ' ' + street}</div>
-                            <div className='phone'>{phoneLabel[language] + ' ' + phone}</div>
+                            <div className='street'>{t({ es: 'C:', ca: 'C:', en: 'Address:' })} {street}</div>
+                            <div className='phone'>{t({ es: 'Tlf:', ca: 'Tel:', en: 'Phone:' })} {phone}</div>
                         </div>
-                        <div onClick={openWhatsApp} className='whatsapp' >
+                        <a className='whatsapp' href={whatsapp} target='_blank' rel='noreferrer'>
                             <div className='icon'></div>
-                            <div>{whatsappLabel[language]}</div>
-                        </div>
+                            <div>{t({ es: 'Háblanos', ca: 'Parla’ns', en: 'Message us' })}</div>
+                        </a>
                     </div>
                     <div className='maps'>
-                        <iframe title='Correggio' width="400" height="300" src={maps} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" />
+                        <iframe title={name} src={maps} loading='lazy' />
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,0 +1,1037 @@
+@import '../css/theme';
+
+$toolbarHeight: 157px;
+$sheetWidth: 400px;
+$wideScreen: 1100px;
+$radius: 18px;
+$card: $backgroundColor3;
+$cardBorder: rgba(201, 171, 129, 0.16);
+$field: #2e2e33;
+$paperButton: $washi;
+$paperShadow: #b9b4ab;
+$whatsapp: #25d366;
+$whatsappLight: #3ee07b;
+// The «Editar con IA» button (56px, 24px from the corner) stays beside the cart bar
+$fabSpace: 24px + 56px + 12px;
+
+$deliveryIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 7h11v9H3zM14 10h4l3 3v3h-7z'/%3E%3Ccircle cx='7' cy='17.5' r='1.8'/%3E%3Ccircle cx='17' cy='17.5' r='1.8'/%3E%3C/svg%3E");
+$pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2'/%3E%3C/svg%3E");
+
+@mixin reset-button {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pedidos {
+    color: $textColor1;
+    text-align: left;
+    font-size: 15px;
+
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+        outline: 2px solid $lineColor2;
+        outline-offset: 2px;
+    }
+}
+
+// Each step's number is a hanko stamp, with a dashed line before it from the second step
+.pedidos-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 28px;
+    list-style: none;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+    }
+
+    span {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $redLight;
+        border-radius: 7px;
+        color: $redLight;
+        font-family: $fontDisplay;
+        font-size: 18px;
+        transform: rotate(-8deg);
+    }
+}
+
+/*
+ * Search and sections: paper buttons on dark, raised like a ticket machine's
+ */
+
+.pedidos-toolbar {
+    position: sticky;
+    top: $navbarHeight;
+    z-index: 10;
+    padding: 16px 0 0;
+    border-top: 1px solid $cardBorder;
+    border-bottom: 1px solid $cardBorder;
+    background-color: $backgroundColor2;
+    box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.8);
+}
+
+.pedidos-search {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    input {
+        width: 100%;
+        height: 44px;
+        padding: 0 16px 0 42px;
+        border: 1px solid $field;
+        border-radius: 99px;
+        background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a8174' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E") 14px center / 18px no-repeat;
+        color: $textColor1;
+        font: inherit;
+        font-size: 16px; // 16px keeps iOS from zooming in on focus
+
+        &:focus,
+        &:focus-visible {
+            outline: none;
+            border-color: $redLight;
+        }
+
+        &::placeholder {
+            color: $textColor4;
+        }
+    }
+}
+
+.pedidos-chips {
+    display: flex;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 12px 16px 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    button {
+        @include reset-button;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        min-width: 100px;
+        padding: 8px 12px;
+        border: 1.5px solid transparent;
+        border-radius: 12px;
+        background-color: $paperButton;
+        color: $ink;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        box-shadow: 0 5px 0 $paperShadow;
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+
+        &:hover {
+            transform: translateY(1px);
+        }
+
+        // Pressed in
+        &.selected {
+            border-color: $red;
+            background-color: $red;
+            color: #fff;
+            box-shadow: 0 2px 0 $redDark;
+            transform: translateY(3px);
+
+            .pedidos-chip-kanji {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.pedidos-chip-kanji {
+    color: $red;
+    font-family: $fontBrush;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+    transition: color 0.2s;
+}
+
+.pedidos-layout {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 8px 16px 120px;
+}
+
+.pedidos-section {
+    padding-top: 32px;
+}
+
+.pedidos-section-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 14px;
+    margin-bottom: 18px;
+
+    img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid $lineColor1;
+    }
+
+    b {
+        color: $red;
+        font-family: $fontBrush;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    h2 {
+        color: $textColor1;
+        font-family: $fontDisplay;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    span {
+        color: $textColor4;
+        font-size: 14px;
+    }
+}
+
+.pedidos-dishes {
+    display: grid;
+    // 2 cards a row on phones, 3 from 600px, 4 from 860px and 3 again beside the order column
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/*
+ * Dish: the cut-out photo on a plate lit in red, and the text below
+ */
+
+// Outlined in red like the hero's .cta-bar, a little brighter on hover and in the cart
+.pedidos-dish {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(224, 57, 63, 0.16);
+    border-radius: $radius;
+    background: linear-gradient(#1d1d21, $card 40%);
+    transition: border-color 0.2s, box-shadow 0.3s, translate 0.3s;
+
+    &:hover {
+        border-color: rgba(224, 57, 63, 0.42);
+        box-shadow: 0 22px 36px -24px #000;
+        translate: 0 -3px;
+
+        .pedidos-dish-media img {
+            transform: scale(1.05);
+        }
+    }
+
+    // After :hover, so a card in the cart keeps its look on hover
+    &.in-cart {
+        border-color: $redLight;
+        box-shadow: 0 18px 32px -20px $redGlow;
+    }
+}
+
+// A red hanko stamp over the photo
+.pedidos-dish-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 4px;
+    border-radius: 7px;
+    color: $washi;
+    font-family: $fontDisplay;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: $red;
+    box-shadow: inset 0 0 0 2px rgba(244, 241, 236, 0.35), 0 6px 12px -6px #000;
+    transform: rotate(-8deg);
+}
+
+.pedidos-dish-media {
+    aspect-ratio: 1.2;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 58%, rgba(224, 57, 63, 0.3), transparent 62%);
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+}
+
+// Dishes IOYI has no photo of show its seal, faded
+.pedidos-dish-placeholder {
+    display: grid;
+    place-items: center;
+    height: 100%;
+
+    img {
+        width: 38%;
+        height: auto;
+        opacity: 0.18;
+    }
+}
+
+// A short gold dash at the top, like the .kicker's
+.pedidos-dish-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 6px;
+    padding: 18px 16px 16px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 16px;
+        top: 0;
+        width: 28px;
+        height: 2px;
+        background-color: $amber;
+    }
+
+    h3 {
+        color: $textColor1;
+        font-family: $fontDisplay;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.25;
+        overflow-wrap: break-word;
+    }
+}
+
+.pedidos-dish-description {
+    color: $textColor3;
+    font-size: 13px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pedidos-dish-footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 6px;
+}
+
+.pedidos-dish-price {
+    margin-right: auto;
+    color: $amber;
+    font-family: $fontDisplay;
+    font-size: 21px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.pedidos-tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-family: $fontBody;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: 3px;
+
+    &.vegan {
+        background-color: rgba(126, 190, 120, 0.16);
+        color: #9fd49a;
+    }
+
+    &.spicy {
+        background-color: rgba(224, 57, 63, 0.18);
+        color: #ff8a8f;
+    }
+}
+
+// Drinks: no photo area, the number beside the name
+.pedidos-dishes.no-photos {
+    .pedidos-dish-media {
+        display: none;
+    }
+
+    .pedidos-dish-number {
+        top: 16px;
+        left: 14px;
+        min-width: 30px;
+        height: 30px;
+        color: $redLight;
+        font-size: 14px;
+        background: none;
+        box-shadow: inset 0 0 0 2px $red;
+    }
+
+    .pedidos-dish-body {
+        padding-top: 18px;
+
+        &::before {
+            display: none;
+        }
+
+        h3 {
+            min-height: 30px;
+            padding-left: 44px;
+            font-size: 18px;
+        }
+    }
+}
+
+// Two bars draw the «+», centered whatever the font (the glyph sat off-center)
+.pedidos-add {
+    @include reset-button;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:
+        linear-gradient(#fff, #fff) center / 14px 2px no-repeat,
+        linear-gradient(#fff, #fff) center / 2px 14px no-repeat,
+        linear-gradient(135deg, $redLight, $red);
+    font-size: 0;
+    box-shadow: 0 6px 16px -6px $redGlow;
+    transition: box-shadow 0.2s, transform 0.2s;
+
+    &:hover {
+        box-shadow: 0 8px 20px -6px $redLight;
+        transform: scale(1.06);
+    }
+}
+
+.pedidos-quantity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 40px;
+    color: $textColor1;
+
+    button {
+        @include reset-button;
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border: 1.5px solid $red;
+        border-radius: 50%;
+        color: $redLight;
+        font-size: 20px;
+        line-height: 1;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+
+    span {
+        min-width: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    &.small {
+        height: 28px;
+        gap: 4px;
+
+        button {
+            width: 26px;
+            height: 26px;
+            font-size: 16px;
+        }
+    }
+}
+
+/*
+ * Cart bar and order sheet
+ */
+
+.pedidos-cart-bar {
+    @include reset-button;
+    position: fixed;
+    left: 16px;
+    right: $fabSpace;
+    bottom: 24px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 56px;
+    max-width: 480px;
+    padding: 0 18px 0 10px;
+    border-radius: 99px;
+    background-color: $red;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+    &.empty {
+        background-color: $backgroundColor3;
+        color: $textColor3;
+        border: 1px solid $cardBorder;
+
+        .pedidos-cart-count {
+            background-color: $field;
+            color: $textColor3;
+        }
+    }
+}
+
+.pedidos-cart-count {
+    display: grid;
+    place-items: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 6px;
+    border-radius: 99px;
+    background-color: $black;
+    color: $textColor2;
+}
+
+.pedidos-cart-price {
+    margin-left: auto;
+}
+
+.pedidos-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+
+    &.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.pedidos-sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    height: min(92vh, 92dvh);
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    background-color: $backgroundColor3;
+    transform: translateY(105%);
+    transition: transform 0.3s ease;
+
+    &.open {
+        transform: translateY(0);
+    }
+}
+
+.pedidos-sheet-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pedidos-sheet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    color: #fff;
+    background: linear-gradient(to bottom, $red, $redDark);
+
+    h2 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: $fontBody;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        line-height: 1.1;
+        text-transform: uppercase;
+
+        span {
+            color: $amberLight;
+            font-family: $fontBrush;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+    }
+}
+
+.pedidos-sheet-close {
+    @include reset-button;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.pedidos-sheet-body {
+    flex: 1;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 8px 20px 20px;
+    scrollbar-width: thin;
+    scrollbar-color: $field transparent;
+}
+
+.pedidos-sheet-title {
+    margin: 22px 0 10px;
+    color: $textColor2;
+    font-family: $fontBody;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pedidos-cart-items {
+    list-style: none;
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px dashed rgba(201, 171, 129, 0.22);
+    }
+}
+
+.pedidos-cart-item-name {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    line-height: 1.3;
+
+    span {
+        font-weight: 700;
+    }
+
+    small {
+        color: $textColor4;
+    }
+
+    .pedidos-cart-item-number {
+        color: $amber;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}
+
+.pedidos-cart-item-total {
+    min-width: 58px;
+    text-align: right;
+    color: $amber;
+    font-weight: 700;
+}
+
+.pedidos-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    button {
+        @include reset-button;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: 10px;
+        padding: 9px 12px;
+        border: 1.5px solid $field;
+        border-radius: 12px;
+        background-color: $backgroundColor2;
+        color: $textColor3;
+        font-size: 13px;
+        text-align: left;
+        transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+
+        strong {
+            color: $textColor1;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        small {
+            grid-column: 1 / -1;
+            margin-top: 3px;
+            color: $textColor4;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+
+        &.selected {
+            border-color: $red;
+            background-color: rgba(200, 36, 43, 0.1);
+            color: $redLight;
+        }
+    }
+}
+
+.pedidos-type-icon {
+    width: 22px;
+    height: 22px;
+
+    &.delivery {
+        @include icon($deliveryIcon);
+    }
+
+    &.pickup {
+        @include icon($pickupIcon);
+    }
+}
+
+.pedidos-form {
+    display: grid;
+    gap: 12px;
+}
+
+.pedidos-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    span {
+        color: $textColor3;
+        font-size: 13px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid $field;
+        border-radius: 10px;
+        background-color: $backgroundColor2;
+        color: $textColor1;
+        font: inherit;
+        font-size: 16px;
+        resize: vertical;
+
+        &::placeholder {
+            color: #66666c;
+        }
+    }
+
+    small {
+        color: #f29a8a;
+        font-size: 12px;
+    }
+
+    &.invalid {
+
+        input,
+        textarea {
+            border-color: #e0796b;
+        }
+    }
+}
+
+.pedidos-note,
+.pedidos-warning {
+    margin-top: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.pedidos-note {
+    background-color: rgba(201, 171, 129, 0.1);
+    color: $lineColor2;
+
+    &.sent {
+        background-color: rgba(37, 211, 102, 0.12);
+        color: #a6eac0;
+    }
+}
+
+.pedidos-warning {
+    background-color: rgba(224, 121, 107, 0.14);
+    color: #f2a99d;
+}
+
+.pedidos-sheet-footer {
+    padding: 14px 20px calc(16px + env(safe-area-inset-bottom));
+    border-top: 2px dashed rgba(201, 171, 129, 0.22);
+    background-color: $backgroundColor3;
+
+    .pedidos-warning,
+    .pedidos-note {
+        margin: 0 0 10px;
+    }
+
+    .pedidos-note.sent {
+        margin: 10px 0 0;
+    }
+}
+
+.pedidos-totals {
+    display: grid;
+    gap: 4px;
+    margin-bottom: 12px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        color: $textColor3;
+        font-size: 14px;
+    }
+
+    dd {
+        margin: 0;
+    }
+
+    .pedidos-total {
+        margin-top: 4px;
+        color: $textColor1;
+        font-family: $fontDisplay;
+        font-size: 22px;
+        font-weight: 800;
+    }
+}
+
+.pedidos-whatsapp {
+    @include reset-button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 54px;
+    border-radius: 99px;
+    background-color: $whatsapp;
+    color: #0b2e17;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 10px 24px -12px rgba(37, 211, 102, 0.55);
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $whatsappLight;
+    }
+}
+
+.pedidos-whatsapp-icon {
+    @include icon($whatsappIcon);
+    width: 24px;
+    height: 24px;
+}
+
+.pedidos-link {
+    @include reset-button;
+    color: inherit;
+    text-decoration: underline;
+}
+
+.pedidos-small {
+    margin-top: 10px;
+    color: $textColor4;
+    font-size: 12px;
+    line-height: 1.45;
+
+    &.center {
+        margin-top: 32px;
+        text-align: center;
+    }
+}
+
+.pedidos-empty {
+    padding: 24px 0;
+    color: $textColor4;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media (max-width: $wideScreen - 1px) {
+    body.pedidos-sheet-open {
+        overflow: hidden;
+    }
+}
+
+// Phones: smaller titles, steps under their stamp and one-line section buttons, so the sticky bar stays low
+@media (max-width: 599px) {
+    .pedidos-steps {
+        gap: 8px;
+
+        li {
+            flex: 1;
+            flex-direction: column;
+            font-size: 13px;
+        }
+    }
+
+    .pedidos-chips button {
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 6px;
+        min-width: 0;
+        padding: 7px 12px;
+    }
+
+    .pedidos-chip-kanji {
+        font-size: 17px;
+    }
+
+    .pedidos-section-header h2 {
+        font-size: 24px;
+    }
+
+    .pedidos-dish-number {
+        top: 8px;
+        left: 8px;
+        min-width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+
+    .pedidos-dish-body {
+        padding: 10px 12px 12px;
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    .pedidos-dish-price {
+        font-size: 16px;
+    }
+
+    .pedidos-tag {
+        margin: 2px 0 0;
+    }
+
+    .pedidos-add {
+        width: 34px;
+        height: 34px;
+    }
+
+    .pedidos-dish .pedidos-quantity {
+        gap: 0;
+
+        button {
+            width: 26px;
+            height: 26px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .pedidos-dishes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+@media (min-width: 860px) and (max-width: $wideScreen - 1px) {
+    .pedidos-dishes {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 700px) {
+    .pedidos-cart-bar {
+        left: 50%;
+        right: auto;
+        width: 440px;
+        transform: translateX(-50%);
+    }
+
+    .pedidos-sheet {
+        left: auto;
+        top: 0;
+        height: auto;
+        width: $sheetWidth;
+        border-left: 1px solid $cardBorder;
+        border-radius: 0;
+        transform: translateX(105%);
+
+        &.open {
+            transform: translateX(0);
+        }
+    }
+}
+
+// Wide screens: the order is a column beside the menu, always visible
+@media (min-width: $wideScreen) {
+    .pedidos-layout {
+        display: grid;
+        grid-template-columns: 1fr $sheetWidth;
+        align-items: start;
+        gap: 28px;
+        padding-bottom: 60px;
+    }
+
+    .pedidos-sheet {
+        position: sticky;
+        top: $navbarHeight + $toolbarHeight + 16px;
+        z-index: 1;
+        width: auto;
+        height: calc(100vh - #{$navbarHeight + $toolbarHeight + 32px});
+        margin-top: 24px;
+        border: 1px solid $cardBorder;
+        border-radius: $radius;
+        overflow: hidden;
+        transform: none;
+    }
+
+    .pedidos-sheet-close,
+    .pedidos-cart-bar,
+    .pedidos-backdrop {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pedidos-sheet,
+    .pedidos-backdrop {
+        transition: none;
+    }
+}

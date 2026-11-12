@@ -4,17 +4,12 @@
   "icons": [
     {
       "src": "LogoRedIcon.webp",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "LogoRedIcon.webp",
-      "sizes": "80x80 64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "sizes": "332x270",
+      "type": "image/webp"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#c9ab81",
-  "background_color": "#121518"
+  "theme_color": "#0b0b0c",
+  "background_color": "#0b0b0c"
 }

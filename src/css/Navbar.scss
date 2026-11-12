@@ -15,16 +15,26 @@
         left: 0px;
         top: 0px;
         background-color: $black;
-        opacity: 0.55;
+    }
+
+    // Red line of the logo under the bar
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, $red 25%, $redLight 50%, $red 75%, transparent);
     }
 
     .main-logo {
         background-image: url('../images/LogoRed.webp');
         position: absolute;
-        left: 0px;
-        top: 2px;
-        height: 100%;
-        width: 100px;
+        left: 24px;
+        top: 6px;
+        height: calc(100% - 12px);
+        width: 90px;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -55,24 +65,179 @@
 
     }
 
+    // Globe, language code and arrow; the list opens under it
+    .language-menu {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-family: $fontBody;
+
+        .language-button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 10px;
+            border: 1px solid rgba($lineColor1, 0.35);
+            border-radius: 999px;
+            background: none;
+            color: $textColor2;
+            font: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: color 0.3s, border-color 0.3s;
+
+            &:hover {
+                color: $lineColor2;
+                border-color: $lineColor2;
+            }
+        }
+
+        .language-globe {
+            width: 18px;
+            height: 18px;
+        }
+
+        .language-arrow {
+            width: 6px;
+            height: 6px;
+            margin: -3px 2px 0 0;
+            border-right: 1.5px solid currentColor;
+            border-bottom: 1.5px solid currentColor;
+            transform: rotate(45deg);
+            transition: transform 0.3s;
+        }
+
+        .language-list {
+            position: absolute;
+            // Above the bar's red line (&::after), which would paint across the list
+            z-index: 1;
+            top: calc(100% - 8px);
+            right: 0;
+            min-width: 170px;
+            margin: 0;
+            padding: 6px;
+            list-style: none;
+            border: 1px solid rgba($lineColor1, 0.35);
+            border-radius: 12px;
+            background-color: $backgroundColor3;
+            box-shadow: 0 18px 40px -12px #000;
+            // No opacity fade: the page would show through the list while it opens
+            visibility: hidden;
+            transform: translateY(-6px);
+            transition: transform 0.2s, visibility 0.2s;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 10px 12px;
+                border-radius: 8px;
+                color: $textColor1;
+                font-size: 15px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background-color 0.2s, color 0.2s;
+
+                &:hover {
+                    background-color: rgba($lineColor1, 0.12);
+                    color: $lineColor2;
+                }
+
+                // Color and not bold marks the language of the page, so the row keeps its width
+                &[aria-current] {
+                    color: $textColor2;
+
+                    .language-code {
+                        color: #fff;
+                        background-color: $red;
+                        border-color: $red;
+                    }
+                }
+            }
+
+            .language-code {
+                width: 34px;
+                padding: 2px 0;
+                border: 1px solid $lineColor3;
+                border-radius: 4px;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-align: center;
+                color: $textColor3;
+            }
+        }
+
+        &.is-open {
+            .language-arrow {
+                transform: rotate(225deg) translate(-2px, -2px);
+            }
+
+            .language-list {
+                visibility: visible;
+                transform: none;
+            }
+        }
+    }
+
     .menu {
         position: absolute;
         height: 100%;
-        right: 20px;
+        // Leaves room for the language button
+        right: 128px;
         top: 0;
         display: flex;
         gap: 40px;
         color: $textColor2;
+        font-size: 14px;
         font-weight: 600;
-        font-family: 'CondLight';
+        font-family: $fontBody;
         letter-spacing: 3px;
 
-        .selected {
-            .underline {
-                background-color: $underline  !important;
+        // Only in the phone menu
+        .link-kanji,
+        .menu-languages,
+        .menu-info {
+            display: none;
+        }
 
-                &::after {
-                    background-color: $underline  !important;
+        // The lines only show under the page you are on
+        .selected {
+            color: $lineColor2;
+
+            .underline {
+                opacity: 1 !important;
+                transform: scaleX(1) !important;
+            }
+        }
+
+        // «Pedir online» is a red button
+        .link-order {
+            a {
+                display: block;
+                padding: 9px 18px;
+                border-radius: 999px;
+                color: #fff;
+                background: linear-gradient(135deg, $redLight, $red);
+                box-shadow: 0px 8px 20px -10px $redLight;
+                transition: box-shadow 0.3s, transform 0.3s;
+            }
+
+            .underline {
+                display: none;
+            }
+
+            &:hover {
+                color: #fff;
+
+                a {
+                    transform: translateY(-2px);
+                    box-shadow: 0px 12px 26px -10px $redLight;
                 }
             }
         }
@@ -88,6 +253,9 @@
                 height: 1px;
                 background-color: $lineColor2;
                 margin: auto;
+                opacity: 0;
+                transform: scaleX(0);
+                transition: opacity 0.3s, transform 0.3s;
 
                 &::after {
                     content: '';
@@ -101,42 +269,224 @@
             }
 
             &:hover {
-                color: $underline;
+                color: $lineColor2;
                 cursor: pointer;
 
                 .underline {
-                    background-color: $underline;
-
-                    &::after {
-                        background-color: $underline;
-                    }
-
+                    opacity: 0.5;
+                    transform: scaleX(0.6);
                 }
             }
         }
     }
 }
 
-@media (max-width: 700px) {
+// The 5 links and the language button need about 1000px next to the logo
+@media (max-width: 1020px) {
     .navbar {
-        .menu-icon {
-            visibility: visible;
+        // The languages are inside the phone menu
+        .language-menu {
+            display: none;
         }
 
+        .menu-icon {
+            visibility: visible;
+            transition: background-size 0.3s;
+
+            // The 4 lines turn into an ✕ while the menu is open
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 26px;
+                height: 1.5px;
+                border-radius: 2px;
+                background-color: $lineColor2;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.3s, transform 0.4s;
+            }
+        }
+
+        &.is-open .menu-icon {
+            background-size: 0px auto;
+
+            &::before {
+                opacity: 1;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                opacity: 1;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+
+        // Full screen under the bar, with the red sun of the logo at the bottom
         .menu {
-            height: auto;
+            position: fixed;
+            top: 68px;
+            left: 0;
+            right: 0;
+            height: calc(100vh - 68px);
+            height: calc(100dvh - 68px);
             flex-direction: column;
-            background-color: $backgroundColor2;
-            right: 0px;
-            transform: translateX(110%);
-            top: calc(100% + 2px);
-            padding: 40px 24px;
+            gap: 0;
+            padding: 16px 28px 32px;
+            overflow-y: auto;
             background-color: $black;
-            opacity: 0.85;
-            border-bottom: 2px solid $lineColor1;
-            border-left: 2px solid $lineColor1;
-            border-bottom-left-radius: 6px;
-            transition: 0.5s;
+            background-image: radial-gradient(circle at 100% 100%, rgba($red, 0.3), rgba($red, 0.08) 35%, transparent 60%);
+            transform: translateX(100%);
+            visibility: hidden;
+            transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1), visibility 0.5s;
+
+            .link {
+                align-self: stretch;
+                border-bottom: 1px solid rgba($lineColor1, 0.18);
+                opacity: 0;
+                transform: translateX(32px);
+                transition: opacity 0.4s, transform 0.4s, box-shadow 0.3s;
+
+                a {
+                    display: flex;
+                    align-items: baseline;
+                    justify-content: space-between;
+                    padding: 22px 4px 18px 16px;
+                    font-family: $fontDisplay;
+                    font-size: 26px;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    color: $textColor1;
+                    transition: color 0.3s;
+                }
+
+                .link-kanji {
+                    display: inline;
+                    font-family: $fontBrush;
+                    font-size: 20px;
+                    letter-spacing: 0;
+                    color: $lineColor3;
+                    transition: color 0.3s;
+                }
+
+                .underline {
+                    display: none;
+                }
+
+                &:hover a {
+                    color: $lineColor2;
+                }
+
+                // A red bar marks the page you are on
+                &.selected {
+                    box-shadow: inset 3px 0 0 $red;
+
+                    a {
+                        color: $lineColor2;
+                    }
+
+                    .link-kanji {
+                        color: $redLight;
+                    }
+                }
+
+                // «Pedir online» goes last, as a wide red button
+                &.link-order {
+                    order: 1;
+                    margin-top: 32px;
+                    border-bottom: none;
+                    box-shadow: none;
+
+                    a {
+                        justify-content: center;
+                        gap: 14px;
+                        padding: 16px 24px;
+                        font-family: $fontBody;
+                        font-size: 16px;
+                        letter-spacing: 4px;
+                        color: #fff;
+                    }
+
+                    .link-kanji {
+                        font-size: 16px;
+                        color: rgba(#fff, 0.75);
+                    }
+                }
+            }
+
+            .menu-languages {
+                order: 2;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: auto;
+                padding-top: 32px;
+                opacity: 0;
+                transition: opacity 0.4s;
+
+                a {
+                    padding: 8px 16px;
+                    border: 1px solid rgba($lineColor1, 0.35);
+                    border-radius: 999px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    color: $textColor1;
+                    cursor: pointer;
+
+                    // Color and not bold marks the language of the page, so the row keeps its width
+                    &[aria-current] {
+                        color: #fff;
+                        background-color: $red;
+                        border-color: $red;
+                    }
+                }
+            }
+
+            .menu-info {
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                padding-top: 24px;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-align: center;
+                color: $textColor3;
+                opacity: 0;
+                transition: opacity 0.4s;
+
+                a {
+                    color: $textColor2;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        // The links slide in one after another
+        &.is-open .menu {
+            transform: none;
+            visibility: visible;
+
+            .link {
+                opacity: 1;
+                transform: none;
+                transition-delay: calc(0.15s + var(--i) * 0.06s);
+
+                &.link-order {
+                    transition-delay: 0.45s;
+                }
+            }
+
+            .menu-languages,
+            .menu-info {
+                opacity: 1;
+                transition-delay: 0.55s;
+            }
         }
     }
 }

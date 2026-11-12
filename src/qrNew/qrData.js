@@ -2,7 +2,7 @@ const cartas = {
     new: {
         es: 'Menú',
         cat: '',
-        pdf: './pdfs/CartaJulio2023.pdf'
+        pdf: '/menu-pdfs/CartaJulio2023.pdf'
     },
 }
 

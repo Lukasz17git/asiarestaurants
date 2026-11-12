@@ -1,22 +1,40 @@
-$backgroundColor1: #171c20;
-$backgroundColor2:#121518;
-$backgroundColor3: #191D22;
-$textColor1: #eee; /*white*/
-$textColor2: #c9ab81; /*gold*/
-$textColor3:#b3b2b2; /*grey*/
-$textColor4: #959494;
-$textColor5: #ad8b5e; /*brown-gold*/
+/*sumi ink: the dark of the red-sun sign*/
+$backgroundColor1: #121214;
+$backgroundColor2: #0b0b0c;
+$backgroundColor3: #18181b; /*for cards*/
+$textColor1: #f4f1ec; /*paper*/
+$textColor2: #c9ab81; /*gold of the old logo*/
+$textColor3: #d0d0d4; /*grey*/
+$textColor4: #8a8a90;
 
 $lineColor1: #c9ab81; /*gold line*/
 $lineColor2: #ead1af;
-$lineColor3: #856B48;
-$lineColor4: #8F795C;
-$lineColor5: #99866a;
+$lineColor3: #856b48;
 
-$lineColorHover: #fff;
-$black: #01090B;
-$underline: rgb(237, 167, 126);
+/*red of the sun and the hanko seal*/
+$red: #c8242b;
+$redLight: #e0393f;
+$redDark: #6e1016;
+$redGlow: rgba(224, 57, 63, 0.35);
 
+/*paper*/
+$washi: #f4f1ec;
+$ink: #0b0b0c;
+$inkGrey: #45454b;
+
+$amber: #c9ab81;
+$amberLight: #ead1af;
+
+$black: #0b0b0c;
+
+$fontDisplay: 'Anton', 'Anton fallback', sans-serif;
+$fontBody: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$fontBrush: 'Yuji Syuku', serif;
+
+$navbarHeight: 68px;
+$easeOut: cubic-bezier(0.22, 1, 0.36, 1);
+
+// Gold text, on each word's <span> (/restaurant's titles)
 @mixin gold{
     background: radial-gradient(#b88746, #fdf5a6);
     background: -webkit-linear-gradient(top , #b88746, #fdf5a6);
@@ -24,6 +42,50 @@ $underline: rgb(237, 167, 126);
     -webkit-text-fill-color: transparent;
 }
 
+// The photos waiting their turn: dark and warm, like the hero's category cards
+@mixin dimmed-photo {
+    filter: grayscale(1) brightness(0.55) sepia(0.4) hue-rotate(-30deg);
+}
+
+// Small white dots fading out from the bottom left corner, gone at $fadeEnd
+@mixin white-dots($fadeEnd) {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1.4px);
+    background-size: 9px 9px;
+    -webkit-mask-image: radial-gradient(ellipse at 0% 100%, #000, transparent $fadeEnd);
+    mask-image: radial-gradient(ellipse at 0% 100%, #000, transparent $fadeEnd);
+    pointer-events: none;
+}
+
+// The old site's cherry blossom vines, faint and tilted, behind a dark section
+@mixin cherry-vines($opacity) {
+    content: '';
+    position: absolute;
+    left: -43%;
+    top: 20px;
+    z-index: -1;
+    width: 200%;
+    min-width: 1800px;
+    height: 150%;
+    background-image: url('../images/cherry2.webp');
+    background-position: top center;
+    filter: opacity($opacity) saturate(0.33);
+    transform: rotate(-30deg);
+    pointer-events: none;
+}
+
+$whatsappIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1a15 15 0 0 1-1.5-.6 12 12 0 0 1-4.6-4.1c-.4-.5-1-1.5-1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.1z'/%3E%3C/svg%3E");
+
+// An SVG drawn in the text color
+@mixin icon($image) {
+    -webkit-mask: $image center / contain no-repeat;
+    mask: $image center / contain no-repeat;
+    background-color: currentColor;
+}
+
 @mixin shadowNavbar{
-    box-shadow: 0px 1px 8px 1px #080808;
+    box-shadow: 0px 1px 8px 1px #000;
 }

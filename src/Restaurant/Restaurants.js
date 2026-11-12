@@ -1,44 +1,60 @@
-import React from 'react'
+import React, { Fragment, useRef } from 'react'
 import Footer from '../Footer'
-import '../css/Restaurant.css'
-import restaurants from './restaurantsData'
+import PageHero from '../sections/PageHero'
 import Restaurant from './Restaurant'
+import restaurants from './restaurantsData'
+import { useReveal } from '../reveal/useReveal'
+import { t } from '../language'
+import '../css/Restaurant.scss'
+
+const countryNames = {
+    spain: { es: 'España', ca: 'Espanya', en: 'Spain' },
+    italy: { es: 'Italia', ca: 'Itàlia', en: 'Italy' },
+}
+
+const numberKanji = ['一', '二', '三', '四']
+
+// One photo card per restaurant, each a link to its block below
+const RestaurantLinks = () => (
+    <ol className='restaurants-hero-list'>
+        {restaurants.map(({ id, town, country, photo }, index) => (
+            <li key={id}>
+                <a href={`#${id}`}>
+                    <img src={photo} alt='' />
+                    <em aria-hidden='true'>{numberKanji[index]}</em>
+                    <b>{town}</b>
+                    <span>{t(countryNames[country])}</span>
+                </a>
+            </li>
+        ))}
+    </ol>
+)
 
 const Restaurants = () => {
-  const language = 'es'
-  const name = 'Asia Restaurantes'.toUpperCase().split('')
-  const { corregio, reggioEmilia, ravenna, orientalTaste } = restaurants
+    const pageRef = useRef(null)
+    useReveal(pageRef)
 
-  const restaurantsTitle = {
-    es: 'Con pasión y cuidadoso detalle desde el 2006',
-    cat: '',
-    it: 'Passione e cura del dettaglio dal 2006'
-  }
-
-  return (
-    <div className='main-restaurant'>
-      <div className='bg-wrapper'>
-        <div className='title-menu'>
-          {name.map((letter, index) => <div key={index} className='letter' style={{ transform: `translate(-50%,-50%) rotate(${index * (160 / (name.length - 1)) - 80}deg)` }}>{letter}</div>)}
-          <div className='logo' />
+    return (
+        <div className='main-restaurant' ref={pageRef}>
+            <PageHero
+                kanji='店'
+                kicker='Asia Restaurants'
+                title={t({
+                    es: <>Con pasión y cuidadoso detalle <em>desde el 2006</em></>,
+                    ca: <>Amb passió i cura del detall <em>des del 2006</em></>,
+                    en: <>With passion and careful detail <em>since 2006</em></>,
+                })}
+                aside={<RestaurantLinks />}
+            />
+            {restaurants.map((restaurant, index) => (
+                <Fragment key={restaurant.id}>
+                    {index > 0 && <div className='restaurant-line' />}
+                    <Restaurant restaurant={restaurant} isFlipped={index % 2 === 1} />
+                </Fragment>
+            ))}
+            <Footer />
         </div>
-        <div className='restaurant-title'>{restaurantsTitle[language]}</div>
-        <div className='menu-top'>
-          <div className='line' />
-          <div className='icon' />
-          <div className='line' />
-        </div>
-      </div>
-      <Restaurant data={orientalTaste}/>
-      <div className='section-line' /><span />
-      <Restaurant data={reggioEmilia} />
-      <div className='section-line' /><span />
-      <Restaurant data={ravenna} />
-      <div className='section-line' /><span />
-      <Restaurant data={corregio} />
-      <Footer />
-    </div>
-  )
+    )
 }
 
 export default Restaurants

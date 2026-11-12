@@ -1,38 +1,30 @@
 import React from 'react'
-import cocina from './cocinaData'
 import { Link } from 'react-router-dom'
-import gold from '../generateGold'
+import { t } from '../language'
+import { revealDelay } from '../reveal/useReveal'
+import cocina from './cocinaData'
 
+// Our cuisine: one tile per cuisine with its kanji; delivery on washi, the last one
 const Section4 = () => {
-  const language = 'es'
-  const name = {
-    es: 'Nuestra Cocina',
-    cat: '',
-    it: 'Our Cuisine'
-  }
-  const menus = 'Ver menús'
   return (
-    <div className='section4'>
-      <div className='fan' />
-      <div className='name '>{name[language]}</div>
-      <div className='container'>
-        {cocina.map(({ name, description }, index) => (
-          <div key={index} className={'cocina cocina' + index}>
-            <div className='title'>{gold(name[language])}</div>
-            <div className='description'>{description[language]}</div>
+    <section className='section4 section section-dark'>
+      <div className='section-header' data-reveal='up'>
+        <div>
+          <p className='kicker'><em>厨房</em></p>
+          <h2 className='heading'>{t({ es: <>Nuestra <em>Cocina</em></>, ca: <>La nostra <em>Cuina</em></>, en: <>Our <em>Cuisine</em></> })}</h2>
+        </div>
+        <Link className='cta cta-red' to='/menu'>{t({ es: 'Ver menús →', ca: 'Veure menús →', en: 'See menus →' })}</Link>
+      </div>
+      <div className='section4-grid'>
+        {cocina.map(({ kanji, name, description }, index) => (
+          <div key={kanji} className='section4-tile' data-reveal='up' style={revealDelay(index)}>
+            <em aria-hidden='true'>{kanji}</em>
+            <h3>{t(name)}</h3>
+            <p>{t(description)}</p>
           </div>
         ))}
-        <img alt='restaurant' />
       </div>
-      <div className='button'>
-        <Link to='/menu'>
-          <div className='button-bg'>
-            {menus}
-          </div>
-        </Link>
-      </div>
-      <div className='fan2' />
-    </div>
+    </section>
   )
 }
 

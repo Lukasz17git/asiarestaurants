@@ -1,9 +1,16 @@
 {
-  "framework": "create-react-app",
+  "framework": null,
   "installCommand": "npm install",
   "buildCommand": "CI=false npm run build",
   "outputDirectory": "build",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "routes": [
+    { "src": "/pdfs/(CartaDia2024_compressed|CartaNoche2024_compressed|CartaLlevar2024_compressed|CartaVinos2024v2_compressed|CartaJulio2023)\\.pdf", "status": 308, "headers": { "Location": "/menu-pdfs/$1.pdf" } },
+    { "src": "/pdfs/(.*)", "status": 308, "headers": { "Location": "/menu-pdfs-old/$1" } },
+    { "src": "/static/(.*)", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
+    { "src": "/dishes/(.*)", "headers": { "Access-Control-Allow-Origin": "*" }, "continue": true },
+    { "src": "/dishes/(.*)\\.(png|webp|svg)", "headers": { "Cache-Control": "public, max-age=86400" }, "continue": true },
+    { "src": "/dishes/(.*)\\.json", "headers": { "Cache-Control": "public, max-age=0, must-revalidate" }, "continue": true },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }

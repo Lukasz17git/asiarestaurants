@@ -1,0 +1,23 @@
+{
+  "name": "Asia Oriental Taste",
+  "brand": "Asia Restaurants",
+  "siteUrl": "https://asiarestaurants.es",
+  "phone": "+34 656 181 427",
+  "street": "Carrer de la Font, 4",
+  "postalCode": "08720",
+  "city": "Vilafranca del Penedès",
+  "region": "Barcelona",
+  "instagramUrl": "https://www.instagram.com/asiavilafranca/",
+  "facebookUrl": "https://www.facebook.com/profile.php?id=100082102034055",
+  "lunchMenu": { "priceInCents": 1590, "hours": "12:30-16:00" },
+  "dinnerMenu": { "priceInCents": 2190, "hours": "20:00-23:00", "fridayAndHolidayExtraInCents": 100 },
+  "openingHours": {
+    "Monday": { "lunch": "12:30-16:00", "dinner": "20:00-23:00" },
+    "Tuesday": { "lunch": "12:30-16:00", "dinner": "20:00-23:00" },
+    "Wednesday": { "lunch": "12:30-16:00", "dinner": "20:00-23:00" },
+    "Thursday": { "lunch": "12:30-16:00", "dinner": "20:00-23:00" },
+    "Friday": { "lunch": "12:30-16:00", "dinner": "20:00-23:00" },
+    "Saturday": { "lunch": "12:30-16:00", "dinner": "20:00-23:00" },
+    "Sunday": { "lunch": "12:30-16:00", "dinner": "20:00-23:00" }
+  }
+}

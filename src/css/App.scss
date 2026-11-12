@@ -8,37 +8,14 @@
 }
 
 
-@font-face {
-    font-family: 'Afterglow';
-    src: local('Afterglow'), url('../../public/Fonts/Afterglow.ttf') format('truetype');
-    font-display: swap;
-}
-// @font-face {
-//     font-family: 'Italianno';
-//     src: local('Italiano'), url('../../public/Fonts/Italianno.ttf') format('truetype');
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'AsianHiro';
-//     src: local('AsianHiro'), url('../../public/Fonts/AsianHiro.ttf') format('truetype');
-//     font-display: swap;
-// }
-// @font-face {
-//     font-family: 'CondLight';
-//     src: local('CondLight'), url('../../public/Fonts/OpenSans-CondLight.ttf') format('truetype');
-//     font-display: swap;
-// }
-
-
 a {
     all: unset;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: $fontBody;
+    // Anton only has weight 400: without this, a bold Anton would be drawn thicker by the browser
+    font-synthesis: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -53,33 +30,380 @@ code {
     background-color: $backgroundColor2;
     width: 100%;
     min-height: 100vh;
+    overflow-x: clip;
 }
 
-
-.grey {
-    color: #888;
-}
-
-.font1 {
-    padding: 12px;
-    font-size: 40px;
-    font-family: 'Italianno';
-}
-
-.font2 {
-    padding: 12px;
-    padding-bottom: 16px;
-    font-size: 72px;
-    line-height: 1em;
-    font-family: 'Italiana';
-}
 
 .font3 {
     padding: 12px;
     font-size: 16px;
 }
 
-.font4 {
-    padding: 12px;
-    font-size: 15px;
+
+/*
+ * Buttons
+ */
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 56px;
+    padding: 0px 30px;
+    border-radius: 999px;
+    font-family: $fontBody;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform 0.35s $easeOut, box-shadow 0.35s, border-color 0.35s, background-color 0.35s, color 0.35s;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        transform: translateY(0px) scale(0.97);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $lineColor2;
+        outline-offset: 3px;
+    }
+}
+
+// The red of the logo's sun, with a light ring
+.cta-red {
+    color: #fff;
+    background: linear-gradient(135deg, $redLight, $red);
+    box-shadow: 0px 0px 0px 3px rgba(224, 57, 63, 0.22), 0px 10px 26px -8px $redLight;
+
+    // Light that crosses the button on hover
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+        transform: translateX(-120%);
+        transition: transform 0.8s $easeOut;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 0px 5px rgba(224, 57, 63, 0.25), 0px 16px 36px -10px $redLight;
+
+        &::before {
+            transform: translateX(120%);
+        }
+    }
+}
+
+// Gold outline on the dark, red outline on white and washi (.on-paper)
+.cta-outline {
+    color: $amber;
+    border: 1px solid rgba(201, 171, 129, 0.55);
+
+    &:hover {
+        border-color: $amber;
+    }
+}
+
+.section-white .cta-outline,
+.cta-outline.on-paper {
+    color: $red;
+    border-color: rgba(200, 36, 43, 0.5);
+
+    &:hover {
+        border-color: $red;
+    }
+}
+
+// A red button and text links inside one pill: «Menús → | Pedir online | Reservar»
+.cta-bar {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    border: 1px solid rgba(224, 57, 63, 0.42);
+    border-radius: 34px;
+    background-color: rgba(18, 18, 20, 0.6);
+    backdrop-filter: blur(6px);
+
+    .cta {
+        margin: -4px 6px -4px -3px;
+    }
+
+    a:not(.cta) {
+        display: inline-flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 0px 20px;
+        color: $amberLight;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $redLight;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $lineColor2;
+            outline-offset: -4px;
+            border-radius: 999px;
+        }
+    }
+
+    a:not(.cta) + a:not(.cta) {
+        border-left: 1px solid rgba(224, 57, 63, 0.42);
+    }
+}
+
+
+/*
+ * Section titles
+ */
+
+// «我们 ¿Quiénes somos?»: the kanji in brush, then the label
+.kicker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #a4a4ab;
+    font-family: $fontBody;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    em {
+        flex-shrink: 0;
+        color: $redLight;
+        font-family: $fontBrush;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0px;
+    }
+}
+
+.heading {
+    margin-top: 14px;
+    color: inherit;
+    font-family: $fontDisplay;
+    font-size: clamp(40px, 5.2vw, 62px);
+    font-weight: 400;
+    line-height: 1.05;
+    text-transform: uppercase;
+    text-wrap: balance;
+
+    em {
+        color: $redLight;
+        font-style: normal;
+    }
+}
+
+.lead {
+    color: #d6d0c7;
+    font-size: 18px;
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+
+// The title on the left, its button on the right
+.section-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px 30px;
+    margin-bottom: 46px;
+}
+
+
+/*
+ * Sections: 100px above and below, the content at most 1120px wide
+ */
+
+.section {
+    position: relative;
+    isolation: isolate;
+    padding: 100px max(80px, calc((100% - 1120px) / 2));
+    color: $textColor1;
+    text-align: left;
+    background-color: $backgroundColor1;
+}
+
+// After .section, so it wins over its text-align: left
+.centered {
+    text-align: center;
+
+    .kicker {
+        justify-content: center;
+    }
+}
+
+.section-dark {
+    background-color: $black;
+}
+
+.section-white {
+    color: #141210;
+    background-color: #fff;
+
+    .kicker {
+        color: #55524d;
+
+        em {
+            color: $red;
+        }
+    }
+
+    .heading em {
+        color: $red;
+    }
+
+    .lead {
+        color: #55524d;
+    }
+}
+
+// A big faint kanji behind a section's title
+.backdrop-kanji {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    z-index: -1;
+    color: rgba(224, 57, 63, 0.09);
+    font-family: $fontBrush;
+    font-size: 260px;
+    line-height: 1;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/*
+ * Seals and suns
+ */
+
+// A red hanko with kanji written top to bottom
+.stamp {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: $red;
+    box-shadow: inset 0px 0px 0px 4px $red, inset 0px 0px 0px 6px rgba(255, 255, 255, 0.85), 0px 10px 24px -8px #000;
+    font-family: $fontBrush;
+    font-size: 24px;
+    line-height: 1;
+    writing-mode: vertical-rl;
+    transform: rotate(7deg);
+}
+
+// The red sun of the logo
+.sun-disc {
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, $redLight, $red 55%, $redDark);
+}
+
+
+/*
+ * Not found
+ */
+
+.final-call {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 140px 24px 100px;
+    overflow: hidden;
+    color: $textColor1;
+    background-color: $black;
+
+    &::before {
+        @include white-dots(60%);
+    }
+
+    // The logo's sun, rising behind the text
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        right: -120px;
+        bottom: -160px;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, $redLight, $red 55%, $redDark);
+        opacity: 0.85;
+    }
+
+    .final-call-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        max-width: 760px;
+    }
+
+    .heading {
+        margin: 0px;
+        font-size: clamp(46px, 8vw, 92px);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .section {
+        padding: 80px 24px;
+    }
+
+    .backdrop-kanji {
+        font-size: 160px;
+    }
+}
+
+// Too narrow for one row: without the pill, the links wrap below the button
+@media (max-width: 560px) {
+    .cta-bar {
+        border: none;
+        background: none;
+        backdrop-filter: none;
+
+        .cta {
+            margin: 0px 4px 0px 0px;
+        }
+
+        a:not(.cta) {
+            padding: 0px 14px;
+        }
+    }
 }

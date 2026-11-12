@@ -1,69 +1,48 @@
+import { facts } from '../data/facts'
+import lunchPhoto from '../images/menus/allyoucaneat2.webp'
+import dinnerPhoto from '../images/menus/allyoucaneat1.webp'
+import takeawayPhoto from '../images/menus/takeAway.webp'
+
+const pdfFolder = `${process.env.PUBLIC_URL}/menu-pdfs`
+
+// backdropKanji: written down the card's right side; orderPage: a second button to order it online
 const menus = {
     day: {
-        name: {
-            es: 'Menú Mediodía',
-            cat: ''
-        },
-        description: {
-            es: 'Nuestros menús del mediodía',
-            cat: ''
-        },
-        time: {
-            es: '12:30 - 16:00',
-            cat: ''
-        },
-        price: '15,90€',
-        button: {
-            es: 'Ver Carta',
-            cat: ''
-        },
-        pdf: './pdfs/CartaDia2024_compressed.pdf'
+        name: { es: 'Menú Mediodía', ca: 'Menú Migdia', en: 'Lunch Menu' },
+        description: { es: 'Nuestros menús del mediodía', ca: 'Els nostres menús del migdia', en: 'Our lunchtime menus' },
+        time: { es: facts.lunchMenuHours },
+        price: facts.lunchMenuPrice,
+        backdropKanji: '昼食',
+        photo: lunchPhoto,
+        pdf: `${pdfFolder}/CartaDia2024_compressed.pdf`,
     },
     night: {
-        name: {
-            es: 'Menú Noche',
-            cat: ''
+        name: { es: 'Menú Noche', ca: 'Menú Vespre', en: 'Dinner Menu' },
+        description: { es: 'Nuestros menús nocturnos', ca: 'Els nostres menús del vespre', en: 'Our evening menus' },
+        time: { es: facts.dinnerMenuHours },
+        price: facts.dinnerMenuPrice,
+        note: {
+            es: `Viernes y festivos + ${facts.dinnerMenuExtra}`,
+            ca: `Divendres i festius + ${facts.dinnerMenuExtra}`,
+            en: `Fridays and holidays + ${facts.dinnerMenuExtra}`,
         },
-        description: {
-            es: 'Nuestros menús nocturnos',
-            cat: ''
-        },
-        time: {
-            es: '20:00 - 23:00',
-            cat: ''
-        },
-        price: '21,90€',
-        price2: '- viernes y  festivos + 1€ -',
-        button: {
-            es: 'Ver Carta',
-            cat: ''
-        },
-        pdf: './pdfs/CartaNoche2024_compressed.pdf'
-    },
-    festive: {
-        name: {
-            es: 'Menú Festivos',
-            cat: ''
-        },
-        description: {
-            es: 'Nuestro menú nocturno pero con un precio adicional de 1€, viernes cuenta como festivo',
-            cat: ''
-        }
+        backdropKanji: '夕食',
+        photo: dinnerPhoto,
+        pdf: `${pdfFolder}/CartaNoche2024_compressed.pdf`,
     },
     pedidos: {
-        name: {
-            es: 'Carta Pedidos',
-            cat: ''
-        },
+        name: { es: 'Carta Pedidos', ca: 'Carta Comandes', en: 'Takeaway Menu' },
         description: {
             es: 'Nuestros platos disponibles para poder ser llevados a tu casa o al sitio que prefieras',
-            cat: ''
+            ca: 'Els nostres plats disponibles per poder ser portats a casa teva o al lloc que prefereixis',
+            en: 'Our dishes available to be taken to your home or wherever you prefer',
         },
-        button: {
-            es: 'Ver Carta',
-            cat: ''
-        },
-        pdf: './pdfs/CartaLlevar2024_compressed.pdf'
-    }
+        time: { es: 'Para llevar', ca: 'Per emportar', en: 'Takeaway' },
+        backdropKanji: '外卖',
+        photo: takeawayPhoto,
+        pdf: `${pdfFolder}/CartaLlevar2024_compressed.pdf`,
+        orderPage: '/pedidos',
+    },
 }
+
 export default menus

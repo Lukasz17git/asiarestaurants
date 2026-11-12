@@ -1,45 +1,46 @@
+import uramakiPhoto from '../images/home/_uramaki.webp'
+import goldenPhoto from '../images/home/_golden.webp'
+import pokePhoto from '../images/home/_poke.webp'
+import sambaPhoto from '../images/home/_samba.webp'
+
+// The home's most popular dishes
 const examples = [
     {
         name: 'Uramaki Asia',
-        photo: '_uramaki',
+        photo: uramakiPhoto,
         description: {
             es: 'Rollo de sushi con salmón cocido, aguacate, philadelphia y salmón picante.',
-            cat: '',
-            en: '',
-            it: 'Involtino di sushi con salmone cotto, avocado, philadelphia e salmone piccante.'
-        }
+            ca: 'Rotlle de sushi amb salmó cuit, alvocat, philadelphia i salmó picant.',
+            en: 'Sushi roll with cooked salmon, avocado, philadelphia and spicy salmon.',
+        },
     },
     {
         name: 'Golden Lobster Roll',
-        photo: '_golden',
+        photo: goldenPhoto,
         description: {
             es: 'Uramaki Especial con langosta a temperatura ambiente, aguacate, trufa y hojas de oro comestibles.',
-            cat: '',
-            en: '',
-            it: 'Uramaki Speciale con astice in tempura, avocado, tartufo e foglie d’oro commestibile.'
-        }
+            ca: 'Uramaki Especial amb llagosta a temperatura ambient, alvocat, tòfona i fulles d’or comestibles.',
+            en: 'Special Uramaki with lobster at room temperature, avocado, truffle and edible gold leaf.',
+        },
     },
     {
         name: 'Poke Bowls Vegeta',
-        photo: '_poke',
+        photo: pokePhoto,
         description: {
             es: 'Edamame, Aguacate, Zanahorias, Mango y Pepinos.',
-            cat: '',
-            en: '',
-            it: 'Edamame, Avocado, Carote, Mango e Cetrioli.'
-        }
+            ca: 'Edamame, Alvocat, Pastanagues, Mango i Cogombres.',
+            en: 'Edamame, Avocado, Carrots, Mango and Cucumbers.',
+        },
     },
     {
         name: 'Samba',
-        photo: '_samba',
+        photo: sambaPhoto,
         description: {
             es: 'Gunkan especial coronado con salmón, lima y alcohol flambeado.',
-            cat: '',
-            en: '',
-            it: 'Gunkan speciale ricoperto di salmone, lime e alcool flambé.'
-        }
+            ca: 'Gunkan especial coronat amb salmó, llima i alcohol flamejat.',
+            en: 'Special gunkan topped with salmon, lime and flambéed alcohol.',
+        },
     },
-
 ]
 
 export default examples
