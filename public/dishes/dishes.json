@@ -725,7 +725,7 @@
                "zh": "鮭魚飯糰內有鮭魚"
             },
             "priceInCents": 400,
-            "photo": null,
+            "photo": "onigiri",
             "isVegan": false,
             "isSpicy": false
          },
@@ -746,7 +746,7 @@
                "zh": "鮪魚飯糰內有鮪魚"
             },
             "priceInCents": 500,
-            "photo": null,
+            "photo": "onigiri",
             "isVegan": false,
             "isSpicy": false
          },
@@ -767,7 +767,7 @@
                "zh": "內有熟鮭魚和照燒醬的米飯糰"
             },
             "priceInCents": 450,
-            "photo": null,
+            "photo": "onigiri",
             "isVegan": false,
             "isSpicy": false
          },
@@ -788,7 +788,7 @@
                "zh": "內有熟鮪魚和照燒醬的米飯糰"
             },
             "priceInCents": 450,
-            "photo": null,
+            "photo": "onigiri",
             "isVegan": false,
             "isSpicy": false
          },
@@ -809,7 +809,7 @@
                "zh": "內有各式蔬菜的米飯糰"
             },
             "priceInCents": 400,
-            "photo": null,
+            "photo": "onigiri",
             "isVegan": false,
             "isSpicy": false
          }
@@ -2310,7 +2310,7 @@
                "es": "Gamba frita, vuelta salmón flameado, queso y pistacho"
             },
             "priceInCents": 1200,
-            "photo": null,
+            "photo": "uramaki-special-burn",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2387,7 +2387,7 @@
                "es": "Gamba frita, vuelta aguacate y cebolla"
             },
             "priceInCents": 1100,
-            "photo": null,
+            "photo": "uramaki-dragon",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2533,7 +2533,7 @@
                "es": "Atún cocido, queso y pistacho"
             },
             "priceInCents": 800,
-            "photo": null,
+            "photo": "uramaki-tuna-philadelphia",
             "isVegan": false,
             "isSpicy": false
          },
@@ -3654,7 +3654,7 @@
                "es": "Tallarines de harina con verdura y pollo"
             },
             "priceInCents": 600,
-            "photo": null,
+            "photo": "yaki-soba",
             "isVegan": false,
             "isSpicy": false
          },
