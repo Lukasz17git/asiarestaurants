@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Only reached by its link: nothing links here and Google doesn't list it -->
     <meta name="robots" content="noindex, nofollow">
-    <title>Fotos que faltan · Asia Oriental Taste</title>
+    <title>Fotos mejoradas para Glovo · Asia Oriental Taste</title>
     <link rel="icon" href="/LogoRedIcon.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,7 +98,7 @@
 <main>
     <header>
         <img src="/LogoRedIcon.webp" alt="">
-        <h1>Fotos que faltan</h1>
+        <h1>Fotos mejoradas para Glovo</h1>
     </header>
     <p class="intro">
         Fotos de los platos sacadas de la carta, para ponerlas en Glovo. Cada una se descarga con el número y el
@@ -108,7 +108,7 @@
     <div class="grid"></div>
 </main>
 <script>
-    // [number, name, photo]: photo is the file name in /dishes/photos-for-web (.webp) and photos-for-pdf-menu (.png)
+    // [number, name, photo]: photo is the file name in /dishes/photos-for-web (.webp) and photos-for-download (.png)
     const dishes = [
         [4, 'Guo Tie', 'guo-tie'],
         [43, 'Onigiri de salmón', 'onigiri'],
@@ -153,7 +153,7 @@
     const toConfirm = [129, 134, 144]
 
     const getFileName = (number, name) => `${number}. ${name}.png`
-    const getPngUrl = (photo) => `/dishes/photos-for-pdf-menu/${photo}.png`
+    const getPngUrl = (photo) => `/dishes/photos-for-download/${photo}.png`
 
     const grid = document.querySelector('.grid')
     grid.innerHTML = dishes.map(([number, name, photo]) => `
@@ -211,7 +211,7 @@
                 zip.file(getFileName(number, name), await response.blob())
                 downloadAllButton.textContent = `Preparando… ${++done}/${dishes.length}`
             }))
-            saveBlob(await zip.generateAsync({ type: 'blob' }), 'fotos-que-faltan.zip')
+            saveBlob(await zip.generateAsync({ type: 'blob' }), 'fotos-mejoradas-glovo.zip')
         } catch {
             alert('No se ha podido crear el .zip. Prueba otra vez o descarga las fotos una a una.')
         } finally {
