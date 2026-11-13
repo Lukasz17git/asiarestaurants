@@ -28,5 +28,6 @@ sale igual. Un plato usa el mismo nombre en las dos: `"photo": "ravioli-carne"` 
   (`scripts/copy-dishes-to-src.js`).
 - Carta en PDF: abrir el menu maker, cambiarla, pulsar «Guardar JSON» y dejar el archivo en `pdf-menu-saved/`.
   Los precios de estas cartas son independientes de los de `dishes.json`: hay que cambiarlos en los dos sitios.
-- Foto nueva: guardar la original en PNG en `photos-original/`, y una copia en WebP de 600 px y calidad 85 en
-  `photos-compressed/`, las dos con el mismo nombre; poner ese nombre, sin extensión, en `photo`.
+- Foto nueva: guardar la original en PNG en `photos-original/` y ejecutar `optimize-images` en el repo (comando de
+  pc-scripts): crea en `photos-compressed/` su WebP de 600 px y calidad 85, con el mismo nombre. Poner ese nombre,
+  sin extensión, en `photo`.
