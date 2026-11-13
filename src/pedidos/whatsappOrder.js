@@ -1,9 +1,11 @@
-import { facts, formatPrice } from '../data/facts'
+import { vilafrancaZone } from './deliveryRules'
+import { facts, formatPrice, formatShortPrice } from '../data/facts'
 
+// WhatsApp shows ~2,50 €~ crossed out
 const getMessageFeeText = (type, quote) => {
-    if (quote.status === 'unknownZone') return 'a consultar'
     if (quote.deliveryFeeInCents) return formatPrice(quote.deliveryFeeInCents)
-    return type === 'pickup' ? formatPrice(0) : 'GRATIS'
+    if (type === 'pickup') return formatPrice(0)
+    return `~${formatPrice(vilafrancaZone.deliveryFeeInCents)}~ GRATIS (envío gratuito a Vilafranca desde ${formatShortPrice(vilafrancaZone.freeDeliveryFromInCents)})`
 }
 
 // Always in Spanish, for the restaurant, in the format they asked for
@@ -13,9 +15,6 @@ export const createOrderMessage = ({ cartItems, customer, type, quote, subtotalI
         : ['Tipo: Entrega a domicilio', `Dirección: ${customer.address.trim()}`, `Código postal: ${customer.postalCode}`]
     const dishLines = cartItems.map(({ dish, quantity }) =>
         `- ${quantity} x ${dish.number}. ${dish.name.es} (${formatPrice(dish.priceInCents)}) = ${formatPrice(dish.priceInCents * quantity)}`)
-    const totalLine = quote.status === 'unknownZone'
-        ? `TOTAL (sin envío): ${formatPrice(subtotalInCents)}`
-        : `TOTAL: ${formatPrice(quote.totalInCents)}`
     const notes = customer.notes.trim()
 
     return [
@@ -30,7 +29,7 @@ export const createOrderMessage = ({ cartItems, customer, type, quote, subtotalI
         '',
         `Subtotal: ${formatPrice(subtotalInCents)}`,
         `Gastos de envío: ${getMessageFeeText(type, quote)}`,
-        totalLine,
+        `TOTAL: ${formatPrice(quote.totalInCents)}`,
         '',
         ...(notes ? [`Observaciones: ${notes}`, ''] : []),
         'Por favor, confirmad el pedido, el tiempo de entrega y cómo realizar el pago. Gracias.',

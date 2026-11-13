@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { QuantityControl } from './DishCard'
-import { getDeliveryQuote } from './deliveryRules'
+import { getDeliveryQuote, outsideVilafrancaZone, vilafrancaZone } from './deliveryRules'
 import { createOrderMessage, createWhatsappUrl } from './whatsappOrder'
 import { t } from '../language'
-import { facts, formatPrice } from '../data/facts'
+import { facts, formatPrice, formatShortPrice } from '../data/facts'
 import { ErrorAlert, FormField, NameAndPhoneFields, getNameAndPhoneErrors, keepFailedFields } from '../sections/contactForm'
 
 const Field = (props) => <FormField className='pedidos-field' {...props} />
@@ -17,26 +17,29 @@ const getErrors = ({ cartItems, customer, type, quote }) => {
         postalCode: (quote.status === 'missingPostalCode' && t({ es: 'Escribe tu código postal.', ca: 'Escriu el teu codi postal.', en: 'Enter your postcode.' })) || (quote.status === 'invalidPostalCode' && t({ es: 'El código postal tiene 5 números.', ca: 'El codi postal té 5 números.', en: 'The postcode has 5 digits.' })),
         minimum: quote.status === 'belowMinimum'
             && t(
-                { es: `El pedido mínimo para el ${customer.postalCode} es de ${formatPrice(quote.minimumOrderInCents)}: te faltan ${formatPrice(quote.missingForMinimumInCents)}.`, ca: `La comanda mínima per al ${customer.postalCode} és de ${formatPrice(quote.minimumOrderInCents)}: et falten ${formatPrice(quote.missingForMinimumInCents)}.`, en: `The minimum order for ${customer.postalCode} is ${formatPrice(quote.minimumOrderInCents)}: you are ${formatPrice(quote.missingForMinimumInCents)} short.` }
+                { es: `Te faltan ${formatPrice(quote.missingForMinimumInCents)} para el mínimo de ${formatShortPrice(quote.minimumOrderInCents)}.`, ca: `Et falten ${formatPrice(quote.missingForMinimumInCents)} per al mínim de ${formatShortPrice(quote.minimumOrderInCents)}.`, en: `Add ${formatPrice(quote.missingForMinimumInCents)} to reach the ${formatShortPrice(quote.minimumOrderInCents)} minimum.` }
             ),
     }
     return keepFailedFields(errors)
 }
 
-const getDeliveryInfo = (type, quote, postalCode) => {
+const vilafrancaFreeFromText = formatShortPrice(vilafrancaZone.freeDeliveryFromInCents)
+const outsideMinimumText = formatShortPrice(outsideVilafrancaZone.minimumOrderInCents)
+
+// Only for Vilafranca; both rates are on the "Entrega a domicilio" button
+const getDeliveryInfo = (type, quote) => {
     if (type === 'pickup') return t({ es: `Recoges el pedido en ${facts.address}. Sin gastos de envío ni pedido mínimo.`, ca: `Reculls la comanda a ${facts.address}. Sense despeses d'enviament ni comanda mínima.`, en: `You pick up the order at ${facts.address}. No delivery fee and no minimum order.` })
-    if (quote.status === 'unknownZone') return t(
-        { es: `Todavía no tenemos tarifa para el ${postalCode}: el restaurante te dirá por WhatsApp si llega y cuánto cuesta el envío.`, ca: `Encara no tenim tarifa per al ${postalCode}: el restaurant et dirà per WhatsApp si hi arriba i quant costa l'enviament.`, en: `We don't have a rate for ${postalCode} yet: the restaurant will tell you by WhatsApp if we deliver there and how much it costs.` }
-    )
-    if (quote.missingForFreeDeliveryInCents > 0) return t({ es: `Añade ${formatPrice(quote.missingForFreeDeliveryInCents)} más y el envío es gratis.`, ca: `Afegeix ${formatPrice(quote.missingForFreeDeliveryInCents)} més i l'enviament és gratis.`, en: `Add ${formatPrice(quote.missingForFreeDeliveryInCents)} more and delivery is free.` })
-    return ''
+    if (!quote.isVilafranca) return ''
+    if (quote.missingForFreeDeliveryInCents > 0) return t({ es: `Añade ${formatPrice(quote.missingForFreeDeliveryInCents)} más y el envío a Vilafranca es gratis.`, ca: `Afegeix ${formatPrice(quote.missingForFreeDeliveryInCents)} més i l'enviament a Vilafranca és gratis.`, en: `Add ${formatPrice(quote.missingForFreeDeliveryInCents)} more and delivery to Vilafranca is free.` })
+    return t({ es: `¡Envío gratis! Tu pedido a Vilafranca es de ${vilafrancaFreeFromText} o más.`, ca: `Enviament gratis! La teva comanda a Vilafranca és de ${vilafrancaFreeFromText} o més.`, en: `Free delivery! Your order to Vilafranca is ${vilafrancaFreeFromText} or more.` })
 }
 
 const getDeliveryFeeText = (type, quote) => {
     if (type === 'pickup') return formatPrice(0)
-    if (quote.status === 'unknownZone') return t({ es: 'A consultar', ca: 'A consultar', en: 'To be confirmed' })
-    if (quote.status !== 'ok') return '—'
-    return quote.deliveryFeeInCents ? formatPrice(quote.deliveryFeeInCents) : t({ es: 'Gratis', ca: 'Gratis', en: 'Free' })
+    // No fee yet while the postal code is missing or wrong
+    if (quote.deliveryFeeInCents === undefined) return '—'
+    if (quote.deliveryFeeInCents) return formatPrice(quote.deliveryFeeInCents)
+    return <span className='pedidos-free'><s>{formatPrice(vilafrancaZone.deliveryFeeInCents)}</s> {t({ es: 'Gratis', ca: 'Gratis', en: 'Free' })}</span>
 }
 
 const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChangeQuantity, onClear, onClose }) => {
@@ -45,17 +48,22 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
 
     const { type } = customer
     const quote = getDeliveryQuote({ type, postalCode: customer.postalCode, subtotalInCents })
+    // On the delivery quote, so the "Entrega a domicilio" button shows it also while pickup is selected
+    const deliveryQuote = getDeliveryQuote({ type: 'delivery', postalCode: customer.postalCode, subtotalInCents })
+    const isFreeDelivery = deliveryQuote.status === 'ok' && !deliveryQuote.deliveryFeeInCents
     const errors = getErrors({ cartItems, customer, type, quote })
     const visibleErrors = showErrors ? errors : {}
-    // The minimum already shows under the form at all times
+    // The minimum already shows above the send button at all times
     const { minimum, ...alertErrors } = visibleErrors
-    const deliveryInfo = getDeliveryInfo(type, quote, customer.postalCode)
+    const deliveryInfo = getDeliveryInfo(type, quote)
 
     const updateField = (field) => (event) => setCustomer({ ...customer, [field]: event.target.value })
     const updatePostalCode = (event) => setCustomer({ ...customer, postalCode: event.target.value.replace(/\D/g, '').slice(0, 5) })
 
+    const hasErrors = Object.keys(errors).length > 0
+
     const sendOrder = () => {
-        if (Object.keys(errors).length) {
+        if (hasErrors) {
             setShowErrors(true)
             return
         }
@@ -102,7 +110,9 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
                     <button type='button' role='radio' aria-checked={type === 'delivery'} className={type === 'delivery' ? 'selected' : ''} onClick={() => setCustomer({ ...customer, type: 'delivery' })}>
                         <span className='pedidos-type-icon delivery' aria-hidden='true' />
                         <strong>{t({ es: 'Entrega a domicilio', ca: 'Lliurament a domicili', en: 'Home delivery' })}</strong>
-                        <small>{t({ es: 'Te confirmamos el precio por WhatsApp', ca: 'Et confirmem el preu per WhatsApp', en: 'We confirm the price by WhatsApp' })}</small>
+                        {isFreeDelivery
+                            ? <small className='pedidos-free'>{t({ es: 'Tu pedido tiene envío gratis', ca: 'La teva comanda té enviament gratis', en: 'Your order has free delivery' })}</small>
+                            : <small>{t({ es: <>Gratis en Vilafranca<br />desde {vilafrancaFreeFromText}<br />Fuera: mínimo {outsideMinimumText}</>, ca: <>Gratis a Vilafranca<br />des de {vilafrancaFreeFromText}<br />Fora: mínim {outsideMinimumText}</>, en: <>Free in Vilafranca<br />from {vilafrancaFreeFromText}<br />Outside: min. {outsideMinimumText}</> })}</small>}
                     </button>
                     <button type='button' role='radio' aria-checked={type === 'pickup'} className={type === 'pickup' ? 'selected' : ''} onClick={() => setCustomer({ ...customer, type: 'pickup' })}>
                         <span className='pedidos-type-icon pickup' aria-hidden='true' />
@@ -122,8 +132,7 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
                     )}
                     <Field label={t({ es: 'Observaciones (opcional)', ca: 'Observacions (opcional)', en: 'Notes (optional)' })} value={customer.notes} onChange={updateField('notes')} isTextarea placeholder={t({ es: 'Alergias, sin picante, timbre...', ca: 'Al·lèrgies, sense picant, timbre...', en: 'Allergies, not spicy, doorbell...' })} />
                 </div>
-                {deliveryInfo && <p className='pedidos-note'>{deliveryInfo}</p>}
-                {quote.status === 'belowMinimum' && <p className='pedidos-warning'>{errors.minimum}</p>}
+                {deliveryInfo && <p className={type === 'delivery' && isFreeDelivery ? 'pedidos-note free' : 'pedidos-note'}>{deliveryInfo}</p>}
             </div>
 
             <div className='pedidos-sheet-footer'>
@@ -131,12 +140,13 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
                     <div><dt>Subtotal</dt><dd>{formatPrice(subtotalInCents)}</dd></div>
                     <div><dt>{t({ es: 'Gastos de envío', ca: "Despeses d'enviament", en: 'Delivery fee' })}</dt><dd>{getDeliveryFeeText(type, quote)}</dd></div>
                     <div className='pedidos-total'>
-                        <dt>{quote.status === 'unknownZone' ? t({ es: 'Total sin envío', ca: 'Total sense enviament', en: 'Total without delivery' }) : 'Total'}</dt>
+                        <dt>Total</dt>
                         <dd>{formatPrice(quote.totalInCents ?? subtotalInCents)}</dd>
                     </div>
                 </dl>
+                {errors.minimum && <p className='pedidos-warning'>{errors.minimum}</p>}
                 <ErrorAlert className='pedidos-warning' title={t({ es: 'Para enviar el pedido:', ca: 'Per enviar la comanda:', en: 'To send the order:' })} errors={alertErrors} />
-                <button type='button' className='pedidos-whatsapp' onClick={sendOrder}>
+                <button type='button' className='pedidos-whatsapp' aria-disabled={hasErrors} onClick={sendOrder}>
                     <span className='pedidos-whatsapp-icon' aria-hidden='true' />
                     {t({ es: 'Enviar pedido por WhatsApp', ca: 'Enviar la comanda per WhatsApp', en: 'Send order by WhatsApp' })}
                 </button>

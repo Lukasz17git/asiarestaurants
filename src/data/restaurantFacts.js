@@ -9,10 +9,10 @@ const { phone, street, postalCode, city, openingHours, lunchMenu, dinnerMenu } =
 const formatPrice = (priceInCents) => `${Math.floor(priceInCents / 100)},${String(priceInCents % 100).padStart(2, '0')} €`
 
 // '15,90 €' with a non-breaking space, so a price inside a text never ends up on two lines
-const formatFactPrice = (priceInCents) => formatPrice(priceInCents).replace(' ', ' ')
+const formatFactPrice = (priceInCents) => formatPrice(priceInCents).replace(' ', ' ')
 
-// 100 -> '1 €'; 150 -> '1,50 €'
-const formatShortPrice = (priceInCents) => (priceInCents % 100 ? formatFactPrice(priceInCents) : `${priceInCents / 100} €`)
+// 100 -> '1 €'; 150 -> '1,50 €'; also with a non-breaking space
+const formatShortPrice = (priceInCents) => (priceInCents % 100 ? formatFactPrice(priceInCents) : `${priceInCents / 100} €`)
 
 // '+34 656 181 427' -> '34656181427'
 const phoneDigits = phone.replace(/\D/g, '')
@@ -148,4 +148,4 @@ const fillFacts = (texts, language) => {
     })
 }
 
-module.exports = { restaurant, formatPrice, getFacts, fillFacts }
+module.exports = { restaurant, formatPrice, formatShortPrice, getFacts, fillFacts }

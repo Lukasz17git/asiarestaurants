@@ -703,6 +703,10 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
             color: $textColor4;
             font-size: 11px;
             line-height: 1.3;
+
+            &.pedidos-free {
+                color: #a6eac0;
+            }
         }
 
         &.selected {
@@ -785,9 +789,20 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     background-color: rgba(201, 171, 129, 0.1);
     color: $lineColor2;
 
-    &.sent {
+    &.sent,
+    &.free {
         background-color: rgba(37, 211, 102, 0.12);
         color: #a6eac0;
+    }
+}
+
+.pedidos-free {
+    color: #a6eac0;
+    font-weight: 700;
+
+    s {
+        color: $textColor3;
+        font-weight: 400;
     }
 }
 
@@ -854,6 +869,14 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 
     &:hover {
         background-color: $whatsappLight;
+    }
+
+    // Still clickable, so a tap lists what is missing
+    &[aria-disabled='true'] {
+        background-color: $field;
+        color: $textColor4;
+        box-shadow: none;
+        cursor: not-allowed;
     }
 }
 
