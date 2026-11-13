@@ -1,64 +1,51 @@
 ================================================================================
-  ASIA RESTAURANTS - por hacer
+  POR HACER · Asia Restaurants
 ================================================================================
 
-  Primero lo del cliente: varias decisiones dependen de lo que conteste.
-  [ ] = por hacer. Cambiar a [x] al terminarlo.
+Primero lo del cliente: varias decisiones dependen de lo que conteste.
+[ ] = por hacer. Cambiar a [x] al terminarlo.
 
---------------------------------------------------------------------------------
-  CLIENTE
---------------------------------------------------------------------------------
+1. MANDAR LAS FOTOS PARA GLOVO                                           CLIENTE
+────────────────────────────────────────────────────────────────────────────────
+   Página con las fotos de 37 platos, con su número y nombre, sueltas o en .zip:
+   https://asiarestaurants.es/fotos-mejoradas-glovo
+   [ ] Mandar el enlace al cliente por WhatsApp
+   [ ] Revisar en Glovo que cada foto está en su plato
 
-  - Mandar las fotos para Glovo                     Página con las fotos de 37 platos, con su número
-                                                    y nombre, sueltas o en .zip:
-                                                    https://asiarestaurants.es/fotos-mejoradas-glovo
-                                                    [ ] Mandar el enlace al cliente por WhatsApp
-                                                    [ ] Revisar en Glovo que cada foto está en su
-                                                        plato
+2. CONFIRMAR 3 FOTOS DE URAMAKIS                                         CLIENTE
+────────────────────────────────────────────────────────────────────────────────
+   129 Especial Burn, 134 Dragón y 144 de atún Philadelphia: la foto sale del
+   uramaki de la carta PDF con ese nombre.
+   [ ] Preguntar al cliente si son esos platos
+   [ ] Si alguno no: "photo": null en dishes.json y quitarlo de la página
+   [ ] Con los 3 confirmados: quitar toConfirm de la página
 
-  - Confirmar 3 fotos de uramakis                   129 Especial Burn, 134 Dragón y 144 de atún
-                                                    Philadelphia: la foto sale del uramaki de la
-                                                    carta PDF con ese nombre.
-                                                    [ ] Preguntar al cliente si son esos platos
-                                                    [ ] Si alguno no: "photo": null en dishes.json y
-                                                        quitarlo de la página
-                                                    [ ] Con los 3 confirmados: quitar toConfirm de
-                                                        la página
+3. POSTRES Y BEBIDAS DE GLOVO                                            CLIENTE
+────────────────────────────────────────────────────────────────────────────────
+   Glovo tiene "Bebidas postre" (tartas, mochis, cervezas, refrescos) y la web
+   no.
+   [ ] Preguntar al cliente si los quiere en "Pedir online"
+   [ ] Si sí: añadirlos a dishes.json con los nombres y precios de Glovo
 
-  - Postres y bebidas de Glovo                      Glovo tiene "Bebidas postre" (tartas, mochis,
-                                                    cervezas, refrescos) y la web no.
-                                                    [ ] Preguntar al cliente si los quiere en "Pedir
-                                                        online"
-                                                    [ ] Si sí: añadirlos a dishes.json con los
-                                                        nombres y precios de Glovo
+4. 4 PLATOS QUE GLOVO NO TIENE                                           CLIENTE
+────────────────────────────────────────────────────────────────────────────────
+   37 Ensalada mixta, 38 Daikon, 39 Ensalada mixta de mariscos y 248 Pasión
+   crujiente. Siguen en la web porque están en la carta PDF.
+   [ ] Preguntar al cliente si se siguen sirviendo
+   [ ] Si no: quitarlos de dishes.json y de la carta PDF
 
-  - 4 platos que Glovo no tiene                     37 Ensalada mixta, 38 Daikon, 39 Ensalada mixta
-                                                    de mariscos y 248 Pasión crujiente. Siguen en la
-                                                    web porque están en la carta PDF.
-                                                    [ ] Preguntar al cliente si se siguen sirviendo
-                                                    [ ] Si no: quitarlos de dishes.json y de la
-                                                        carta PDF
+5. NOMBRE DEL QUESO                                                          WEB
+────────────────────────────────────────────────────────────────────────────────
+   Las descripciones lo llaman de 4 formas: Philadelphia (16 platos), queso
+   crema Philadelphia (4), queso crema (4) y queso (7).
+   [ ] Elegir una, o dejarlo como en Glovo
+   [ ] Cambiar las demás en description.es de dishes.json
 
---------------------------------------------------------------------------------
-  WEB
---------------------------------------------------------------------------------
-
-  - Nombre del queso                                Las descripciones lo llaman de 4 formas:
-                                                    Philadelphia (16 platos), queso crema
-                                                    Philadelphia (4), queso crema (4) y queso (7).
-                                                    [ ] Elegir una, o dejarlo como en Glovo
-                                                    [ ] Cambiar las demás en description.es de
-                                                        dishes.json
-
---------------------------------------------------------------------------------
-  CARTA PDF
---------------------------------------------------------------------------------
-
-  - Descripciones de 4 uramakis                     Solo si se reimprime. En las cartas guardadas,
-                                                    128, 129, 134 y 148 tienen aún el texto de antes
-                                                    de Glovo.
-                                                    [ ] Copiar el de dishes.json en el menu maker
-                                                        (carta-menu-restaurante.vercel.app), en las
-                                                        dos cartas
-                                                    [ ] Pulsar "Guardar JSON" y dejar los dos
-                                                        archivos en public/dishes/pdf-menu-saved/
+6. DESCRIPCIONES DE 4 URAMAKIS                                         CARTA PDF
+────────────────────────────────────────────────────────────────────────────────
+   Solo si se reimprime. En las cartas guardadas, 128, 129, 134 y 148 tienen aún
+   el texto de antes de Glovo.
+   [ ] Copiar el de dishes.json en el menu maker
+       (carta-menu-restaurante.vercel.app), en las dos cartas
+   [ ] Pulsar "Guardar JSON" y dejar los dos archivos en
+       public/dishes/pdf-menu-saved/
