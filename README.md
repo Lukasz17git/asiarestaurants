@@ -16,6 +16,7 @@ Reggio Emilia, Ravenna and Correggio), in Spanish (`/`), Catalan (`/ca`) and Eng
 | Instagram, Facebook | <https://www.instagram.com/asiavilafranca/>, [Facebook](https://www.facebook.com/profile.php?id=100082102034055) | Linked from the footer |
 | Table QR codes | `/qr` and `/qr-new` | Open the PDF menus; no navbar, out of search results |
 | Photos for Glovo | `/fotos-mejoradas-glovo` ([page](public/fotos-mejoradas-glovo/index.html)) | The client downloads the dishes' photos, original or compressed, named by number and name; only reached by its link, out of search results |
+| Images, fonts and dish photos not in use | [not-used/](not-used/README.md) | Kept to reuse later; not built or published |
 
 ## How to change things
 
