@@ -82,7 +82,7 @@
                "es": "Empanadilla de carne a la plancha"
             },
             "priceInCents": 500,
-            "photo": null,
+            "photo": "guo-tie",
             "isVegan": false,
             "isSpicy": false
          },
@@ -304,7 +304,7 @@
                "it": "Gamberi* e verdure miste",
                "zh": "虾仁*和蔬菜拼盘"
             },
-            "priceInCents": 400,
+            "priceInCents": 450,
             "photo": "involtino-vietnamita",
             "isVegan": false,
             "isSpicy": false
@@ -381,7 +381,7 @@
                "it": "ALETTE DI POLLO*",
                "zh": "鸡翅*"
             },
-            "priceInCents": 500,
+            "priceInCents": 600,
             "photo": "alette-di-pollo",
             "isVegan": false,
             "isSpicy": false
@@ -465,7 +465,7 @@
                "it": "Pesce bianco e gambero*",
                "zh": "白鱼和虾*"
             },
-            "priceInCents": 400,
+            "priceInCents": 450,
             "photo": "samurai-stick",
             "isVegan": false,
             "isSpicy": false
@@ -884,7 +884,7 @@
                "it": "Tonno servito con salsa ponzu",
                "zh": "配柚子酱的金枪鱼"
             },
-            "priceInCents": 1000,
+            "priceInCents": 1200,
             "photo": "carpaccio-tonno",
             "isVegan": false,
             "isSpicy": false
@@ -2007,7 +2007,7 @@
          {
             "number": 112,
             "name": {
-               "es": "Crunchy Truffle Tuna",
+               "es": "Dong Crunchy Truffle Tuna",
                "cat": "CRUNCHY TRUFFLE TUNA",
                "en": "CRUNCHY TRUFFLE TUNA",
                "it": "CRUNCHY TRUFFLE TUNA",
@@ -2071,7 +2071,7 @@
                "it": "Con tartare di salmone, philadelphia spicy e teriyaki",
                "zh": "配鮭魚塔塔、辣味奶油芝士和照燒醬"
             },
-            "priceInCents": 500,
+            "priceInCents": 600,
             "photo": "tacos-sake",
             "isVegan": false,
             "isSpicy": true
@@ -2092,7 +2092,7 @@
                "it": "Con tartare di tonno, philadelphia spicy e teriyaki",
                "zh": "配金枪鱼鞑靼、辣味费城奶酪和照烧酱"
             },
-            "priceInCents": 500,
+            "priceInCents": 600,
             "photo": "tacos-tuna",
             "isVegan": false,
             "isSpicy": true
@@ -2120,7 +2120,7 @@
          {
             "number": 117,
             "name": {
-               "es": "Sake Phila",
+               "es": "Uramaki de Philadelphia",
                "cat": "Uramaki de Salmó Philadelphia",
                "en": "Salmon Philadelphia Uramaki",
                "it": "URAMAKI SAKE PHILA",
@@ -2137,7 +2137,7 @@
          {
             "number": 118,
             "name": {
-               "es": "Uramaki Sake",
+               "es": "Uramaki de salmón",
                "cat": "Uramaki de Salmó",
                "en": "Salmon Uramaki",
                "it": "URAMAKI SALMONE",
@@ -2158,27 +2158,27 @@
          {
             "number": 119,
             "name": {
-               "es": "Torre Elfeel"
+               "es": "Uramaki Torre Elefeel"
             },
             "description": {
                "es": "Salmón, aguacate, vuelta pescado blanco y salsa ponzu, lima"
             },
             "priceInCents": 1200,
-            "photo": null,
+            "photo": "uramaki-torre-elefeel",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 120,
             "name": {
-               "es": "Spicy Sake",
+               "es": "Uramaki de salmón picante",
                "cat": "Uramaki de Salmó Picant",
                "en": "Spicy Salmon Uramaki",
                "it": "URAMAKI SPICY SALMONE",
                "zh": "辣鲑鱼裹卷"
             },
             "description": {
-               "es": "Salmón, aguacate, salsa spicy y almendra"
+               "es": "Salmón, aguacate, mayonesa picante y almendra"
             },
             "priceInCents": 900,
             "photo": "uramaki-spicy-salmone",
@@ -2188,13 +2188,13 @@
          {
             "number": 121,
             "name": {
-               "es": "Flambé Roll"
+               "es": "Uramaki Flambé Roll"
             },
             "description": {
                "es": "Salmón, aguacate, tarta de salmón flameado con crema miso y pistacho"
             },
             "priceInCents": 1100,
-            "photo": null,
+            "photo": "uramaki-flambe-roll",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2207,7 +2207,7 @@
                "es": "Salmón, aguacate, vuelta salmón flameado, teriyaki y kataifi"
             },
             "priceInCents": 1000,
-            "photo": null,
+            "photo": "ioyi-salmon",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2217,17 +2217,17 @@
                "es": "Hotate"
             },
             "description": {
-               "es": "Salmón, aguacate, vuelta vieira, trufa negra y teriyaki"
+               "es": "Salmón, aguacate, vuelta de vieira, trufa negra de verano fresca y teriyaki"
             },
             "priceInCents": 1800,
-            "photo": null,
+            "photo": "hotate",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 124,
             "name": {
-               "es": "Miami",
+               "es": "Uramaki Miami",
                "cat": "Uramaki Miami",
                "en": "Miami Uramaki",
                "it": "URAMAKI MIAMI",
@@ -2244,14 +2244,14 @@
          {
             "number": 125,
             "name": {
-               "es": "Mexico",
+               "es": "Uramaki Mexicano",
                "cat": "Uramaki Mexicà",
                "en": "Mexican Uramaki",
                "it": "URAMAKI MEXICAN",
                "zh": "墨西哥裹卷"
             },
             "description": {
-               "es": "Salmón, aguacate con nachos y salsa mexicana"
+               "es": "Salmón, aguacate, mayonesa picante y nachos"
             },
             "priceInCents": 1000,
             "photo": "uramaki-mexican",
@@ -2261,13 +2261,13 @@
          {
             "number": 126,
             "name": {
-               "es": "Asia Roll"
+               "es": "Uramaki Asia Roll"
             },
             "description": {
-               "es": "Salmón cocido, aguacate, queso con tarta de salmón y picante"
+               "es": "Salmón cocido, aguacate, Philadelphia, tartar de salmón crudo, salsa picante y teriyaki"
             },
             "priceInCents": 1100,
-            "photo": null,
+            "photo": "uramaki-asia-roll",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2280,21 +2280,21 @@
                "es": "Salmón cocido, aguacate, vuelta pescado blanco y salsa burrata pistacho"
             },
             "priceInCents": 1100,
-            "photo": null,
+            "photo": "new-future",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 128,
             "name": {
-               "es": "Tiger",
+               "es": "Uramaki Tiger",
                "cat": "Uramaki Tiger",
                "en": "Tiger Uramaki",
                "it": "URAMAKI TIGER",
                "zh": "虎裹卷"
             },
             "description": {
-               "es": "Gamba frita, vuelta salmón y patata dulce"
+               "es": "Gamba en tempura, mayonesa, envuelto en salmón, teriyaki y patata dulce"
             },
             "priceInCents": 1000,
             "photo": "uramaki-tiger",
@@ -2304,10 +2304,10 @@
          {
             "number": 129,
             "name": {
-               "es": "Especial Burn"
+               "es": "Uramaki Especial Burn"
             },
             "description": {
-               "es": "Gamba frita, vuelta salmón flameado, queso y pistacho"
+               "es": "Gamba en tempura, Philadelphia, envuelto en salmón sellado, salsa teriyaki y pistacho"
             },
             "priceInCents": 1200,
             "photo": "uramaki-special-burn",
@@ -2320,10 +2320,10 @@
                "es": "Ebi Flower"
             },
             "description": {
-               "es": "Gamba frita, queso, tarta de salmón con pesto"
+               "es": "Gamba frita, queso, tarta de salmón con pesto y teriyaki"
             },
             "priceInCents": 1200,
-            "photo": null,
+            "photo": "ebi-flower",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2333,24 +2333,24 @@
                "es": "Angel Roll"
             },
             "description": {
-               "es": "Gamba frita, queso, tarta de salmón flameado y patata dulce"
+               "es": "Gamba frita, queso, tarta de salmón flameado, patata dulce y teriyaki"
             },
             "priceInCents": 1200,
-            "photo": null,
+            "photo": "angel-roll",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 132,
             "name": {
-               "es": "Ebiten",
+               "es": "Uramaki Ebiten",
                "cat": "Uramaki Ebiten",
                "en": "Ebiten Uramaki",
                "it": "URAMAKI EBITEN",
                "zh": "海老天裹卷"
             },
             "description": {
-               "es": "Gamba frita, mayonesa y kataifi"
+               "es": "Gamba en tempura, mayonesa, kataifi y teriyaki"
             },
             "priceInCents": 800,
             "photo": "uramaki-ebiten",
@@ -2360,14 +2360,14 @@
          {
             "number": 133,
             "name": {
-               "es": "Ebiten Phila",
+               "es": "Uramaki Ebiten Philadelphia",
                "cat": "Uramaki Ebitan Philadelphia",
                "en": "Ebitan Philadelphia Uramaki",
                "it": "URAMAKI EBITAN PHILA",
                "zh": "海老天费城裹卷"
             },
             "description": {
-               "es": "Gamba frita, queso y cebolla frita"
+               "es": "Gamba en tempura, cebolla frita, Philadelphia y teriyaki"
             },
             "priceInCents": 900,
             "photo": "uramaki-ebiten-philadelphia",
@@ -2377,14 +2377,14 @@
          {
             "number": 134,
             "name": {
-               "es": "Dragon",
+               "es": "Uramaki Dragón",
                "cat": "Uramaki Drac",
                "en": "Dragon Uramaki",
                "it": "URAMAKI DRAGON",
                "zh": "龙裹卷"
             },
             "description": {
-               "es": "Gamba frita, vuelta aguacate y cebolla"
+               "es": "Gamba en tempura, mayonesa, envuelto en aguacate, teriyaki y cebolla"
             },
             "priceInCents": 1100,
             "photo": "uramaki-dragon",
@@ -2394,14 +2394,14 @@
          {
             "number": 135,
             "name": {
-               "es": "Vintage",
+               "es": "Uramaki Vintage",
                "cat": "Uramaki Vintage",
                "en": "Vintage Uramaki",
                "it": "URAMAKI VINTAGE",
                "zh": "复古卷"
             },
             "description": {
-               "es": "Gamba frita, gamba roja, burrata y pistacho"
+               "es": "Gamba en tempura con gamba roja cruda por fuera, salsa teriyaki, pistacho y burrata"
             },
             "priceInCents": 1500,
             "photo": "uramaki-vintage",
@@ -2411,14 +2411,14 @@
          {
             "number": 136,
             "name": {
-               "es": "Truffle Tuna",
+               "es": "Uramaki de atún trufado",
                "cat": "Uramaki de Tonyina amb Tòfona",
                "en": "Truffle Tuna Uramaki",
                "it": "URAMAKI TRUFFLE TUNA",
                "zh": "松露金枪鱼卷"
             },
             "description": {
-               "es": "Gamba frita, tarta de atún flameado con burrata y trufa"
+               "es": "Gamba en tempura con atún crudo por fuera, salsa de trufa teriyaki y burrata"
             },
             "priceInCents": 1500,
             "photo": "uramaki-7",
@@ -2434,21 +2434,21 @@
                "es": "Gamba frita, tarta de salmón flameado, spicy y cebolla frita"
             },
             "priceInCents": 1300,
-            "photo": null,
+            "photo": "sweet-hot",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 138,
             "name": {
-               "es": "Lobster Roll",
+               "es": "Uramaki de langosta",
                "cat": "Uramaki de Llagosta",
                "en": "Lobster Roll",
                "it": "LOBSTER ROLL",
                "zh": "龙虾卷"
             },
             "description": {
-               "es": "Gamba frita, aguacate, tarta de langosta y teriyaki"
+               "es": "Langostino en tempura, Philadelphia, envuelto en aguacate, salsa teriyaki y tartar de langosta"
             },
             "priceInCents": 1800,
             "photo": "lobster-roll",
@@ -2464,7 +2464,7 @@
                "es": "Gamba frita, aguacate, pescado blanco, burrata y patata dulce"
             },
             "priceInCents": 1300,
-            "photo": null,
+            "photo": "white-tiger",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2477,7 +2477,7 @@
                "es": "Gamba frita, aguacate, vuelta salmón flameado, salsa pistacho"
             },
             "priceInCents": 1200,
-            "photo": null,
+            "photo": "dynamite",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2487,10 +2487,10 @@
                "es": "Burrata Roll"
             },
             "description": {
-               "es": "Gamba frita, aguacate, trufa negra y teriyaki"
+               "es": "Gamba frita, aguacate, trufa negra de verano fresca y teriyaki"
             },
             "priceInCents": 1300,
-            "photo": null,
+            "photo": "burrata-roll",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2500,10 +2500,10 @@
                "es": "Anguila Roll"
             },
             "description": {
-               "es": "Gamba frita, aguacate, queso, anguila"
+               "es": "Aguacate y queso, con vuelta de anguila y teriyaki"
             },
             "priceInCents": 1500,
-            "photo": null,
+            "photo": "anguila-roll",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2516,21 +2516,21 @@
                "es": "Aguacate, queso, tarta de salmón con salsa mango y almendra"
             },
             "priceInCents": 1100,
-            "photo": null,
+            "photo": "samba-roll",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 144,
             "name": {
-               "es": "Tuna Phila",
+               "es": "Uramaki de atún Philadelphia",
                "cat": "Uramaki de Tonyina Philadelphia",
                "en": "Tuna Philadelphia Uramaki",
                "it": "URAMAKI TUNA PHILA",
                "zh": "金枪鱼费城裹卷"
             },
             "description": {
-               "es": "Atún cocido, queso y pistacho"
+               "es": "Atún cocido, aguacate y Philadelphia"
             },
             "priceInCents": 800,
             "photo": "uramaki-tuna-philadelphia",
@@ -2540,7 +2540,7 @@
          {
             "number": 145,
             "name": {
-               "es": "Tuna Roll",
+               "es": "Uramaki de atún",
                "cat": "Uramaki de Tonyina",
                "en": "Tuna Uramaki",
                "it": "URAMAKI TUNA",
@@ -2561,14 +2561,14 @@
          {
             "number": 146,
             "name": {
-               "es": "Spicy Tuna",
+               "es": "Uramaki de atún picante",
                "cat": "Uramaki de Tonyina Picant",
                "en": "Spicy Tuna Uramaki",
                "it": "URAMAKI SPICY TUNA",
                "zh": "辣吞拿鱼裹卷"
             },
             "description": {
-               "es": "Atún, aguacate, spicy y almendra"
+               "es": "Atún, aguacate, mayonesa picante y almendra"
             },
             "priceInCents": 1000,
             "photo": "uramaki-spicy-tuna",
@@ -2578,16 +2578,16 @@
          {
             "number": 147,
             "name": {
-               "es": "Vegano",
+               "es": "Uramaki vegano",
                "cat": "Uramaki Vegà",
                "en": "Vegan Uramaki",
                "it": "URAMAKI VEGAN",
                "zh": "纯素裹卷"
             },
             "description": {
-               "es": "Aguacate, pepino y nabo"
+               "es": "Vegetales variados"
             },
-            "priceInCents": 700,
+            "priceInCents": 800,
             "photo": "uramaki-vegetarian",
             "isVegan": false,
             "isSpicy": false
@@ -2595,14 +2595,14 @@
          {
             "number": 148,
             "name": {
-               "es": "Crispy Vegetal",
+               "es": "Uramaki Crispy Vegetal",
                "cat": "Uramaki d'Espàrrecs Cruixents",
                "en": "Crispy Asparagus Uramaki",
                "it": "URAMAKI CRISPY ASPARAGO",
                "zh": "脆芦笋裹卷"
             },
             "description": {
-               "es": "Espárrago frito, aguacate y salsa sésamo"
+               "es": "Espárragos fritos, pepino, envueltos en aguacate y salsa de sésamo"
             },
             "priceInCents": 1000,
             "photo": "uramaki-crispy-asparago",
@@ -2612,14 +2612,14 @@
          {
             "number": 149,
             "name": {
-               "es": "Beef Roll",
+               "es": "Roll de carne",
                "cat": "Roll de carn",
                "en": "Beef Roll",
                "it": "BEEF ROLL",
                "zh": "牛肉卷"
             },
             "description": {
-               "es": "Espárrago frito, pepino, tarta de ternera con burrata"
+               "es": "Espárragos fritos, pepino, burrata y tartar de ternera"
             },
             "priceInCents": 1500,
             "photo": "uramaki-beef",
@@ -2632,24 +2632,24 @@
                "es": "Crispy Green"
             },
             "description": {
-               "es": "Verdura mixta frita, aguacate con patata dulce"
+               "es": "Verdura mixta frita, aguacate con patata dulce y teriyaki"
             },
             "priceInCents": 1000,
-            "photo": null,
+            "photo": "crispy-green",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 151,
             "name": {
-               "es": "Miura",
+               "es": "Uramaki Miura",
                "cat": "Uramaki Miura",
                "en": "Miura Uramaki",
                "it": "URAMAKI MIURA",
                "zh": "三浦裹卷"
             },
             "description": {
-               "es": "Salmón frito, queso y pistacho"
+               "es": "Salmón frito, Philadelphia, pistacho y teriyaki"
             },
             "priceInCents": 800,
             "photo": "uramaki-miura",
@@ -2659,17 +2659,34 @@
          {
             "number": 152,
             "name": {
-               "es": "Tori",
+               "es": "Uramaki de pollo",
                "cat": "Uramaki de Pollastre",
                "en": "Tori Uramaki",
                "it": "URAMAKI TORI",
                "zh": "鸡肉裹卷"
             },
             "description": {
-               "es": "Pollo frito, aguacate con queso y pistacho"
+               "es": "Pollo frito, aguacate, Philadelphia y teriyaki"
             },
             "priceInCents": 800,
             "photo": "uramaki-tori",
+            "isVegan": false,
+            "isSpicy": false
+         },
+         {
+            "number": 300,
+            "name": {
+               "es": "Uramaki Arcoíris",
+               "cat": "Uramaki Arc de Sant Martí",
+               "en": "Rainbow Uramaki",
+               "it": "URAMAKI ARCOBALENO",
+               "zh": "彩虹卷"
+            },
+            "description": {
+               "es": "Surimi, aguacate, mayonesa y pescado variado envuelto"
+            },
+            "priceInCents": 1000,
+            "photo": "uramaki-arcoiris",
             "isVegan": false,
             "isSpicy": false
          }
@@ -2880,7 +2897,7 @@
          {
             "number": 161,
             "name": {
-               "es": "Nigiri de salmón flambeado",
+               "es": "Nigiri de salmón flameado",
                "cat": "Nigiri de salmó flambat",
                "en": "Flambéed Salmon Nigiri",
                "it": "NIGIRI SAKE FLAMBE",
@@ -2942,8 +2959,8 @@
             "description": {
                "es": "Con trufa"
             },
-            "priceInCents": 450,
-            "photo": null,
+            "priceInCents": 400,
+            "photo": "nigiri-de-mantequilla",
             "isVegan": false,
             "isSpicy": false
          },
@@ -2992,7 +3009,7 @@
          {
             "number": 167,
             "name": {
-               "es": "Nigiri de atún flambeado",
+               "es": "Nigiri de atún flameado",
                "cat": "Nigiri de tonyina flambat",
                "en": "Flambéed Tuna Nigiri",
                "it": "NIGIRI TUNA FLAMBE",
@@ -3034,7 +3051,7 @@
          {
             "number": 169,
             "name": {
-               "es": "Nigiri de lubina flambeado",
+               "es": "Nigiri de lubina flameado",
                "cat": "Nigiri de llobarro flambat",
                "en": "Flambéed Sea Bass Nigiri",
                "it": "NIGIRI SUZUKI FLAMBE",
@@ -3813,7 +3830,7 @@
                "it": "Soia, alghe* e tofu",
                "zh": "大豆，海藻*和豆腐"
             },
-            "priceInCents": 400,
+            "priceInCents": 500,
             "photo": "zuppa-di-miso",
             "isVegan": true,
             "isSpicy": false
@@ -3834,7 +3851,7 @@
                "it": "Uova, verdure miste, tofu e piccante",
                "zh": "蛋，綜合蔬菜，豆腐和辣味"
             },
-            "priceInCents": 450,
+            "priceInCents": 550,
             "photo": "zuppa-pecchinese",
             "isVegan": true,
             "isSpicy": true
@@ -3855,7 +3872,7 @@
                "it": "Pollo*, uova e mais",
                "zh": "雞肉*，蛋和玉米"
             },
-            "priceInCents": 450,
+            "priceInCents": 550,
             "photo": "zuppa-pollo-e-mais",
             "isVegan": false,
             "isSpicy": false
@@ -3876,7 +3893,7 @@
                "it": "Frutti di mare*, uova e asparagi",
                "zh": "海鮮*，雞蛋和蘆筍"
             },
-            "priceInCents": 500,
+            "priceInCents": 600,
             "photo": "zuppa-osumashi",
             "isVegan": false,
             "isSpicy": false
@@ -4523,23 +4540,26 @@
          {
             "number": 249,
             "name": {
-               "es": "Almejas a la plancha"
+               "es": "Almejas plancha"
             },
             "description": {
-               "es": "Almejas"
+               "es": "Almejas con salsa del chef"
             },
             "priceInCents": 800,
-            "photo": null,
+            "photo": "almejas-plancha",
             "isVegan": false,
             "isSpicy": false
          },
          {
             "number": 250,
             "name": {
-               "es": "Pulpito a la plancha"
+               "es": "Pulpito"
+            },
+            "description": {
+               "es": "Pulpito a la plancha con salsa del chef"
             },
             "priceInCents": 1000,
-            "photo": null,
+            "photo": "pulpito",
             "isVegan": false,
             "isSpicy": false
          },
@@ -4588,13 +4608,13 @@
          {
             "number": 253,
             "name": {
-               "es": "Pollo plancha"
+               "es": "Teppantori pollo"
             },
             "description": {
-               "es": "Pollo con salsa chef"
+               "es": "Pollo a la plancha con salsa del chef"
             },
             "priceInCents": 800,
-            "photo": null,
+            "photo": "teppantori-pollo",
             "isVegan": false,
             "isSpicy": false
          },
@@ -4769,7 +4789,7 @@
          {
             "number": 264,
             "name": {
-               "es": "Setas y brotes de bambú",
+               "es": "Tofu, setas y bambú",
                "cat": "Bolets i Brots de Bambú",
                "en": "Mushrooms and Bamboo Shoots",
                "it": "FUNGHI E BAMBU",
@@ -4845,78 +4865,78 @@
          {
             "number": 267,
             "name": {
-               "es": "Spicy Pot marisco"
+               "es": "Pot marisco"
             },
             "description": {
                "es": "Marisco con verdura y salsa potpicante"
             },
             "priceInCents": 1200,
-            "photo": null,
+            "photo": "pot-marisco",
             "isVegan": false,
             "isSpicy": true
          },
          {
             "number": 268,
             "name": {
-               "es": "Spicy Pot ternera"
+               "es": "Ternera pot"
             },
             "description": {
                "es": "Ternera con verdura y salsa potpicante"
             },
             "priceInCents": 800,
-            "photo": null,
+            "photo": "ternera-pot",
             "isVegan": false,
             "isSpicy": true
          },
          {
             "number": 269,
             "name": {
-               "es": "Spicy Pot coliflor"
+               "es": "Coliflor pot"
             },
             "description": {
                "es": "Coliflor con verdura y salsa potpicante"
             },
             "priceInCents": 600,
-            "photo": null,
+            "photo": "coliflor-pot",
             "isVegan": false,
             "isSpicy": true
          },
          {
             "number": 270,
             "name": {
-               "es": "Spicy Pot calamar"
+               "es": "Calamar pot"
             },
             "description": {
                "es": "Calamar con verdura y salsa potpicante"
             },
             "priceInCents": 1000,
-            "photo": null,
+            "photo": "calamar-pot",
             "isVegan": false,
             "isSpicy": true
          },
          {
             "number": 271,
             "name": {
-               "es": "Spicy Pot patata"
+               "es": "Patata pot"
             },
             "description": {
                "es": "Patata con verdura y salsa potpicante"
             },
             "priceInCents": 650,
-            "photo": null,
+            "photo": "patata-pot",
             "isVegan": false,
             "isSpicy": true
          },
          {
             "number": 272,
             "name": {
-               "es": "Patata pimienta"
+               "es": "Patata pimiento"
             },
             "description": {
-               "es": "Patata con sal y pimienta"
+               "es": "Patata con pimiento"
             },
             "priceInCents": 650,
-            "photo": null,
+            "photo": "patata-pimiento",
             "isVegan": false,
             "isSpicy": false
          }
