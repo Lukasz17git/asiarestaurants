@@ -7,18 +7,17 @@ Las webs de Asia Restaurants y de IOYI Ramen tienen esta misma carpeta, con los 
 | Qué | Para qué sirve | Quién lo usa |
 |---|---|---|
 | `dishes.json` | Lista de platos de la web: secciones, número, nombre, descripción, precio en céntimos y foto | «Pedir online», páginas externas y el menu maker cuando no hay carta guardada |
-| `photos-for-web/` | Fotos en WebP, pequeñas (cargan rápido en el móvil) | La web y páginas externas |
-| `photos-for-pdf-menu/` | Las mismas fotos en PNG, con más calidad y fondo transparente, para imprimir. `no-image.png` es la de los platos sin foto | El menu maker |
-| `photos-for-download/` | Las mismas fotos en PNG al tamaño más grande que hay (el doble que las del PDF), para que el cliente las descargue. Las 27 sacadas de la carta PDF no tienen original: son las mismas que en `photos-for-pdf-menu/` | La página [/fotos-mejoradas-glovo](../fotos-mejoradas-glovo/index.html) |
+| `photos-compressed/` | Fotos en WebP de 600 px como máximo y calidad 85, con fondo transparente. `no-image.webp` es la de los platos sin foto | La web, el menu maker y páginas externas |
+| `photos-original/` | Las mismas fotos en PNG al tamaño más grande que hay, para descargarlas. Las 27 sacadas de la carta PDF no tienen original: son el recorte de la carta, de 800 px | La página [/fotos-mejoradas-glovo](../fotos-mejoradas-glovo/index.html) |
 | `pdf-menu-saved/` | Cartas en PDF ya maquetadas, guardadas con «Guardar JSON» del menu maker (`full-menu.json`, `lunch-menu.json`). Puede no existir | El menu maker |
 | `pdf-menu-covers-and-icons/` | Portadas del PDF (`cover-page-1/2/3.png`) e iconos de vegano y picante | El menu maker |
 
-## Por qué hay tres carpetas de fotos
+## Por qué hay dos carpetas de fotos
 
-Son las mismas fotos en tres tamaños: WebP pesa unas 10 veces menos y es para pantalla; el PNG de
-`photos-for-pdf-menu/` es para el PDF que se imprime, y el de `photos-for-download/`, el original, para descargar.
-Un plato usa el mismo nombre en las tres: `"photo": "ravioli-carne"` es `photos-for-web/ravioli-carne.webp`,
-`photos-for-pdf-menu/ravioli-carne.png` y `photos-for-download/ravioli-carne.png`.
+Son las mismas fotos en dos tamaños: la original, para descargar, y la comprimida (unas 50 veces más ligera), para
+la web y el PDF. En el PDF comprimido cada foto ocupa unos 310 px, así que 600 px bastan: con las originales el PDF
+sale igual. Un plato usa el mismo nombre en las dos: `"photo": "ravioli-carne"` es
+`photos-original/ravioli-carne.png` y `photos-compressed/ravioli-carne.webp`.
 
 ## Cómo se cambia algo
 
@@ -26,6 +25,5 @@ Un plato usa el mismo nombre en las tres: `"photo": "ravioli-carne"` es `photos-
   (`scripts/copy-dishes-to-src.js`).
 - Carta en PDF: abrir el menu maker, cambiarla, pulsar «Guardar JSON» y dejar el archivo en `pdf-menu-saved/`.
   Los precios de estas cartas son independientes de los de `dishes.json`: hay que cambiarlos en los dos sitios.
-- Foto nueva: guardarla con el mismo nombre en las tres carpetas (la original en `photos-for-download/`, y una
-  copia de unos 800 px en `photos-for-pdf-menu/` y otra de 500 px en `.webp` en `photos-for-web/`) y poner ese
-  nombre, sin extensión, en `photo`.
+- Foto nueva: guardar la original en PNG en `photos-original/`, y una copia en WebP de 600 px y calidad 85 en
+  `photos-compressed/`, las dos con el mismo nombre; poner ese nombre, sin extensión, en `photo`.

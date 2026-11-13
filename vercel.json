@@ -8,6 +8,8 @@
     { "src": "/pdfs/(.*)", "status": 308, "headers": { "Location": "/menu-pdfs-old/$1" } },
     { "src": "/static/(.*)", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
     { "src": "/dishes/(.*)", "headers": { "Access-Control-Allow-Origin": "*" }, "continue": true },
+    { "src": "/dishes/photos-for-web/(.*)", "status": 308, "headers": { "Location": "/dishes/photos-compressed/$1" } },
+    { "src": "/dishes/photos-for-pdf-menu/(.*)\\.png", "status": 308, "headers": { "Location": "/dishes/photos-compressed/$1.webp" } },
     { "src": "/dishes/(.*)\\.(png|webp|svg)", "headers": { "Cache-Control": "public, max-age=86400" }, "continue": true },
     { "src": "/dishes/(.*)\\.json", "headers": { "Cache-Control": "public, max-age=0, must-revalidate" }, "continue": true },
     { "handle": "filesystem" },
