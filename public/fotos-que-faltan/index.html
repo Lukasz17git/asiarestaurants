@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Only reached by its link: nothing links here and Google doesn't list it -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Fotos que faltan · Asia Oriental Taste</title>
+    <link rel="icon" href="/LogoRedIcon.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #121214;
+            --card: #18181b;
+            --text: #f4f1ec;
+            --muted: #8a8a90;
+            --gold: #c9ab81;
+            --red: #c8242b;
+            --red-light: #e0393f;
+            --line: #2a2a2e;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font: 15px/1.45 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        main { max-width: 1200px; margin: 0 auto; padding: 32px 16px 64px; }
+
+        header { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
+        header img { width: 56px; height: 56px; }
+
+        h1 {
+            margin: 0;
+            font: 400 clamp(28px, 6vw, 42px)/1.05 'Anton', sans-serif;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+        }
+
+        .intro { color: var(--muted); max-width: 640px; margin: 12px 0 20px; }
+
+        .download-all {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 8px;
+            background: var(--red);
+            color: #fff;
+            font: 600 15px 'Inter', sans-serif;
+            cursor: pointer;
+        }
+        .download-all:hover { background: var(--red-light); }
+        .download-all:disabled { opacity: .7; cursor: wait; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: #000; }
+
+        .card-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 12px; }
+        .name { margin: 0; font-weight: 600; flex: 1; }
+        .number { color: var(--gold); }
+        .note { margin: 0; font-size: 13px; color: var(--gold); }
+
+        .download {
+            padding: 9px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            color: var(--text);
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .download:hover { border-color: var(--gold); color: var(--gold); }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <img src="/LogoRedIcon.webp" alt="">
+        <h1>Fotos que faltan</h1>
+    </header>
+    <p class="intro">
+        Fotos de los platos sacadas de la carta, para ponerlas en Glovo. Cada una se descarga con el número y el
+        nombre del plato (por ejemplo «123. Hotate.png»), o todas juntas en un .zip.
+    </p>
+    <button class="download-all" type="button">Descargar todas (.zip)</button>
+    <div class="grid"></div>
+</main>
+<script>
+    // [number, name, photo]: photo is the file name in /dishes/photos-for-web (.webp) and photos-for-pdf-menu (.png)
+    const dishes = [
+        [4, 'Guo Tie', 'guo-tie'],
+        [43, 'Onigiri de salmón', 'onigiri'],
+        [44, 'Onigiri de atún', 'onigiri'],
+        [45, 'Onigiri de salmón cocido', 'onigiri'],
+        [46, 'Onigiri de atún cocido', 'onigiri'],
+        [47, 'Onigiri vegano', 'onigiri'],
+        [119, 'Uramaki Torre Elefeel', 'uramaki-torre-elefeel'],
+        [121, 'Uramaki Flambé Roll', 'uramaki-flambe-roll'],
+        [122, 'Ioyi Salmon', 'ioyi-salmon'],
+        [123, 'Hotate', 'hotate'],
+        [126, 'Uramaki Asia Roll', 'uramaki-asia-roll'],
+        [127, 'New Future', 'new-future'],
+        [129, 'Uramaki Especial Burn', 'uramaki-special-burn'],
+        [130, 'Ebi Flower', 'ebi-flower'],
+        [131, 'Angel Roll', 'angel-roll'],
+        [134, 'Uramaki Dragón', 'uramaki-dragon'],
+        [137, 'Sweet Hot', 'sweet-hot'],
+        [139, 'White Tiger', 'white-tiger'],
+        [140, 'Dynamite', 'dynamite'],
+        [141, 'Burrata Roll', 'burrata-roll'],
+        [142, 'Anguila Roll', 'anguila-roll'],
+        [143, 'Samba Roll', 'samba-roll'],
+        [144, 'Uramaki de atún Philadelphia', 'uramaki-tuna-philadelphia'],
+        [150, 'Crispy Green', 'crispy-green'],
+        [164, 'Nigiri de mantequilla', 'nigiri-de-mantequilla'],
+        [202, 'Yaki Soba', 'yaki-soba'],
+        [204, 'Yaki Asia', 'yaki-soba'],
+        [249, 'Almejas plancha', 'almejas-plancha'],
+        [250, 'Pulpito', 'pulpito'],
+        [253, 'Teppantori pollo', 'teppantori-pollo'],
+        [267, 'Pot marisco', 'pot-marisco'],
+        [268, 'Ternera pot', 'ternera-pot'],
+        [269, 'Coliflor pot', 'coliflor-pot'],
+        [270, 'Calamar pot', 'calamar-pot'],
+        [271, 'Patata pot', 'patata-pot'],
+        [272, 'Patata pimiento', 'patata-pimiento'],
+        [300, 'Uramaki Arcoíris', 'uramaki-arcoiris'],
+    ]
+
+    // Photos taken from a carta dish with another name: the client confirms they're the same dish
+    const toConfirm = [129, 134, 144]
+
+    const getFileName = (number, name) => `${number}. ${name}.png`
+    const getPngUrl = (photo) => `/dishes/photos-for-pdf-menu/${photo}.png`
+
+    const grid = document.querySelector('.grid')
+    grid.innerHTML = dishes.map(([number, name, photo]) => `
+        <article class="card">
+            <img src="/dishes/photos-for-web/${photo}.webp" alt="${name}" loading="lazy" width="500" height="500">
+            <div class="card-body">
+                <p class="name"><span class="number">${number}.</span> ${name}</p>
+                ${toConfirm.includes(number) ? '<p class="note">¿Es este plato? Confírmalo, por favor.</p>' : ''}
+                <a class="download" href="${getPngUrl(photo)}" download="${getFileName(number, name)}">Descargar</a>
+            </div>
+        </article>`).join('')
+
+    const saveBlob = (blob, fileName) => {
+        const link = document.createElement('a')
+        link.href = URL.createObjectURL(blob)
+        link.download = fileName
+        link.click()
+        setTimeout(() => URL.revokeObjectURL(link.href), 10000)
+    }
+
+    // Saves the photo from a blob: Vercel's `Content-Disposition: filename="hotate.png"` beats the link's `download`
+    grid.addEventListener('click', async (event) => {
+        const link = event.target.closest('.download')
+        if (!link) return
+        event.preventDefault()
+        try {
+            const response = await fetch(link.href)
+            if (!response.ok) throw new Error(response.status)
+            saveBlob(await response.blob(), link.download)
+        } catch {
+            window.open(link.href, '_blank')
+        }
+    })
+
+    const loadJsZip = () => new Promise((resolve, reject) => {
+        if (window.JSZip) return resolve(window.JSZip)
+        const script = document.createElement('script')
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js'
+        script.onload = () => resolve(window.JSZip)
+        script.onerror = reject
+        document.head.append(script)
+    })
+
+    const downloadAllButton = document.querySelector('.download-all')
+    downloadAllButton.addEventListener('click', async () => {
+        const buttonText = downloadAllButton.textContent
+        downloadAllButton.disabled = true
+        try {
+            const JSZip = await loadJsZip()
+            const zip = new JSZip()
+            let done = 0
+            await Promise.all(dishes.map(async ([number, name, photo]) => {
+                const response = await fetch(getPngUrl(photo))
+                if (!response.ok) throw new Error(`${photo}: ${response.status}`)
+                zip.file(getFileName(number, name), await response.blob())
+                downloadAllButton.textContent = `Preparando… ${++done}/${dishes.length}`
+            }))
+            saveBlob(await zip.generateAsync({ type: 'blob' }), 'fotos-que-faltan.zip')
+        } catch {
+            alert('No se ha podido crear el .zip. Prueba otra vez o descarga las fotos una a una.')
+        } finally {
+            downloadAllButton.disabled = false
+            downloadAllButton.textContent = buttonText
+        }
+    })
+</script>
+</body>
+</html>
