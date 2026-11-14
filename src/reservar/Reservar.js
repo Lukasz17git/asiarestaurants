@@ -60,6 +60,7 @@ const Reservar = () => {
     const shifts = getShiftsOn(booking.date || today)
     const errors = getErrors(booking)
     const visibleErrors = showErrors ? errors : {}
+    const hasErrors = Object.keys(errors).length > 0
 
     const update = (changes) => setBooking((current) => ({ ...current, ...changes }))
     // A time the new day doesn't have, or that already went, is dropped
@@ -78,7 +79,7 @@ const Reservar = () => {
     const send = (event) => {
         event.preventDefault()
         setShowErrors(true)
-        if (Object.keys(errors).length) return
+        if (hasErrors) return
         window.open(createReservationUrl(booking), '_blank', 'noopener,noreferrer')
     }
 
@@ -158,7 +159,7 @@ const Reservar = () => {
                         </div>
                     </div>
                     <div className='reservar-send'>
-                        <button type='submit' className='cta cta-red'>
+                        <button type='submit' className='cta cta-red' aria-disabled={hasErrors}>
                             <span className='reservar-whatsapp-icon' aria-hidden='true' />
                             {t({ es: 'Enviar por WhatsApp', ca: 'Enviar per WhatsApp', en: 'Send by WhatsApp' })}
                         </button>

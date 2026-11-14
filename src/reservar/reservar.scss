@@ -1,6 +1,7 @@
 @import '../css/theme';
 
 $reservarLine: rgba(201, 171, 129, 0.22);
+$field: #2e2e33;
 
 // The booking form, under the hero
 .reservar {
@@ -77,6 +78,19 @@ $reservarLine: rgba(201, 171, 129, 0.22);
             width: 100%;
             padding: 0 16px;
             border: none;
+
+            // As the orders button: still clickable, so a tap lists what is missing
+            &[aria-disabled='true'] {
+                background: $field;
+                color: $textColor4;
+                box-shadow: none;
+                transform: none;
+                cursor: not-allowed;
+
+                &::before {
+                    display: none;
+                }
+            }
         }
     }
 
