@@ -19,8 +19,9 @@ la web y el PDF. En el PDF comprimido cada foto ocupa unos 310 px, así que 600 
 sale igual. Un plato usa el mismo nombre en las dos: `"photo": "ravioli-carne"` es
 `photos-original/ravioli-carne.png` y `photos-compressed/ravioli-carne.webp`.
 
-25 fotos no las usa ningún plato de `dishes.json` (platos que ya no están en la web, como `uramaki-burn` o
-`chirashi-salmone`): para usar una, basta con poner su nombre en `photo`.
+Las fotos de platos que la web ya no usa (como `uramaki-burn` o `chirashi-salmone`) están en
+[not-used/public/dishes/](../../not-used/README.md), con estas mismas dos carpetas: para usar una, mover sus dos
+archivos aquí y poner su nombre en `photo`.
 
 ## Cómo se cambia algo
 
