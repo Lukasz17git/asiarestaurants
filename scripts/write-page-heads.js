@@ -52,7 +52,7 @@ const restaurantScript = toJsonLdScript({
     '@id': `${siteUrl}/#restaurant`,
     name: restaurant.name,
     url: `${siteUrl}/`,
-    image: `${siteUrl}/og-image.webp`,
+    image: `${siteUrl}/og-image.jpg`,
     logo: `${siteUrl}/LogoRed.webp`,
     telephone: restaurant.phone.replaceAll(' ', ''),
     priceRange: '€€',

@@ -9,7 +9,7 @@ Primero lo del cliente: varias decisiones dependen de lo que conteste.
 ────────────────────────────────────────────────────────────────────────────────
    Página con las fotos de 37 platos, con su número y nombre, sueltas o en .zip:
    https://asiarestaurants.es/fotos-mejoradas-glovo
-   [ ] Mandar el enlace al cliente por WhatsApp
+   [x] Mandar el enlace al cliente por WhatsApp
    [ ] Revisar en Glovo que cada foto está en su plato
 
 2. CONFIRMAR 3 FOTOS DE URAMAKIS                                         CLIENTE
