@@ -15,7 +15,7 @@ Reggio Emilia, Ravenna and Correggio), in Spanish (`/`), Catalan (`/ca`) and Eng
 | PDF menu | [Menu maker](https://carta-menu-restaurante.vercel.app/) ([code](https://github.com/Lukasz17git/restaurant_menu_maker)) | Builds the printed menu from this site's `public/dishes/` |
 | Instagram, Facebook | <https://www.instagram.com/asiavilafranca/>, [Facebook](https://www.facebook.com/profile.php?id=100082102034055) | Linked from the footer |
 | Table QR codes | `/qr` and `/qr-new` | Open the PDF menus; no navbar, out of search results |
-| Photos for Glovo | `/descargar-fotos-glovo` ([page](public/descargar-fotos-glovo.html)) | The client downloads the dishes' photos, original or compressed, named by number and name; only reached by its link, out of search results. The old link `/fotos-mejoradas-glovo` redirects here |
+| Photos for Glovo | `/fotos-mejoradas-glovo` ([page](public/fotos-mejoradas-glovo.html)) | The client downloads the dishes' photos, original or compressed, named by number and name; only reached by its link, out of search results |
 | Dish photos, fonts and images not in use | [not-used-assets/](not-used-assets/README.md) | Kept to reuse later; not built or published |
 
 ## How to change things
@@ -59,7 +59,7 @@ external pages read it, so its file names can't change. IOYI Ramen's site has th
 | --- | --- | --- |
 | `dishes.json` | The site's dishes: sections, number, name, description, price in cents and photo | Online orders; the menu maker when there's no saved menu |
 | `photos-compressed/` | WebP, 600 px at most, quality 85, transparent background; `no-image.webp` for dishes without a photo | The site, the menu maker, external pages |
-| `photos-original/` | The same photos as PNG at the largest size there is, to download; the 27 cut from the PDF menu are that 800 px crop | `/descargar-fotos-glovo` |
+| `photos-original/` | The same photos as PNG at the largest size there is, to download; the 27 cut from the PDF menu are that 800 px crop | `/fotos-mejoradas-glovo` |
 | `pdf-menu-saved/` | The PDF menus laid out in the menu maker and saved with «Guardar JSON»: `lunch-menu.json` (opened by default) and `full-menu.json` (`?menu=full-menu`) | The menu maker |
 | `pdf-menu-covers-and-icons/` | The PDF's covers (`cover-page-1/2/3.png`) and the vegan and spicy icons | The menu maker |
 
