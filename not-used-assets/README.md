@@ -9,7 +9,7 @@ it's outside `public/` and no code imports it.
 | `Fonts/`: Afterglow, Calama (`Calama_new.ttf`), Open Sans Condensed Light (`.ttf` and `OpenSans.woff2`), and the `.ttf` of AsianHiro and Italianno (the site uses their `.woff2`) | `public/Fonts/` |
 | `og-image.webp`: the old picture shown when the site's link is shared | `public/` |
 | `qr-asiarestaurants.png`: the old site's QR code, 3000 px | `public/` |
-| `menu-maker-extras/`: the empty plates (`empty.png` to `empty_4.png`), the «PRÓXIMAMENTE» plate the menu maker showed for a dish without a photo (`default_meal.png`) and the old vegan icon (`vegan_old.png`), from asiarestaurants-menu-maker-next | `public/dishes/` |
+| `menu-maker-extras/`: the empty plates (`empty.png` to `empty_4.png`), the «PRÓXIMAMENTE» plate the menu maker showed for a dish without a photo (`default_meal.png`) the old vegan icon (`vegan_old.png`) and the old cover page 2, with other buffet prices (`cover-page-2-old.png`), from asiarestaurants-menu-maker-next | `public/dishes/` |
 
 ## Dish photos
 
