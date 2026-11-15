@@ -15,15 +15,15 @@ Reggio Emilia, Ravenna and Correggio), in Spanish (`/`), Catalan (`/ca`) and Eng
 | PDF menu | [Menu maker](https://carta-menu-restaurante.vercel.app/) ([code](https://github.com/Lukasz17git/restaurant_menu_maker)) | Builds the printed menu from this site's `public/dishes/` |
 | Instagram, Facebook | <https://www.instagram.com/asiavilafranca/>, [Facebook](https://www.facebook.com/profile.php?id=100082102034055) | Linked from the footer |
 | Table QR codes | `/qr` and `/qr-new` | Open the PDF menus; no navbar, out of search results |
-| Photos for Glovo | `/fotos-mejoradas-glovo` ([page](public/fotos-mejoradas-glovo/index.html)) | The client downloads the dishes' photos, original or compressed, named by number and name; only reached by its link, out of search results |
-| Dish photos and fonts not in use | [not-used/](not-used/README.md) | Kept to reuse later; not built or published |
+| Photos for Glovo | `/descargar-fotos-glovo` ([page](public/descargar-fotos-glovo.html)) | The client downloads the dishes' photos, original or compressed, named by number and name; only reached by its link, out of search results. The old link `/fotos-mejoradas-glovo` redirects here |
+| Dish photos, fonts and images not in use | [not-used-assets/](not-used-assets/README.md) | Kept to reuse later; not built or published |
 
 ## How to change things
 
 | To change | Edit |
 | --- | --- |
 | Opening hours, lunch and dinner menu (price, hours), phone, address, Instagram, Facebook | [src/data/restaurant.json](src/data/restaurant.json): every page and language takes them from there |
-| Dishes, prices and photos of the menu page and online orders (and the PDF menu) | [public/dishes/](public/dishes/): see its [README](public/dishes/README.md) |
+| Dishes, prices and photos of the menu page and online orders (and the PDF menu) | [public/dishes/](public/dishes/): see [Dishes](#dishes) |
 | The menu cards (lunch, dinner, takeaway) and their PDFs | [src/Menu/MenusData.js](src/Menu/MenusData.js); the PDFs are in [public/menu-pdfs/](public/menu-pdfs/) |
 | PDFs opened by the table QR codes | [src/qr/qrData.js](src/qr/qrData.js) and [src/qrNew/qrData.js](src/qrNew/qrData.js) |
 | The home's most popular dishes and cuisine cards | [src/Home/examplesData.js](src/Home/examplesData.js) and [src/Home/cocinaData.js](src/Home/cocinaData.js) |
@@ -49,6 +49,30 @@ Orders and bookings have no backend: the site opens WhatsApp with the message re
 
 Old links to `/pdfs/...` (printed QR codes, Google) redirect to `/menu-pdfs/` or, for menus no longer in use,
 to `/menu-pdfs-old/`.
+
+## Dishes
+
+`public/dishes/` is published at `https://asiarestaurants.es/dishes/...`, where online orders, the menu maker and
+external pages read it, so its file names can't change. IOYI Ramen's site has the same folder with the same names.
+
+| What | What for | Read by |
+| --- | --- | --- |
+| `dishes.json` | The site's dishes: sections, number, name, description, price in cents and photo | Online orders; the menu maker when there's no saved menu |
+| `photos-compressed/` | WebP, 600 px at most, quality 85, transparent background; `no-image.webp` for dishes without a photo | The site, the menu maker, external pages |
+| `photos-original/` | The same photos as PNG at the largest size there is, to download; the 27 cut from the PDF menu are that 800 px crop | `/descargar-fotos-glovo` |
+| `pdf-menu-saved/` | The PDF menus laid out in the menu maker and saved with «Guardar JSON»: `lunch-menu.json` (opened by default) and `full-menu.json` (`?menu=full-menu`) | The menu maker |
+| `pdf-menu-covers-and-icons/` | The PDF's covers (`cover-page-1/2/3.png`) and the vegan and spicy icons | The menu maker |
+
+A dish has the same name in both photo folders: `"photo": "ravioli-carne"` is `photos-original/ravioli-carne.png`
+and `photos-compressed/ravioli-carne.webp`. The PDF shows each photo at about 310 px, so 600 px is enough.
+
+- **Price, name or dish of online orders:** edit `dishes.json`; `npm start` and `npm run build` copy it into `src/`
+  (`scripts/copy-dishes-to-src.js`).
+- **PDF menu:** change it in the menu maker, press «Guardar JSON» and put the file in `pdf-menu-saved/`. Its prices
+  don't come from `dishes.json`: change them in both.
+- **New photo:** save the PNG in `photos-original/` and run `optimize-images` (pc-scripts) in the repo: it writes the
+  600 px WebP in `photos-compressed/` with the same name. Put that name, without extension, in `photo`.
+- **Photos not in use** are in [not-used-assets/](not-used-assets/README.md): to use one, move its two files here.
 
 ## Hosting and domain
 
