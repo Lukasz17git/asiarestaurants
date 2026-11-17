@@ -1,38 +1,36 @@
 import { vilafrancaZone } from './deliveryRules'
-import { facts, formatPrice, formatShortPrice } from '../data/facts'
+import { facts, formatPrice } from '../data/facts'
 
-// WhatsApp shows ~2,50 €~ crossed out
-const getMessageFeeText = (type, quote) => {
-    if (quote.deliveryFeeInCents) return formatPrice(quote.deliveryFeeInCents)
-    if (type === 'pickup') return formatPrice(0)
-    return `~${formatPrice(vilafrancaZone.deliveryFeeInCents)}~ GRATIS (envío gratuito a Vilafranca desde ${formatShortPrice(vilafrancaZone.freeDeliveryFromInCents)})`
+// WhatsApp shows ~2,50 €~ crossed out; only Vilafranca ships free
+const getMessageFeeLine = (quote) => {
+    if (!quote.isVilafranca) return `Envío fuera de Vilafranca: ${formatPrice(quote.deliveryFeeInCents)}`
+    if (quote.deliveryFeeInCents) return `Envío Vilafranca: ${formatPrice(quote.deliveryFeeInCents)}`
+    return `Envío Vilafranca: ~${formatPrice(vilafrancaZone.deliveryFeeInCents)}~ GRATIS`
 }
 
-// Always in Spanish, for the restaurant, in the format they asked for
+// Always in Spanish, for the restaurant, read on a phone: each title fits in one line.
+// No emojis: through wa.me 🛵, ✅ or ☎ arrive as '�'
 export const createOrderMessage = ({ cartItems, customer, type, quote, subtotalInCents }) => {
-    const deliveryLines = type === 'pickup'
-        ? ['Tipo: Recogida en el restaurante']
-        : ['Tipo: Entrega a domicilio', `Dirección: ${customer.address.trim()}`, `Código postal: ${customer.postalCode}`]
-    const dishLines = cartItems.map(({ dish, quantity }) =>
-        `- ${quantity} x ${dish.number}. ${dish.name.es} (${formatPrice(dish.priceInCents)}) = ${formatPrice(dish.priceInCents * quantity)}`)
+    const isPickup = type === 'pickup'
+    const dishLines = cartItems.map(({ dish, quantity }) => `- ${quantity} x ${dish.number}. ${dish.name.es}: ${formatPrice(dish.priceInCents * quantity)}`)
     const notes = customer.notes.trim()
 
     return [
-        `NUEVO PEDIDO - ${facts.name}`,
+        isPickup ? '*NUEVO PEDIDO PARA RECOGER*' : '*NUEVO PEDIDO A DOMICILIO*',
         '',
-        `Nombre: ${customer.name.trim()}`,
-        `Teléfono: ${customer.phone.trim()}`,
-        ...deliveryLines,
+        '*CLIENTE*',
+        customer.name.trim(),
+        customer.phone.trim(),
         '',
-        'Pedido:',
+        ...(isPickup ? [] : ['*DIRECCIÓN DEL CLIENTE*', customer.address.trim(), customer.postalCode, '']),
+        '*PEDIDO*',
         ...dishLines,
         '',
-        `Subtotal: ${formatPrice(subtotalInCents)}`,
-        `Gastos de envío: ${getMessageFeeText(type, quote)}`,
-        `TOTAL: ${formatPrice(quote.totalInCents)}`,
+        ...(isPickup ? [] : [`Subtotal: ${formatPrice(subtotalInCents)}`, getMessageFeeLine(quote)]),
+        `*TOTAL: ${formatPrice(quote.totalInCents)}*`,
         '',
-        ...(notes ? [`Observaciones: ${notes}`, ''] : []),
-        'Por favor, confirmad el pedido, el tiempo de entrega y cómo realizar el pago. Gracias.',
+        ...(notes ? ['*OBSERVACIONES*', notes, ''] : []),
+        `Por favor, confirmad el pedido, la hora de ${isPickup ? 'recogida' : 'entrega'} y cómo pagar. Gracias.`,
     ].join('\n')
 }
 

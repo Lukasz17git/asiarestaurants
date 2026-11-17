@@ -56,19 +56,22 @@ const formatLongDate = (dateValue) => {
     return text[0].toUpperCase() + text.slice(1)
 }
 
-// Always in Spanish, for the restaurant; people is '1' to '6' or 'Más de 6'
+// Always in Spanish, for the restaurant, in the order message's blocks; people is '1' to '6' or 'Más de 6'.
 // No emojis: through wa.me they arrive as '�'. WhatsApp shows *text* in bold
 export const createReservationUrl = ({ people, date, time, name, phone: customerPhone }) => {
     const message = [
-        `Hola, me gustaría reservar una mesa en ${facts.name}:`,
+        '*NUEVA RESERVA DE MESA*',
         '',
-        `*Personas:* ${people}`,
-        `*Día:* ${formatLongDate(date)}`,
-        `*Hora:* ${time}`,
-        `*Nombre:* ${name.trim()}`,
-        `*Teléfono:* ${customerPhone.trim()}`,
+        '*CLIENTE*',
+        name.trim(),
+        customerPhone.trim(),
         '',
-        '¿Nos confirmáis la mesa? ¡Gracias!',
+        '*RESERVA*',
+        `Personas: ${people}`,
+        `Día: ${formatLongDate(date)}`,
+        `Hora: ${time}`,
+        '',
+        'Por favor, confirmad la mesa. Gracias.',
     ].join('\n')
     return createWhatsappUrl(message)
 }
