@@ -1,9 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import pages from './pages.json'
 import qrRoutes from './qrRoutes.json'
 import { basename, language } from '../language'
 import { fillPageFacts, restaurant } from '../data/facts'
+import { countPage } from '../analytics'
 
 const { siteUrl } = restaurant
 const { pages: languagePages, notFoundTitle } = fillPageFacts(pages[language])
@@ -22,11 +23,15 @@ const setNoindex = (isNoindex) => {
     document.head.append(meta)
 }
 
-// Sets the title, description and canonical of the page on each client-side navigation
+// Sets the title, description and canonical of the page on each client-side navigation, and counts the visit
 export default function PageHead() {
     const { pathname } = useLocation()
+    const isLandingPage = useRef(true)
 
     useEffect(() => {
+        // GoatCounter's script already counts the landing page
+        if (!isLandingPage.current) countPage(window.location.pathname)
+        isLandingPage.current = false
         // '/menu/' -> '/menu'
         const route = pathname.replace(/\/$/, '') || '/'
         const page = languagePages[route]

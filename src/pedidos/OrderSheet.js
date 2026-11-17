@@ -3,6 +3,7 @@ import { QuantityControl } from './DishCard'
 import { getDeliveryQuote, outsideVilafrancaZone, vilafrancaZone } from './deliveryRules'
 import { createOrderMessage, createWhatsappUrl } from './whatsappOrder'
 import { t } from '../language'
+import { countEvent } from '../analytics'
 import { facts, formatPrice, formatShortPrice } from '../data/facts'
 import { ErrorAlert, FormField, NameAndPhoneFields, getNameAndPhoneErrors, keepFailedFields } from '../sections/contactForm'
 
@@ -68,6 +69,7 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
             return
         }
         const message = createOrderMessage({ cartItems, customer, type, quote, subtotalInCents })
+        countEvent('whatsapp-order')
         window.open(createWhatsappUrl(message), '_blank', 'noopener,noreferrer')
         setIsSent(true)
     }

@@ -5,6 +5,7 @@ import tablePhoto from '../images/menus/allyoucaneat3.webp'
 import { useReveal } from '../reveal/useReveal'
 import { createReservationUrl, getNextDays, getShiftsOn, isBookableSlot, isPastSlot, toDateValue } from '../sections/reservation'
 import { t } from '../language'
+import { countEvent } from '../analytics'
 import './reservar.scss'
 import { facts } from '../data/facts'
 import { ErrorAlert, NameAndPhoneFields, getNameAndPhoneErrors, keepFailedFields } from '../sections/contactForm'
@@ -80,6 +81,7 @@ const Reservar = () => {
         event.preventDefault()
         setShowErrors(true)
         if (hasErrors) return
+        countEvent('whatsapp-booking')
         window.open(createReservationUrl(booking), '_blank', 'noopener,noreferrer')
     }
 
