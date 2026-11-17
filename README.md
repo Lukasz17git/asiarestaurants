@@ -13,6 +13,7 @@ Reggio Emilia, Ravenna and Correggio), in Spanish (`/`), Catalan (`/ca`) and Eng
 | Hosting | Vercel | Deploys, domains, build settings |
 | Domain | [Hostalia](https://www.hostalia.com/) | DNS of `asiarestaurants.es` |
 | PDF menu | [Menu maker](https://carta-menu-restaurante.vercel.app/) ([code](https://github.com/Lukasz17git/restaurant_menu_maker)) | Builds the printed menu from this site's `public/dishes/` |
+| Visits | [GoatCounter](https://asiarestaurants.goatcounter.com) | Visits per page, plus WhatsApp orders and bookings, calls, Instagram and Facebook clicks under «Events»; no cookies |
 | Instagram, Facebook | <https://www.instagram.com/asiavilafranca/>, [Facebook](https://www.facebook.com/profile.php?id=100082102034055) | Linked from the footer |
 | Table QR codes | `/qr` and `/qr-new` | Open the PDF menus; no navbar, out of search results |
 | Photos for Glovo | `/fotos-mejoradas-glovo` ([page](public/fotos-mejoradas-glovo.html)) | The client downloads the dishes' photos, original or compressed, named by number and name; only reached by its link, out of search results |
@@ -22,7 +23,9 @@ Reggio Emilia, Ravenna and Correggio), in Spanish (`/`), Catalan (`/ca`) and Eng
 
 | To change | Edit |
 | --- | --- |
-| Opening hours, lunch and dinner menu (price, hours), phone, address, Instagram, Facebook | [src/data/restaurant.json](src/data/restaurant.json): every page and language takes them from there |
+| Opening hours, lunch and dinner menu (price, hours), phone, address, map coordinates (`geo`), Instagram, Facebook | [src/data/restaurant.json](src/data/restaurant.json): every page and language takes them from there |
+| Owner details of the legal page (company, CIF, registry, email) | `legal` in [src/data/restaurant.json](src/data/restaurant.json); the build warns while one is empty |
+| Allergens of a dish | `allergens` in [public/dishes/dishes.json](public/dishes/dishes.json): see [Dishes](#dishes) |
 | Dishes, prices and photos of the menu page and online orders (and the PDF menu) | [public/dishes/](public/dishes/): see [Dishes](#dishes) |
 | The menu cards (lunch, dinner, takeaway) and their PDFs | [src/Menu/MenusData.js](src/Menu/MenusData.js); the PDFs are in [public/menu-pdfs/](public/menu-pdfs/) |
 | PDFs opened by the table QR codes | [src/qr/qrData.js](src/qr/qrData.js) and [src/qrNew/qrData.js](src/qrNew/qrData.js) |
@@ -31,6 +34,7 @@ Reggio Emilia, Ravenna and Correggio), in Spanish (`/`), Catalan (`/ca`) and Eng
 | Delivery postal codes, fees and minimum order | [src/pedidos/deliveryRules.js](src/pedidos/deliveryRules.js) |
 | Page titles and Google descriptions | [src/seo/pages.json](src/seo/pages.json) (`{lunchMenuPrice}` and similar are filled from `restaurant.json`) |
 | Texts on the pages | The page's component in `src/`; each text is written as `t({ es, ca, en })` |
+| Which clicks count as events in GoatCounter | [src/analytics.js](src/analytics.js) |
 | Redirects, 404s, cache headers | [vercel.json](vercel.json) |
 
 `openingHours` gives each day its shifts, as `"opens-closes"`:
@@ -57,7 +61,7 @@ external pages read it, so its file names can't change. IOYI Ramen's site has th
 
 | What | What for | Read by |
 | --- | --- | --- |
-| `dishes.json` | The site's dishes: sections, number, name, description, price in cents and photo | Online orders; the menu maker when there's no saved menu |
+| `dishes.json` | The site's dishes: sections, number, name, description, price in cents, photo and allergens | Online orders; the menu maker when there's no saved menu |
 | `photos-compressed/` | WebP, 600 px at most, quality 85, transparent background; `no-image.webp` for dishes without a photo | The site, the menu maker, external pages |
 | `photos-original/` | The same photos as PNG at the largest size there is, to download; the 27 cut from the PDF menu are that 800 px crop | `/fotos-mejoradas-glovo` |
 | `pdf-menu-saved/` | The PDF menus laid out in the menu maker and saved with «Guardar JSON»: `lunch-menu.json` (opened by default) and `full-menu.json` (`?menu=full-menu`) | The menu maker |
@@ -72,6 +76,9 @@ and `photos-compressed/ravioli-carne.webp`. The PDF shows each photo at about 31
   don't come from `dishes.json`: change them in both.
 - **New photo:** save the PNG in `photos-original/` and run `optimize-images` (pc-scripts) in the repo: it writes the
   600 px WebP in `photos-compressed/` with the same name. Put that name, without extension, in `photo`.
+- **Allergens:** `"allergens": ["gluten", "soy"]` on the dish, with the keys of
+  [src/data/allergens.js](src/data/allergens.js); orders and the menu page show them under the description, and the
+  build stops on a key that isn't there.
 - **Photos not in use** are in [not-used-assets/](not-used-assets/README.md): to use one, move its two files here.
 
 ## Hosting and domain

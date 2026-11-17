@@ -10,6 +10,7 @@ import Footer from '../Footer'
 import { useReveal, revealDelay } from '../reveal/useReveal'
 import { menuSections } from '../pedidos/takeawayMenu'
 import { orderOnlineLabel, t } from '../language'
+import { facts } from '../data/facts'
 import allYouCanEatPhoto1 from '../images/menus/allyoucaneat1.webp'
 import allYouCanEatPhoto2 from '../images/menus/allyoucaneat2.webp'
 import allYouCanEatPhoto3 from '../images/menus/allyoucaneat3.webp'
@@ -143,6 +144,13 @@ const Menus = () => {
                 <div key={sectionId} className='meals-grid'>
                     {visibleSection.dishes.map((dish, index) => <Dish key={dish.number} dish={dish} index={index} />)}
                 </div>
+                <p className='meals-allergens'>
+                    {t({
+                        es: <>¿Alergias o intolerancias? Pregúntanos por los alérgenos de cada plato, en el local o al <a href={facts.phoneUrl}>{facts.phoneWithoutPrefix}</a>.</>,
+                        ca: <>Al·lèrgies o intoleràncies? Pregunta'ns pels al·lèrgens de cada plat, al local o al <a href={facts.phoneUrl}>{facts.phoneWithoutPrefix}</a>.</>,
+                        en: <>Allergies or intolerances? Ask us about the allergens of each dish, at the restaurant or on <a href={facts.phoneUrl}>{facts.phoneWithoutPrefix}</a>.</>,
+                    })}
+                </p>
                 <div className='cta-buttons'>
                     <a className='cta cta-red' href={menus.night.pdf} target='_blank' rel='noreferrer'>{t({ es: 'Ver Todo →', ca: 'Veure-ho Tot →', en: 'See All →' })}</a>
                     <Link className='cta cta-outline' to='/pedidos'>{t(orderOnlineLabel)}</Link>

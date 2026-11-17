@@ -344,6 +344,13 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     overflow: hidden;
 }
 
+.pedidos-dish-allergens {
+    margin-top: 6px;
+    color: $textColor4;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
 .pedidos-dish-footer {
     display: flex;
     align-items: center;

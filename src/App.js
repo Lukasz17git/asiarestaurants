@@ -16,6 +16,7 @@ import { basename } from './language';
 
 const Pedidos = lazy(() => import('./pedidos/Pedidos'))
 const Reservar = lazy(() => import('./reservar/Reservar'))
+const Legal = lazy(() => import('./legal/Legal'))
 
 function App() {
   console.log('Made by Lukasz Maraj')
@@ -31,6 +32,7 @@ function App() {
             <Route path='/menu' element={<Menus />} />
             <Route path='/pedidos' element={<Pedidos />} />
             <Route path='/reservar' element={<Reservar />} />
+            <Route path='/legal' element={<Legal />} />
             <Route path='*' element={<NotFound />} />
           </Route>
           {/* The QR codes on the tables open these, without the navbar */}

@@ -2,6 +2,7 @@ import React from 'react'
 import logoUrl from '../images/LogoRedIcon.webp'
 import { formatPrice } from '../data/facts'
 import { t } from '../language'
+import { allergenNames } from '../data/allergens'
 
 export const QuantityControl = ({ quantity, name, onChange, size }) => (
     <div className={`pedidos-quantity ${size ?? ''}`}>
@@ -26,6 +27,7 @@ const DishCard = ({ dish, quantity, onChange }) => (
                 {dish.isSpicy && <span className='pedidos-tag spicy'>{t({ es: 'Picante', ca: 'Picant', en: 'Spicy' })}</span>}
             </h3>
             {dish.description && <p className='pedidos-dish-description'>{dish.description}</p>}
+            {!!dish.allergens?.length && (<p className='pedidos-dish-allergens'>{t({ es: 'Alérgenos', ca: 'Al·lèrgens', en: 'Allergens' })}: {dish.allergens.map((key) => t(allergenNames[key])).join(', ')}</p>)}
             <div className='pedidos-dish-footer'>
                 <span className='pedidos-dish-price'>{formatPrice(dish.priceInCents)}</span>
                 {quantity

@@ -11,6 +11,18 @@ const pageTexts = require(path.join(root, 'src/seo/pages.json'))
 const { restaurant, getFacts, fillFacts } = require(path.join(root, 'src/data/restaurantFacts.js'))
 const dishSections = require(path.join(root, 'public/dishes/dishes.json'))
 const qrRoutes = require(path.join(root, 'src/seo/qrRoutes.json'))
+const { allergenNames } = require(path.join(root, 'src/data/allergens.js'))
+
+// A misspelt allergen would show nothing to someone allergic to it
+const unknownAllergens = dishSections.flatMap((section) => section.dishes)
+    .flatMap((dish) => (dish.allergens ?? []).filter((key) => !allergenNames[key]).map((key) => `${dish.number} ${dish.name.es}: '${key}'`))
+if (unknownAllergens.length) {
+    throw new Error(`dishes.json has allergens that aren't in src/data/allergens.js: ${unknownAllergens.join(', ')}`)
+}
+
+// The legal page leaves out an empty line, but Spanish law (LSSI) asks for all of them
+const emptyLegalFields = Object.keys(restaurant.legal).filter((field) => !restaurant.legal[field])
+if (emptyLegalFields.length) console.warn(`restaurant.json: legal.${emptyLegalFields.join(', legal.')} still empty`)
 
 const { siteUrl } = restaurant
 const languages = Object.keys(pageTexts)
@@ -61,6 +73,7 @@ const restaurantScript = toJsonLdScript({
     acceptsReservations: `${siteUrl}/reservar`,
     sameAs: [restaurant.instagramUrl, restaurant.facebookUrl],
     hasMap: getFacts('es').mapsUrl,
+    geo: { '@type': 'GeoCoordinates', ...restaurant.geo },
     openingHoursSpecification: getFacts('es').schedule.flatMap(({ weekdays, shifts }) => shifts.map(({ opens, closes }) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: weekdays, opens, closes }))),
     address: {
         '@type': 'PostalAddress',

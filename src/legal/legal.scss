@@ -1,0 +1,85 @@
+@import '../css/theme';
+
+// The page, under the 68px navbar
+.legal {
+    max-width: 68ch;
+    margin: 0px auto;
+    padding: 150px 24px 120px;
+    color: $textColor3;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: left;
+
+    .kicker {
+        justify-content: center;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .heading {
+        margin: 16px 0px 24px;
+        font-size: clamp(30px, 4.6vw, 48px);
+    }
+
+    h2 {
+        margin: 44px 0px 12px;
+        color: $textColor1;
+        font-family: $fontDisplay;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0px 0px 14px;
+        text-wrap: pretty;
+    }
+
+    b {
+        color: $textColor1;
+    }
+
+    a {
+        color: $textColor2;
+        text-decoration: underline;
+        overflow-wrap: anywhere;
+    }
+
+    .legal-owner {
+        margin: 0px 0px 18px;
+        padding: 16px 20px;
+        border-left: 2px solid $lineColor3;
+        background: $backgroundColor3;
+
+        div {
+            display: grid;
+            grid-template-columns: 11em 1fr;
+            gap: 12px;
+            padding: 4px 0px;
+        }
+
+        dt {
+            color: $textColor4;
+        }
+
+        dd {
+            margin: 0px;
+            color: $textColor1;
+        }
+    }
+
+    .legal-updated {
+        margin-top: 44px;
+        color: $textColor4;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 520px) {
+    .legal .legal-owner div {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+}

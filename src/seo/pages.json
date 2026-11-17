@@ -35,6 +35,12 @@
         "heading": "Asia Restaurantes: Vilafranca del Penedès, Reggio Emilia, Ravenna y Correggio",
         "description": "Asia Restaurants, con pasión y cuidadoso detalle desde el 2006: Asia Oriental Taste en {street}, Vilafranca del Penedès, y tres restaurantes en Italia. Teléfono: {phoneWithoutPrefix}.",
         "linkText": "Nuestros restaurantes"
+      },
+      "/legal": {
+        "title": "Aviso legal, privacidad y cookies | Asia Oriental Taste",
+        "heading": "Aviso legal y privacidad",
+        "description": "Datos del titular de asiarestaurants.es, política de privacidad, cookies y alérgenos de Asia Oriental Taste, en Vilafranca del Penedès.",
+        "linkText": "Aviso legal y privacidad"
       }
     }
   },
@@ -74,6 +80,12 @@
         "heading": "Asia Restaurants: Vilafranca del Penedès, Reggio Emilia, Ravenna i Correggio",
         "description": "Asia Restaurants, amb passió i cura del detall des del 2006: Asia Oriental Taste al {street}, Vilafranca del Penedès, i tres restaurants a Itàlia. Telèfon: {phoneWithoutPrefix}.",
         "linkText": "Els nostres restaurants"
+      },
+      "/legal": {
+        "title": "Avís legal, privacitat i galetes | Asia Oriental Taste",
+        "heading": "Avís legal i privacitat",
+        "description": "Dades del titular d'asiarestaurants.es, política de privacitat, galetes i al·lèrgens d'Asia Oriental Taste, a Vilafranca del Penedès.",
+        "linkText": "Avís legal i privacitat"
       }
     }
   },
@@ -113,6 +125,12 @@
         "heading": "Asia Restaurants: Vilafranca del Penedès, Reggio Emilia, Ravenna and Correggio",
         "description": "Asia Restaurants, with passion and careful detail since 2006: Asia Oriental Taste at {street}, Vilafranca del Penedès, and three restaurants in Italy. Phone: {phoneWithoutPrefix}.",
         "linkText": "Our restaurants"
+      },
+      "/legal": {
+        "title": "Legal notice, privacy and cookies | Asia Oriental Taste",
+        "heading": "Legal notice and privacy",
+        "description": "Owner details of asiarestaurants.es, privacy policy, cookies and allergens of Asia Oriental Taste, in Vilafranca del Penedès.",
+        "linkText": "Legal notice and privacy"
       }
     }
   }

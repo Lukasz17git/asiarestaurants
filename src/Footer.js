@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='footer-bottom'>
-        <span>© 2026 Asia Restaurants. All Rights Reserved</span>
+        <span>© 2026 Asia Restaurants. All Rights Reserved · <Link to='/legal'>{t({ es: 'Aviso legal y privacidad', ca: 'Avís legal i privacitat', en: 'Legal notice and privacy' })}</Link></span>
         <span>{facts.name}</span>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { formatPrice } from '../data/facts'
 import { t } from '../language'
+import { allergenNames } from '../data/allergens'
 
 // After the 12th dish they all come in together, so a long section doesn't take seconds to appear
 const maxDelayedDishes = 12
@@ -19,6 +20,7 @@ const Dish = ({ dish, index }) => {
             <div className='dish-body'>
                 <h3 className='name'>{t(name)}</h3>
                 {description && <p className='dish-description'>{description}</p>}
+                {!!dish.allergens?.length && (<p className='dish-allergens'>{t({ es: 'Alérgenos', ca: 'Al·lèrgens', en: 'Allergens' })}: {dish.allergens.map((key) => t(allergenNames[key])).join(', ')}</p>)}
                 <div className='dish-footer'>
                     <span className='dish-price'>{formatPrice(priceInCents)}</span>
                     {isVegan && <span className='dish-tag is-vegan'>{t({ es: 'Vegano', ca: 'Vegà', en: 'Vegan' })}</span>}

@@ -143,6 +143,19 @@
         margin-top: 50px;
     }
 
+    .meals-allergens {
+        max-width: 60ch;
+        margin: 36px auto 0px;
+        color: $textColor4;
+        font-size: 14px;
+        text-align: center;
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+
     // One button per section (28): they wrap on wide screens and scroll sideways on phones
     .meals-tabs {
         display: grid;
@@ -272,6 +285,12 @@
             color: $textColor4;
             font-size: 14px;
             line-height: 1.55;
+        }
+
+        .dish-allergens {
+            color: $textColor4;
+            font-size: 12px;
+            line-height: 1.4;
         }
 
         .dish-footer {

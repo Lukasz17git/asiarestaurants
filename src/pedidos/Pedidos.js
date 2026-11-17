@@ -99,7 +99,13 @@ const Pedidos = () => {
                                 </div>
                             </section>
                         ))}
-                        <p className='pedidos-small center'>{t({ es: 'Si tienes alguna alergia, indícalo en las observaciones del pedido.', ca: 'Si tens alguna al·lèrgia, indica-ho a les observacions de la comanda.', en: 'If you have any allergy, say so in the order notes.' })}</p>
+                        <p className='pedidos-small center'>
+                            {t({
+                                es: <>¿Alergias o intolerancias? Pregúntanos por los alérgenos de cada plato antes de pedir, al <a href={facts.phoneUrl}>{facts.phoneWithoutPrefix}</a>, e indícalo en las observaciones del pedido.</>,
+                                ca: <>Al·lèrgies o intoleràncies? Pregunta'ns pels al·lèrgens de cada plat abans de demanar, al <a href={facts.phoneUrl}>{facts.phoneWithoutPrefix}</a>, i indica-ho a les observacions de la comanda.</>,
+                                en: <>Allergies or intolerances? Ask us about the allergens of each dish before ordering, on <a href={facts.phoneUrl}>{facts.phoneWithoutPrefix}</a>, and say so in the order notes.</>,
+                            })}
+                        </p>
                     </main>
 
                     <aside className={isSheetOpen ? 'pedidos-sheet open' : 'pedidos-sheet'} aria-label={t({ es: 'Tu pedido', ca: 'La teva comanda', en: 'Your order' })}>
