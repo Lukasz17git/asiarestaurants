@@ -1,7 +1,8 @@
 // A crawler that runs no JS only reads the HTML file, so each route of each language gets its own copy of
 // build/index.html (build/menu/index.html, build/ca/menu/index.html...) with its title, description, canonical,
 // hreflang links and a <noscript> with its text. Also writes build/404.html and build/sitemap.xml,
-// and adds the restaurant's data as schema.org Restaurant to every page and the dishes as schema.org Menu to /menu.
+// and adds the restaurant's data as schema.org Restaurant to every page, the dishes as schema.org Menu to /menu
+// and the site's name and photo as schema.org WebSite and WebPage to the home.
 const fs = require('fs')
 const path = require('path')
 
@@ -58,13 +59,38 @@ const getNoscript = (language, route) => {
 // '<' escaped so a text can't close the <script>
 const toJsonLdScript = (jsonLd) => `<script type="application/ld+json">${JSON.stringify(jsonLd).replaceAll('<', '\\u003c')}</script>`
 
+// The search result's thumbnail, in the 3 shapes Google asks for
+const searchPhotos = ['1x1', '4x3', '16x9'].map((shape) => `${siteUrl}/search-photo-${shape}.jpg`)
+
+// WebSite gives the name Google shows above the result ('Asia Restaurants', not 'asiarestaurants.es');
+// WebPage, the photo it should prefer as the home's thumbnail
+const getHomeScript = (language) => toJsonLdScript([
+    {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        name: restaurant.brand,
+        alternateName: [restaurant.name, siteUrl.replace('https://', '')],
+        url: `${siteUrl}/`,
+    },
+    {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        url: `${siteUrl}${getPath(language, '/')}`,
+        inLanguage: language,
+        isPartOf: { '@id': `${siteUrl}/#website` },
+        about: { '@id': `${siteUrl}/#restaurant` },
+        primaryImageOfPage: searchPhotos[0],
+    },
+])
+
 const restaurantScript = toJsonLdScript({
     '@context': 'https://schema.org',
     '@type': 'Restaurant',
     '@id': `${siteUrl}/#restaurant`,
     name: restaurant.name,
     url: `${siteUrl}/`,
-    image: `${siteUrl}/og-image.jpg`,
+    image: searchPhotos,
     logo: `${siteUrl}/LogoRed.webp`,
     telephone: restaurant.phone.replaceAll(' ', ''),
     priceRange: '€€',
@@ -118,7 +144,8 @@ for (const language of languages) {
         html = replaceHomeText(html, `property="og:url" content="${siteUrl}/"`, `property="og:url" content="${url}"`)
         html = replaceHomeText(html, '<html lang="es">', `<html lang="${language}">`)
         html = replaceHomeText(html, 'content="es_ES"', `content="${texts[language].ogLocale}"`)
-        html = replaceHomeText(html, '</head>', `${getAlternateLinks(route)}${restaurantScript}${route === '/menu' ? getMenuScript(language) : ''}</head>`)
+        const routeScript = { '/': getHomeScript, '/menu': getMenuScript }[route]?.(language) ?? ''
+        html = replaceHomeText(html, '</head>', `${getAlternateLinks(route)}${restaurantScript}${routeScript}</head>`)
         html = replaceHomeText(html, '<div id="root">', `${getNoscript(language, route)}<div id="root">`)
 
         const folder = path.join(buildFolder, getPath(language, route))

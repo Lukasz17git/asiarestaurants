@@ -18,11 +18,14 @@ Primero lo tuyo, luego lo del cliente: varias cosas dependen de lo que conteste.
    [ ] Abrir https://asiarestaurants.es/#toggle-goatcounter una vez en cada
        navegador tuyo, para no contar tus visitas
 
-2. VOLVER A ENVIAR EL SITEMAP                                                 TÚ
+2. SEARCH CONSOLE Y BING                                                      TÚ
 ────────────────────────────────────────────────────────────────────────────────
-   /legal es nueva (también /ca/legal y /en/legal).
+   /legal es nueva (también /ca/legal y /en/legal), y la home dice a Google el
+   nombre del sitio ("Asia Restaurants") y su foto (search-photo-*.jpg).
    [ ] Enviar https://asiarestaurants.es/sitemap.xml en Search Console >
        Sitemaps después del deploy
+   [ ] Pedir la indexación de https://asiarestaurants.es/ en Search Console >
+       Inspección de URLs, después del deploy
    [ ] Importar la web en Bing Webmaster Tools desde Search Console, si aún no
        está
 
