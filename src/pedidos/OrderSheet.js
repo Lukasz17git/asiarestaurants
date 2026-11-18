@@ -27,9 +27,42 @@ const getErrors = ({ cartItems, customer, type, quote }) => {
 const vilafrancaFreeFromText = formatShortPrice(vilafrancaZone.freeDeliveryFromInCents)
 const outsideMinimumText = formatShortPrice(outsideVilafrancaZone.minimumOrderInCents)
 
+const mapApps = [
+    { id: 'google', name: 'Google Maps', url: facts.mapsUrl },
+    { id: 'apple', name: 'Apple Maps', url: facts.appleMapsUrl },
+    { id: 'waze', name: 'Waze', url: facts.wazeUrl },
+]
+
+// «Cómo llegar» opens the map apps inside the strip; a popup would hide under the sheet's footer on phones
+const PickupPlace = () => {
+    const [isMapAppsOpen, setIsMapAppsOpen] = useState(false)
+
+    return (
+        <>
+            <div className='pedidos-pickup'>
+                <div className='pedidos-pickup-place'>
+                    <span className='pedidos-pickup-pin' aria-hidden='true' />
+                    <p>{facts.street}<small>{facts.postalCode} {facts.town}</small></p>
+                    <button type='button' aria-expanded={isMapAppsOpen} onClick={() => setIsMapAppsOpen((isOpen) => !isOpen)}>
+                        {t({ es: 'Cómo llegar', ca: 'Com arribar-hi', en: 'Directions' })}
+                        <span aria-hidden='true'>▾</span>
+                    </button>
+                </div>
+                {isMapAppsOpen && (
+                    <div className='pedidos-map-apps'>
+                        {mapApps.map(({ id, name, url }) => (
+                            <a key={id} className={id} href={url} target='_blank' rel='noopener noreferrer'>{name}<span aria-hidden='true'>↗</span></a>
+                        ))}
+                    </div>
+                )}
+            </div>
+            <p className='pedidos-pickup-note'>{t({ es: 'Sin gastos de envío ni pedido mínimo.', ca: "Sense despeses d'enviament ni comanda mínima.", en: 'No delivery fee and no minimum order.' })}</p>
+        </>
+    )
+}
+
 // Only for Vilafranca; both rates are on the "Entrega a domicilio" button
-const getDeliveryInfo = (type, quote) => {
-    if (type === 'pickup') return t({ es: `Recoges el pedido en ${facts.address}. Sin gastos de envío ni pedido mínimo.`, ca: `Reculls la comanda a ${facts.address}. Sense despeses d'enviament ni comanda mínima.`, en: `You pick up the order at ${facts.address}. No delivery fee and no minimum order.` })
+const getDeliveryInfo = (quote) => {
     if (!quote.isVilafranca) return ''
     if (quote.missingForFreeDeliveryInCents > 0) return t({ es: `Añade ${formatPrice(quote.missingForFreeDeliveryInCents)} más y el envío a Vilafranca es gratis.`, ca: `Afegeix ${formatPrice(quote.missingForFreeDeliveryInCents)} més i l'enviament a Vilafranca és gratis.`, en: `Add ${formatPrice(quote.missingForFreeDeliveryInCents)} more and delivery to Vilafranca is free.` })
     return t({ es: `¡Envío gratis! Tu pedido a Vilafranca es de ${vilafrancaFreeFromText} o más.`, ca: `Enviament gratis! La teva comanda a Vilafranca és de ${vilafrancaFreeFromText} o més.`, en: `Free delivery! Your order to Vilafranca is ${vilafrancaFreeFromText} or more.` })
@@ -43,11 +76,10 @@ const getDeliveryFeeText = (type, quote) => {
     return <span className='pedidos-free'><s>{formatPrice(vilafrancaZone.deliveryFeeInCents)}</s> {t({ es: 'Gratis', ca: 'Gratis', en: 'Free' })}</span>
 }
 
-const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChangeQuantity, onClear, onClose }) => {
+const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, type, setType, onChangeQuantity, onClear, onClose }) => {
     const [showErrors, setShowErrors] = useState(false)
     const [isSent, setIsSent] = useState(false)
 
-    const { type } = customer
     const quote = getDeliveryQuote({ type, postalCode: customer.postalCode, subtotalInCents })
     // On the delivery quote, so the "Entrega a domicilio" button shows it also while pickup is selected
     const deliveryQuote = getDeliveryQuote({ type: 'delivery', postalCode: customer.postalCode, subtotalInCents })
@@ -56,7 +88,7 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
     const visibleErrors = showErrors ? errors : {}
     // The minimum already shows above the send button at all times
     const { minimum, ...alertErrors } = visibleErrors
-    const deliveryInfo = getDeliveryInfo(type, quote)
+    const deliveryInfo = getDeliveryInfo(quote)
 
     const updateField = (field) => (event) => setCustomer({ ...customer, [field]: event.target.value })
     const updatePostalCode = (event) => setCustomer({ ...customer, postalCode: event.target.value.replace(/\D/g, '').slice(0, 5) })
@@ -109,19 +141,20 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
 
                 <h3 className='pedidos-sheet-title'>{t({ es: '¿Cómo lo quieres?', ca: 'Com la vols?', en: 'How do you want it?' })}</h3>
                 <div className='pedidos-types' role='radiogroup' aria-label={t({ es: 'Tipo de pedido', ca: 'Tipus de comanda', en: 'Order type' })}>
-                    <button type='button' role='radio' aria-checked={type === 'delivery'} className={type === 'delivery' ? 'selected' : ''} onClick={() => setCustomer({ ...customer, type: 'delivery' })}>
+                    <button type='button' role='radio' aria-checked={type === 'delivery'} className={type === 'delivery' ? 'selected' : ''} onClick={() => setType('delivery')}>
                         <span className='pedidos-type-icon delivery' aria-hidden='true' />
                         <strong>{t({ es: 'Entrega a domicilio', ca: 'Lliurament a domicili', en: 'Home delivery' })}</strong>
                         {isFreeDelivery
                             ? <small className='pedidos-free'>{t({ es: 'Tu pedido tiene envío gratis', ca: 'La teva comanda té enviament gratis', en: 'Your order has free delivery' })}</small>
                             : <small>{t({ es: <>Gratis en Vilafranca<br />desde {vilafrancaFreeFromText}<br />Fuera: mínimo {outsideMinimumText}</>, ca: <>Gratis a Vilafranca<br />des de {vilafrancaFreeFromText}<br />Fora: mínim {outsideMinimumText}</>, en: <>Free in Vilafranca<br />from {vilafrancaFreeFromText}<br />Outside: min. {outsideMinimumText}</> })}</small>}
                     </button>
-                    <button type='button' role='radio' aria-checked={type === 'pickup'} className={type === 'pickup' ? 'selected' : ''} onClick={() => setCustomer({ ...customer, type: 'pickup' })}>
+                    <button type='button' role='radio' aria-checked={type === 'pickup'} className={type === 'pickup' ? 'selected' : ''} onClick={() => setType('pickup')}>
                         <span className='pedidos-type-icon pickup' aria-hidden='true' />
                         <strong>{t({ es: 'Recoger en el restaurante', ca: 'Recollir al restaurant', en: 'Pick up at the restaurant' })}</strong>
                         <small>{facts.street}</small>
                     </button>
                 </div>
+                {type === 'pickup' && <PickupPlace />}
 
                 <h3 className='pedidos-sheet-title'>{t({ es: 'Tus datos', ca: 'Les teves dades', en: 'Your details' })}</h3>
                 <div className='pedidos-form'>
@@ -134,7 +167,7 @@ const OrderSheet = ({ cartItems, subtotalInCents, customer, setCustomer, onChang
                     )}
                     <Field label={t({ es: 'Observaciones (opcional)', ca: 'Observacions (opcional)', en: 'Notes (optional)' })} value={customer.notes} onChange={updateField('notes')} isTextarea placeholder={t({ es: 'Alergias, sin picante, timbre...', ca: 'Al·lèrgies, sense picant, timbre...', en: 'Allergies, not spicy, doorbell...' })} />
                 </div>
-                {deliveryInfo && <p className={type === 'delivery' && isFreeDelivery ? 'pedidos-note free' : 'pedidos-note'}>{deliveryInfo}</p>}
+                {deliveryInfo && <p className={isFreeDelivery ? 'pedidos-note free' : 'pedidos-note'}>{deliveryInfo}</p>}
             </div>
 
             <div className='pedidos-sheet-footer'>

@@ -18,6 +18,7 @@ const formatShortPrice = (priceInCents) => (priceInCents % 100 ? formatFactPrice
 const phoneDigits = phone.replace(/\D/g, '')
 const address = `${street}, ${postalCode} ${city}`
 const mapsQuery = encodeURIComponent(`${restaurant.name}, ${address}`)
+const { latitude, longitude } = restaurant.geo
 // 'https://www.instagram.com/asiavilafranca/' -> '@asiavilafranca'
 const instagramHandle = `@${restaurant.instagramUrl.split('/').filter(Boolean).pop()}`
 const dishCount = dishSections.reduce((count, section) => count + section.dishes.length, 0)
@@ -118,6 +119,8 @@ const getFacts = (language) => {
         town: city,
         address,
         mapsUrl: `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`,
+        appleMapsUrl: `https://maps.apple.com/?q=${encodeURIComponent(restaurant.name)}&ll=${latitude},${longitude}`,
+        wazeUrl: `https://waze.com/ul?ll=${latitude},${longitude}&navigate=yes`,
         schedule,
         // Each day's shifts, for the booking form and today's hours: { Monday: [{ name: 'Mediodía', opens: '12:30', ... }], ... }
         weekShifts: Object.fromEntries(weekdays.map((weekday) => [weekday, getDayShifts(weekday, language)])),
