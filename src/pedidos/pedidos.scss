@@ -1093,29 +1093,14 @@ body:has(.pedidos-photo-dialog[open]) {
     overflow: hidden;
 }
 
-// Opening: the backdrop darkens, the card rises and grows with its photo, the pieces seal presses down like a
-// stamp and the text follows line by line. translateY stays within the dialog's 16px padding, so no scrollbar shows
+// Opening: the backdrop darkens and the card grows a little into place
 .pedidos-photo-dialog[open] {
     &::backdrop {
-        animation: pedidos-dialog-fade 0.3s ease-out;
+        animation: pedidos-dialog-fade 0.2s ease-out;
     }
 
     .pedidos-photo-dialog-card {
-        animation: pedidos-dialog-card-in 0.5s $easeOut;
-    }
-
-    .pedidos-dish-pieces {
-        animation: pedidos-dialog-stamp 0.4s 0.3s ease-out backwards;
-    }
-
-    .pedidos-photo-dialog-body > * {
-        animation: pedidos-dialog-rise 0.45s $easeOut backwards;
-    }
-
-    @for $i from 1 through 5 {
-        .pedidos-photo-dialog-body > :nth-child(#{$i}) {
-            animation-delay: 0.1s + $i * 0.05s;
-        }
+        animation: pedidos-dialog-grow 0.2s ease-out;
     }
 }
 
@@ -1125,30 +1110,10 @@ body:has(.pedidos-photo-dialog[open]) {
     }
 }
 
-@keyframes pedidos-dialog-card-in {
+@keyframes pedidos-dialog-grow {
     from {
         opacity: 0;
-        transform: translateY(16px) scale(0.95);
-    }
-}
-
-// scale on top of the seal's own rotate transform
-@keyframes pedidos-dialog-stamp {
-    0% {
-        opacity: 0;
-        scale: 1.8;
-    }
-
-    70% {
-        opacity: 1;
-        scale: 0.92;
-    }
-}
-
-@keyframes pedidos-dialog-rise {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+        transform: scale(0.97);
     }
 }
 
