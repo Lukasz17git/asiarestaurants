@@ -119,8 +119,10 @@ const getFacts = (language) => {
         town: city,
         address,
         mapsUrl: `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`,
-        appleMapsUrl: `https://maps.apple.com/?q=${encodeURIComponent(restaurant.name)}&ll=${latitude},${longitude}`,
-        wazeUrl: `https://waze.com/ul?ll=${latitude},${longitude}&navigate=yes`,
+        // «Cómo llegar» opens the route to the restaurant in each app
+        googleDirectionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${mapsQuery}`,
+        appleDirectionsUrl: `https://maps.apple.com/?daddr=${latitude},${longitude}`,
+        wazeDirectionsUrl: `https://waze.com/ul?ll=${latitude},${longitude}&navigate=yes`,
         schedule,
         // Each day's shifts, for the booking form and today's hours: { Monday: [{ name: 'Mediodía', opens: '12:30', ... }], ... }
         weekShifts: Object.fromEntries(weekdays.map((weekday) => [weekday, getDayShifts(weekday, language)])),

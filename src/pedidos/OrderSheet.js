@@ -28,9 +28,9 @@ const vilafrancaFreeFromText = formatShortPrice(vilafrancaZone.freeDeliveryFromI
 const outsideMinimumText = formatShortPrice(outsideVilafrancaZone.minimumOrderInCents)
 
 const mapApps = [
-    { id: 'google', name: 'Google Maps', url: facts.mapsUrl },
-    { id: 'apple', name: 'Apple Maps', url: facts.appleMapsUrl },
-    { id: 'waze', name: 'Waze', url: facts.wazeUrl },
+    { id: 'google', name: 'Google Maps', url: facts.googleDirectionsUrl },
+    { id: 'apple', name: 'Apple Maps', url: facts.appleDirectionsUrl },
+    { id: 'waze', name: 'Waze', url: facts.wazeDirectionsUrl },
 ]
 
 // «Cómo llegar» opens the map apps inside the strip; a popup would hide under the sheet's footer on phones
