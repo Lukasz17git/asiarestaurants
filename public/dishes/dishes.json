@@ -1594,6 +1594,7 @@
                "zh": "三文魚"
             },
             "priceInCents": 500,
+            "pieces": 6,
             "photo": "hosomaki-sake",
             "isVegan": false,
             "isSpicy": false
@@ -1615,6 +1616,7 @@
                "zh": "吞拿魚"
             },
             "priceInCents": 600,
+            "pieces": 6,
             "photo": "hosomaki-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -1636,6 +1638,7 @@
                "zh": "熟蝦"
             },
             "priceInCents": 450,
+            "pieces": 6,
             "photo": "hosomaki-ebi",
             "isVegan": false,
             "isSpicy": false
@@ -1657,6 +1660,7 @@
                "zh": "酪梨"
             },
             "priceInCents": 500,
+            "pieces": 6,
             "photo": "hosomaki-avocado",
             "isVegan": true,
             "isSpicy": false
@@ -1678,6 +1682,7 @@
                "zh": "黃瓜"
             },
             "priceInCents": 450,
+            "pieces": 6,
             "photo": "hosomaki-kappa",
             "isVegan": true,
             "isSpicy": false
@@ -1693,6 +1698,7 @@
                "cat": "Salmó"
             },
             "priceInCents": 500,
+            "pieces": 6,
             "photo": "image85",
             "isVegan": false,
             "isSpicy": false
@@ -1714,6 +1720,7 @@
                "zh": "三文魚"
             },
             "priceInCents": 500,
+            "pieces": 6,
             "photo": "soy-maki-sake",
             "isVegan": false,
             "isSpicy": false
@@ -1735,6 +1742,7 @@
                "zh": "炸三文魚、費城奶酪和照燒醬"
             },
             "priceInCents": 600,
+            "pieces": 6,
             "photo": "hosomaki-fry-sake",
             "isVegan": false,
             "isSpicy": false
@@ -1756,6 +1764,7 @@
                "zh": "吞拿魚"
             },
             "priceInCents": 600,
+            "pieces": 6,
             "photo": "soy-maki-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -1777,6 +1786,7 @@
                "zh": "炸蝦*"
             },
             "priceInCents": 600,
+            "pieces": 6,
             "photo": "hosomaki-fry-ebi",
             "isVegan": false,
             "isSpicy": false
@@ -1798,6 +1808,7 @@
                "zh": "炸三文魚、芒果、費城奶酪和芒果醬"
             },
             "priceInCents": 700,
+            "pieces": 6,
             "photo": "hosomaki-fry-mango",
             "isVegan": false,
             "isSpicy": false
@@ -1819,6 +1830,7 @@
                "zh": "炸三文魚、草莓費城奶酪和照燒醬"
             },
             "priceInCents": 700,
+            "pieces": 6,
             "photo": "hosomaki-fry-fragola",
             "isVegan": false,
             "isSpicy": false
@@ -1840,6 +1852,7 @@
                "zh": "用卷心菜卷起來，三文魚塔塔、鱷梨、辣味蛋黃醬和照燒醬"
             },
             "priceInCents": 1000,
+            "pieces": 6,
             "photo": "hosomaki-nidi-sake",
             "isVegan": false,
             "isSpicy": true
@@ -1861,6 +1874,7 @@
                "zh": "用卷心菜卷起來，鮪魚塔塔、鱷梨、辣味蛋黃醬和照燒醬"
             },
             "priceInCents": 1100,
+            "pieces": 6,
             "photo": "hosomaki-nidi-tuna",
             "isVegan": false,
             "isSpicy": true
@@ -2130,6 +2144,7 @@
                "es": "Salmón, aguacate y queso"
             },
             "priceInCents": 900,
+            "pieces": 8,
             "photo": "uramaki-sake-philadelphia",
             "isVegan": false,
             "isSpicy": false
@@ -2151,6 +2166,7 @@
                "zh": "三文鱼和鳄梨"
             },
             "priceInCents": 800,
+            "pieces": 8,
             "photo": "uramaki-salmone",
             "isVegan": false,
             "isSpicy": false
@@ -2164,6 +2180,7 @@
                "es": "Salmón, aguacate, vuelta pescado blanco y salsa ponzu, lima"
             },
             "priceInCents": 1200,
+            "pieces": 8,
             "photo": "uramaki-torre-elefeel",
             "isVegan": false,
             "isSpicy": false
@@ -2181,6 +2198,7 @@
                "es": "Salmón, aguacate, mayonesa picante y almendra"
             },
             "priceInCents": 900,
+            "pieces": 8,
             "photo": "uramaki-spicy-salmone",
             "isVegan": false,
             "isSpicy": false
@@ -2194,6 +2212,7 @@
                "es": "Salmón, aguacate, tarta de salmón flameado con crema miso y pistacho"
             },
             "priceInCents": 1100,
+            "pieces": 8,
             "photo": "uramaki-flambe-roll",
             "isVegan": false,
             "isSpicy": false
@@ -2207,6 +2226,7 @@
                "es": "Salmón, aguacate, vuelta salmón flameado, teriyaki y kataifi"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "ioyi-salmon",
             "isVegan": false,
             "isSpicy": false
@@ -2220,6 +2240,7 @@
                "es": "Salmón, aguacate, vuelta de vieira, trufa negra de verano fresca y teriyaki"
             },
             "priceInCents": 1800,
+            "pieces": 8,
             "photo": "hotate",
             "isVegan": false,
             "isSpicy": false
@@ -2237,6 +2258,7 @@
                "es": "Salmón, aguacate, queso, mango fresco y salsa mango"
             },
             "priceInCents": 1100,
+            "pieces": 8,
             "photo": "uramaki-miami",
             "isVegan": false,
             "isSpicy": false
@@ -2254,6 +2276,7 @@
                "es": "Salmón, aguacate, mayonesa picante y nachos"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-mexican",
             "isVegan": false,
             "isSpicy": false
@@ -2267,6 +2290,7 @@
                "es": "Salmón cocido, aguacate, Philadelphia, tartar de salmón crudo, salsa picante y teriyaki"
             },
             "priceInCents": 1100,
+            "pieces": 8,
             "photo": "uramaki-asia-roll",
             "isVegan": false,
             "isSpicy": false
@@ -2280,6 +2304,7 @@
                "es": "Salmón cocido, aguacate, vuelta pescado blanco y salsa burrata pistacho"
             },
             "priceInCents": 1100,
+            "pieces": 8,
             "photo": "new-future",
             "isVegan": false,
             "isSpicy": false
@@ -2297,6 +2322,7 @@
                "es": "Gamba en tempura, mayonesa, envuelto en salmón, teriyaki y patata dulce"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-tiger",
             "isVegan": false,
             "isSpicy": false
@@ -2310,6 +2336,7 @@
                "es": "Gamba en tempura, Philadelphia, envuelto en salmón sellado, salsa teriyaki y pistacho"
             },
             "priceInCents": 1200,
+            "pieces": 8,
             "photo": "uramaki-special-burn",
             "isVegan": false,
             "isSpicy": false
@@ -2323,6 +2350,7 @@
                "es": "Gamba frita, queso, tarta de salmón con pesto y teriyaki"
             },
             "priceInCents": 1200,
+            "pieces": 8,
             "photo": "ebi-flower",
             "isVegan": false,
             "isSpicy": false
@@ -2336,6 +2364,7 @@
                "es": "Gamba frita, queso, tarta de salmón flameado, patata dulce y teriyaki"
             },
             "priceInCents": 1200,
+            "pieces": 8,
             "photo": "angel-roll",
             "isVegan": false,
             "isSpicy": false
@@ -2353,6 +2382,7 @@
                "es": "Gamba en tempura, mayonesa, kataifi y teriyaki"
             },
             "priceInCents": 800,
+            "pieces": 8,
             "photo": "uramaki-ebiten",
             "isVegan": false,
             "isSpicy": false
@@ -2370,6 +2400,7 @@
                "es": "Gamba en tempura, cebolla frita, Philadelphia y teriyaki"
             },
             "priceInCents": 900,
+            "pieces": 8,
             "photo": "uramaki-ebiten-philadelphia",
             "isVegan": false,
             "isSpicy": false
@@ -2387,6 +2418,7 @@
                "es": "Gamba en tempura, mayonesa, envuelto en aguacate, teriyaki y cebolla"
             },
             "priceInCents": 1100,
+            "pieces": 8,
             "photo": "uramaki-dragon",
             "isVegan": false,
             "isSpicy": false
@@ -2404,6 +2436,7 @@
                "es": "Gamba en tempura con gamba roja cruda por fuera, salsa teriyaki, pistacho y burrata"
             },
             "priceInCents": 1500,
+            "pieces": 8,
             "photo": "uramaki-vintage",
             "isVegan": false,
             "isSpicy": false
@@ -2421,6 +2454,7 @@
                "es": "Gamba en tempura con atún crudo por fuera, salsa de trufa teriyaki y burrata"
             },
             "priceInCents": 1500,
+            "pieces": 8,
             "photo": "uramaki-7",
             "isVegan": false,
             "isSpicy": false
@@ -2434,6 +2468,7 @@
                "es": "Gamba frita, tarta de salmón flameado, spicy y cebolla frita"
             },
             "priceInCents": 1300,
+            "pieces": 8,
             "photo": "sweet-hot",
             "isVegan": false,
             "isSpicy": false
@@ -2451,6 +2486,7 @@
                "es": "Langostino en tempura, Philadelphia, envuelto en aguacate, salsa teriyaki y tartar de langosta"
             },
             "priceInCents": 1800,
+            "pieces": 8,
             "photo": "lobster-roll",
             "isVegan": false,
             "isSpicy": false
@@ -2464,6 +2500,7 @@
                "es": "Gamba frita, aguacate, pescado blanco, burrata y patata dulce"
             },
             "priceInCents": 1300,
+            "pieces": 8,
             "photo": "white-tiger",
             "isVegan": false,
             "isSpicy": false
@@ -2477,6 +2514,7 @@
                "es": "Gamba frita, aguacate, vuelta salmón flameado, salsa pistacho"
             },
             "priceInCents": 1200,
+            "pieces": 8,
             "photo": "dynamite",
             "isVegan": false,
             "isSpicy": false
@@ -2490,6 +2528,7 @@
                "es": "Gamba frita, aguacate, trufa negra de verano fresca y teriyaki"
             },
             "priceInCents": 1300,
+            "pieces": 8,
             "photo": "burrata-roll",
             "isVegan": false,
             "isSpicy": false
@@ -2503,6 +2542,7 @@
                "es": "Aguacate y queso, con vuelta de anguila y teriyaki"
             },
             "priceInCents": 1500,
+            "pieces": 8,
             "photo": "anguila-roll",
             "isVegan": false,
             "isSpicy": false
@@ -2516,6 +2556,7 @@
                "es": "Aguacate, queso, tarta de salmón con salsa mango y almendra"
             },
             "priceInCents": 1100,
+            "pieces": 8,
             "photo": "samba-roll",
             "isVegan": false,
             "isSpicy": false
@@ -2533,6 +2574,7 @@
                "es": "Atún cocido, aguacate y Philadelphia"
             },
             "priceInCents": 800,
+            "pieces": 8,
             "photo": "uramaki-tuna-philadelphia",
             "isVegan": false,
             "isSpicy": false
@@ -2554,6 +2596,7 @@
                "zh": "金枪鱼和牛油果"
             },
             "priceInCents": 900,
+            "pieces": 8,
             "photo": "uramaki-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -2571,6 +2614,7 @@
                "es": "Atún, aguacate, mayonesa picante y almendra"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-spicy-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -2588,6 +2632,7 @@
                "es": "Vegetales variados"
             },
             "priceInCents": 800,
+            "pieces": 8,
             "photo": "uramaki-vegetarian",
             "isVegan": false,
             "isSpicy": false
@@ -2605,6 +2650,7 @@
                "es": "Espárragos fritos, pepino, envueltos en aguacate y salsa de sésamo"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-crispy-asparago",
             "isVegan": false,
             "isSpicy": false
@@ -2622,6 +2668,7 @@
                "es": "Espárragos fritos, pepino, burrata y tartar de ternera"
             },
             "priceInCents": 1500,
+            "pieces": 8,
             "photo": "uramaki-beef",
             "isVegan": false,
             "isSpicy": false
@@ -2635,6 +2682,7 @@
                "es": "Verdura mixta frita, aguacate con patata dulce y teriyaki"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "crispy-green",
             "isVegan": false,
             "isSpicy": false
@@ -2652,6 +2700,7 @@
                "es": "Salmón frito, Philadelphia, pistacho y teriyaki"
             },
             "priceInCents": 800,
+            "pieces": 8,
             "photo": "uramaki-miura",
             "isVegan": false,
             "isSpicy": false
@@ -2669,6 +2718,7 @@
                "es": "Pollo frito, aguacate, Philadelphia y teriyaki"
             },
             "priceInCents": 800,
+            "pieces": 8,
             "photo": "uramaki-tori",
             "isVegan": false,
             "isSpicy": false
@@ -2686,6 +2736,7 @@
                "es": "Surimi, aguacate, mayonesa y pescado variado envuelto"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-arcoiris",
             "isVegan": false,
             "isSpicy": false
@@ -2727,6 +2778,7 @@
                "zh": "黑米鳕鱼、鳄梨、意大利奶酪、开心果和照烧酱"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-black-sake",
             "isVegan": false,
             "isSpicy": false
@@ -2748,6 +2800,7 @@
                "zh": "黑米鳕鱼、鳄梨、熟金枪鱼、费城奶酪和开心果"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-black-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -2769,6 +2822,7 @@
                "zh": "黑米、蟹肉棒*、熟虾*、鳄梨、美乃滋和照烧酱"
             },
             "priceInCents": 1000,
+            "pieces": 8,
             "photo": "uramaki-black-ebi",
             "isVegan": false,
             "isSpicy": false
@@ -2790,6 +2844,7 @@
                "zh": "黑米、天妇罗虾*、黄瓜、煎三文鱼包裹，配辣照烧酱和炸洋葱"
             },
             "priceInCents": 1500,
+            "pieces": 8,
             "photo": "uramaki-black-sweet",
             "isVegan": false,
             "isSpicy": true
@@ -2811,6 +2866,7 @@
                "zh": "黑米、天妇罗虾*、美乃滋、鲑鱼和丝状面糊包裹"
             },
             "priceInCents": 1200,
+            "pieces": 8,
             "photo": "uramaki-black-tiger",
             "isVegan": false,
             "isSpicy": false
@@ -2852,6 +2908,7 @@
                "zh": "三文鱼"
             },
             "priceInCents": 350,
+            "pieces": 2,
             "photo": "nigiri-sake",
             "isVegan": false,
             "isSpicy": false
@@ -2869,6 +2926,7 @@
                "es": "Con ponzu"
             },
             "priceInCents": 350,
+            "pieces": 2,
             "photo": "nigiri-suzuki",
             "isVegan": false,
             "isSpicy": false
@@ -2890,6 +2948,7 @@
                "zh": "熟虾*"
             },
             "priceInCents": 350,
+            "pieces": 2,
             "photo": "nigiri-ebi",
             "isVegan": false,
             "isSpicy": false
@@ -2911,6 +2970,7 @@
                "zh": "配有照烧酱"
             },
             "priceInCents": 400,
+            "pieces": 2,
             "photo": "nigiri-flabe-sake",
             "isVegan": false,
             "isSpicy": false
@@ -2932,6 +2992,7 @@
                "zh": "金枪鱼"
             },
             "priceInCents": 400,
+            "pieces": 2,
             "photo": "nigiri-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -2947,6 +3008,7 @@
                "cat": "Foie gras flambejat"
             },
             "priceInCents": 800,
+            "pieces": 2,
             "photo": "image141",
             "isVegan": false,
             "isSpicy": false
@@ -2960,6 +3022,7 @@
                "es": "Con trufa"
             },
             "priceInCents": 400,
+            "pieces": 2,
             "photo": "nigiri-de-mantequilla",
             "isVegan": false,
             "isSpicy": false
@@ -2981,6 +3044,7 @@
                "zh": "牛油果"
             },
             "priceInCents": 350,
+            "pieces": 2,
             "photo": "nigiri-avocado",
             "isVegan": false,
             "isSpicy": false
@@ -3002,6 +3066,7 @@
                "zh": "章鱼*"
             },
             "priceInCents": 450,
+            "pieces": 2,
             "photo": "nigiri-tako",
             "isVegan": false,
             "isSpicy": false
@@ -3023,6 +3088,7 @@
                "zh": "配有照烧酱"
             },
             "priceInCents": 450,
+            "pieces": 2,
             "photo": "nigiri-flambe-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -3044,6 +3110,7 @@
                "zh": "配有照烧酱"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "nigiri-anguilla-flambe",
             "isVegan": false,
             "isSpicy": false
@@ -3065,6 +3132,7 @@
                "zh": "配有照烧酱"
             },
             "priceInCents": 450,
+            "pieces": 2,
             "photo": "nigiri-flambe-suzuki",
             "isVegan": false,
             "isSpicy": false
@@ -3086,6 +3154,7 @@
                "zh": "炒饭、费城奶酪、三文鱼鞑靼和芒果酱"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "nigiri-crispy-mango-sake",
             "isVegan": false,
             "isSpicy": false
@@ -3107,6 +3176,7 @@
                "zh": "炒饭、费城奶酪、三文鱼鞑靼、杏仁片和照烧酱"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "nigiri-crispy-sake",
             "isVegan": false,
             "isSpicy": false
@@ -3148,6 +3218,7 @@
                "zh": "米饭包裹三文鱼，配以三文鱼鞑靼"
             },
             "priceInCents": 450,
+            "pieces": 2,
             "photo": "gunkan-sake",
             "isVegan": false,
             "isSpicy": false
@@ -3169,6 +3240,7 @@
                "zh": "米饭包裹三文鱼、费城奶酪和照烧酱"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "gunkan-sake-phila",
             "isVegan": false,
             "isSpicy": false
@@ -3190,6 +3262,7 @@
                "zh": "米饭包裹金枪鱼，配以金枪鱼鞑靼"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "gunkan-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -3211,6 +3284,7 @@
                "zh": "米饭包裹三文鱼，配以三文鱼鞑靼和辣味蛋黄酱"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "gunkan-sake-spicy-mayo",
             "isVegan": false,
             "isSpicy": true
@@ -3232,6 +3306,7 @@
                "zh": "米饭包裹金枪鱼，配以金枪鱼鞑靼和辣味蛋黄酱"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "gunkan-tuna-spicy-mayo",
             "isVegan": false,
             "isSpicy": true
@@ -3253,6 +3328,7 @@
                "zh": "米饭包裹三文鱼、费城奶酪和芒果"
             },
             "priceInCents": 500,
+            "pieces": 2,
             "photo": "nigiri-sake-mango",
             "isVegan": false,
             "isSpicy": false
@@ -3294,6 +3370,7 @@
                "zh": "蟹肉棒*、鳄梨、蛋黄酱、飞鱼子和照烧酱"
             },
             "priceInCents": 450,
+            "pieces": 1,
             "photo": "temaki-california",
             "isVegan": false,
             "isSpicy": false
@@ -3315,6 +3392,7 @@
                "zh": "三文鱼和鳄梨"
             },
             "priceInCents": 500,
+            "pieces": 1,
             "photo": "temaki-sake",
             "isVegan": false,
             "isSpicy": false
@@ -3336,6 +3414,7 @@
                "zh": "金枪鱼和鳄梨"
             },
             "priceInCents": 600,
+            "pieces": 1,
             "photo": "temaki-tuna",
             "isVegan": false,
             "isSpicy": false
@@ -3357,6 +3436,7 @@
                "zh": "三文鱼、鳄梨和辣椒蛋黄酱"
             },
             "priceInCents": 550,
+            "pieces": 1,
             "photo": "temaki-sake-spicy-mayo",
             "isVegan": false,
             "isSpicy": true
@@ -3378,6 +3458,7 @@
                "zh": "金枪鱼、鳄梨和辣椒蛋黄酱"
             },
             "priceInCents": 650,
+            "pieces": 1,
             "photo": "temaki-tuna-spicy-mayo",
             "isVegan": false,
             "isSpicy": true
@@ -3399,6 +3480,7 @@
                "zh": "三文鱼、费城奶酪和照烧酱"
             },
             "priceInCents": 500,
+            "pieces": 1,
             "photo": "temaki-sake-phila",
             "isVegan": false,
             "isSpicy": false
@@ -3420,6 +3502,7 @@
                "zh": "炸虾、蛋黄酱和照烧酱"
             },
             "priceInCents": 500,
+            "pieces": 1,
             "photo": "temaki-ebiten",
             "isVegan": false,
             "isSpicy": false
@@ -3441,6 +3524,7 @@
                "zh": "蔬菜拼盘"
             },
             "priceInCents": 450,
+            "pieces": 1,
             "photo": "temaki-vegan",
             "isVegan": false,
             "isSpicy": false
@@ -3462,6 +3546,7 @@
                "zh": "鳗鱼、牛油果、费城奶酪和照烧酱"
             },
             "priceInCents": 600,
+            "pieces": 1,
             "photo": "temaki-anguilla",
             "isVegan": false,
             "isSpicy": false

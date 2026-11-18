@@ -61,7 +61,7 @@ external pages read it, so its file names can't change. IOYI Ramen's site has th
 
 | What | What for | Read by |
 | --- | --- | --- |
-| `dishes.json` | The site's dishes: sections, number, name, description, price in cents, photo and allergens | Online orders; the menu maker when there's no saved menu |
+| `dishes.json` | The site's dishes: sections, number, name, description, price in cents, pieces, photo and allergens | Online orders; the menu maker when there's no saved menu |
 | `photos-compressed/` | WebP, 600 px at most, quality 85, transparent background; `no-image.webp` for dishes without a photo | The site, the menu maker, external pages |
 | `photos-original/` | The same photos as PNG at the largest size there is, to download; the 27 cut from the PDF menu are that 800 px crop | `/fotos-mejoradas-glovo` |
 | `pdf-menu-saved/` | The PDF menus laid out in the menu maker and saved with «Guardar JSON»: `lunch-menu.json` (opened by default) and `full-menu.json` (`?menu=full-menu`) | The menu maker |
@@ -76,6 +76,8 @@ and `photos-compressed/ravioli-carne.webp`. The PDF shows each photo at about 31
   don't come from `dishes.json`: change them in both.
 - **New photo:** save the PNG in `photos-original/` and run `optimize-images` (pc-scripts) in the repo: it writes the
   600 px WebP in `photos-compressed/` with the same name. Put that name, without extension, in `photo`.
+- **Pieces:** `"pieces": 6` on a dish sold by pieces, also when its whole section has the same; with more than one,
+  orders show it as a seal on the photo, the menu page as a tag and the WhatsApp order after the name.
 - **Allergens:** `"allergens": ["gluten", "soy"]` on the dish, with the keys of
   [src/data/allergens.js](src/data/allergens.js); orders and the menu page show them under the description, and the
   build stops on a key that isn't there.

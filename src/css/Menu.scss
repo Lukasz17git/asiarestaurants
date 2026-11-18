@@ -321,6 +321,10 @@
                 background-color: rgba(126, 190, 120, 0.16);
             }
 
+            &.is-pieces {
+                border: 1px solid currentColor;
+            }
+
             &.is-spicy {
                 color: #ff8a8f;
                 background-color: rgba(224, 57, 63, 0.18);

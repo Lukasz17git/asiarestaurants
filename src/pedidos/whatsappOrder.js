@@ -12,7 +12,7 @@ const getMessageFeeLine = (quote) => {
 // No emojis: through wa.me 🛵, ✅ or ☎ arrive as '�'
 export const createOrderMessage = ({ cartItems, customer, type, quote, subtotalInCents }) => {
     const isPickup = type === 'pickup'
-    const dishLines = cartItems.map(({ dish, quantity }) => `- ${quantity} x ${dish.number}. ${dish.name.es}: ${formatPrice(dish.priceInCents * quantity)}`)
+    const dishLines = cartItems.map(({ dish, quantity }) => `- ${quantity} x ${dish.number}. ${dish.name.es}${dish.pieces > 1 ? ` (${dish.pieces} uds.)` : ''}: ${formatPrice(dish.priceInCents * quantity)}`)
     const notes = customer.notes.trim()
 
     return [
