@@ -12,14 +12,25 @@ export const QuantityControl = ({ quantity, name, onChange, size }) => (
     </div>
 )
 
-const DishCard = ({ dish, quantity, onChange }) => (
+// From scripts/fit-dish-photos.js: makes every plate fill the card about the same. scale as a string,
+// since React would add 'px' to the number
+const getPhotoFitStyle = (photoFit) => photoFit && { scale: String(photoFit.scale), translate: `${photoFit.x}% ${photoFit.y}%` }
+
+// '8 uds.', as a red seal on the card's photo and in DishPhotoDialog
+export const formatPieces = (pieces) => `${pieces} ${t({ es: 'uds.', ca: 'u.', en: 'pcs' })}`
+
+const DishCard = ({ dish, quantity, onChange, onOpenPhoto }) => (
     <article className={quantity ? 'pedidos-dish in-cart' : 'pedidos-dish'}>
         <span className='pedidos-dish-number'>{dish.number}</span>
-        <div className='pedidos-dish-media'>
-            {dish.photoUrl
-                ? <img src={dish.photoUrl} alt={t(dish.name)} loading='lazy' />
-                : <div className='pedidos-dish-placeholder' aria-hidden='true'><img src={logoUrl} alt='' /></div>}
-        </div>
+        {/* A single piece needs no badge */}
+        {dish.pieces > 1 && <span className='pedidos-dish-pieces'>{formatPieces(dish.pieces)}</span>}
+        {dish.photoUrl
+            ? (
+                <button type='button' className='pedidos-dish-media' onClick={onOpenPhoto} aria-label={`${t({ es: 'Ver la foto de', ca: 'Veure la foto de', en: 'See the photo of' })} ${t(dish.name)}`}>
+                    <img src={dish.photoUrl} alt={t(dish.name)} loading='lazy' style={getPhotoFitStyle(dish.photoFit)} />
+                </button>
+            )
+            : <div className='pedidos-dish-media'><div className='pedidos-dish-placeholder' aria-hidden='true'><img src={logoUrl} alt='' /></div></div>}
         <div className='pedidos-dish-body'>
             <h3>
                 {t(dish.name)}

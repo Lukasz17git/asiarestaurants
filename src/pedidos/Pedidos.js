@@ -1,8 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import Footer from '../Footer'
 import PageHero from '../sections/PageHero'
 import DishCard from './DishCard'
+import DishPhotoDialog from './DishPhotoDialog'
 import OrderSheet from './OrderSheet'
+import ShareButtons from './ShareButtons'
 import { updateQuantities } from './cart'
 import { facts, formatPrice } from '../data/facts'
 import { dishesByNumber, filterSections } from './takeawayMenu'
@@ -11,7 +14,7 @@ import { usePersistentState } from './usePersistentState'
 import { t } from '../language'
 import './pedidos.scss'
 
-const emptyCustomer = { type: 'delivery', name: '', phone: '', address: '', postalCode: '', notes: '' }
+const emptyCustomer = { name: '', phone: '', address: '', postalCode: '', notes: '' }
 
 // { 12: 2 } -> [{ dish, quantity: 2 }], in menu order; skips numbers no longer on the menu
 const getCartItems = (quantities) => Object.entries(quantities)
@@ -20,10 +23,17 @@ const getCartItems = (quantities) => Object.entries(quantities)
     .sort((a, b) => a.dish.number - b.dish.number)
 
 const Pedidos = () => {
-    const [search, setSearch] = useState('')
+    // In the URL (?buscar=117,122), so a shared link opens the same dishes
+    const search = useSearchParams()[0].get('buscar') ?? ''
+    const navigate = useNavigate()
+    // Keeps ',' as is (encodeURIComponent writes '%2C'), so the link reads '?buscar=117,122'
+    const setSearch = (value) => navigate({ search: value ? `?buscar=${encodeURIComponent(value).replaceAll('%2C', ',')}` : '' }, { replace: true })
+    const [openedPhoto, setOpenedPhoto] = useState(null)
     const [isSheetOpen, setIsSheetOpen] = useState(false)
     const [quantities, setQuantities] = usePersistentState('pedidos-carrito', {})
     const [customer, setCustomer] = usePersistentState('pedidos-datos', emptyCustomer)
+    // Not saved, so every visit starts on pickup
+    const [type, setType] = useState('pickup')
     const toolbarRef = useRef(null)
     const chipsRef = useRef(null)
 
@@ -82,6 +92,12 @@ const Pedidos = () => {
 
                 <div className='pedidos-layout'>
                     <main className='pedidos-menu'>
+                        {search && !!sections.length && (
+                            <div className='pedidos-search-share'>
+                                <span>{t({ es: 'Comparte estos platos', ca: 'Comparteix aquests plats', en: 'Share these dishes' })}</span>
+                                <ShareButtons text={t({ es: `Platos de ${facts.name}`, ca: `Plats de ${facts.name}`, en: `Dishes from ${facts.name}` })} url={window.location.href} />
+                            </div>
+                        )}
                         {!sections.length && <p className='pedidos-empty'>{t({ es: 'No hay platos que coincidan con', ca: 'No hi ha plats que coincideixin amb', en: 'No dishes match' })} «{search}».</p>}
                         {sections.map((section) => (
                             <section key={section.id} id={`seccion-${section.id}`} className='pedidos-section'>
@@ -94,7 +110,7 @@ const Pedidos = () => {
                                 {/* A section without any photo (drinks) shows its dishes as text-only cards */}
                                 <div className={section.dishes.some((dish) => dish.photoUrl) ? 'pedidos-dishes' : 'pedidos-dishes no-photos'}>
                                     {section.dishes.map((dish) => (
-                                        <DishCard key={dish.number} dish={dish} quantity={quantities[dish.number] ?? 0} onChange={(change) => changeQuantity(dish.number, change)} />
+                                        <DishCard key={dish.number} dish={dish} quantity={quantities[dish.number] ?? 0} onChange={(change) => changeQuantity(dish.number, change)} onOpenPhoto={() => setOpenedPhoto({ dish, section })} />
                                     ))}
                                 </div>
                             </section>
@@ -114,6 +130,8 @@ const Pedidos = () => {
                             subtotalInCents={subtotalInCents}
                             customer={customer}
                             setCustomer={setCustomer}
+                            type={type}
+                            setType={setType}
                             onChangeQuantity={changeQuantity}
                             onClear={() => setQuantities({})}
                             onClose={() => setIsSheetOpen(false)}
@@ -129,6 +147,7 @@ const Pedidos = () => {
                         <span className='pedidos-cart-price'>{formatPrice(subtotalInCents)}</span>
                     </button>
                 )}
+                {openedPhoto && <DishPhotoDialog dish={openedPhoto.dish} section={openedPhoto.section} onClose={() => setOpenedPhoto(null)} />}
             </div>
             <Footer />
         </>

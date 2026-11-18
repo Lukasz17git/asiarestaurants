@@ -15,6 +15,9 @@ const getDescription = (dish) => {
     return description && description.toLowerCase() !== t(dish.name).trim().toLowerCase() ? description : ''
 }
 
+// '(8 unidades)' -> 8; 0 for a section without a note
+const getPieces = (section) => Number(section.note?.es.match(/\d+/)?.[0] ?? 0)
+
 // id comes from the Spanish name, so it's the same in every language ('ramen-y-sopas')
 export const menuSections = sections.map((section) => ({
     id: toSlug(section.name.es),
@@ -22,18 +25,29 @@ export const menuSections = sections.map((section) => ({
     kanji: section.kanji ?? '',
     note: t(section.note) ?? '',
     photoUrl: getDishPhotoUrl(section.photo),
-    dishes: section.dishes.map((dish) => ({ ...dish, description: getDescription(dish), photoUrl: getDishPhotoUrl(dish.photo) })),
+    dishes: section.dishes.map((dish) => ({ ...dish, pieces: getPieces(section), description: getDescription(dish), photoUrl: getDishPhotoUrl(dish.photo) })),
 }))
 
 export const dishesByNumber = Object.fromEntries(menuSections.flatMap((section) => section.dishes).map((dish) => [dish.number, dish]))
 
+// '117, 122' or '117 122' -> ['117', '122']; [] when the search has any word
+const getSearchedNumbers = (search) => {
+    const parts = search.split(/[\s,]+/).filter(Boolean)
+    return parts.every((part) => /^\d+$/.test(part)) ? parts : []
+}
+
 export const filterSections = (search) => {
     const normalizedSearch = normalizeSearch(search)
     if (!normalizedSearch) return menuSections
+    const numbers = getSearchedNumbers(normalizedSearch)
+    // Several numbers show exactly those dishes; one is searched as text, so '11' also finds 110 to 119
+    const isDishFound = numbers.length > 1
+        ? (dish) => numbers.includes(String(dish.number))
+        : (dish, section) => normalizeSearch(`${dish.number} ${t(dish.name)} ${dish.description} ${section.name}`).includes(numbers[0] ?? normalizedSearch)
     return menuSections
         .map((section) => ({
             ...section,
-            dishes: section.dishes.filter((dish) => normalizeSearch(`${dish.number} ${t(dish.name)} ${dish.description} ${section.name}`).includes(normalizedSearch)),
+            dishes: section.dishes.filter((dish) => isDishFound(dish, section)),
         }))
         .filter((section) => section.dishes.length)
 }

@@ -11,11 +11,20 @@ $paperButton: $washi;
 $paperShadow: #b9b4ab;
 $whatsapp: #25d366;
 $whatsappLight: #3ee07b;
+$instagramGradient: radial-gradient(circle at 30% 107%, #fdf497 0, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+$goldMetal: linear-gradient(160deg, #f6e4bd, $textColor2 50%, #a8854f);
+$dialogLine: rgba(201, 171, 129, 0.6);
+// The photo dialog's backdrop, rgba(0, 0, 0, 0.8) over the page's #121214
+$dialogBackdrop: #040404;
 // The «Editar con IA» button (56px, 24px from the corner) stays beside the cart bar
 $fabSpace: 24px + 56px + 12px;
 
 $deliveryIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 7h11v9H3zM14 10h4l3 3v3h-7z'/%3E%3Ccircle cx='7' cy='17.5' r='1.8'/%3E%3Ccircle cx='17' cy='17.5' r='1.8'/%3E%3C/svg%3E");
 $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2'/%3E%3C/svg%3E");
+$pinIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z'/%3E%3Ccircle cx='12' cy='9.5' r='2.5'/%3E%3C/svg%3E");
+$instagramIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='2'%3E%3Crect x='3' y='3' width='18' height='18' rx='5'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3C/g%3E%3Ccircle cx='17.3' cy='6.7' r='1.3'/%3E%3C/svg%3E");
+$facebookIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z'/%3E%3C/svg%3E");
+$linkIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7'/%3E%3C/svg%3E");
 
 @mixin reset-button {
     border: none;
@@ -278,10 +287,37 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     transform: rotate(-8deg);
 }
 
+// The pieces of the ration, a red seal across from the stamp: the photo shows fewer than come
+.pedidos-dish-pieces {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    z-index: 1;
+    padding: 6px 10px;
+    border-radius: 99px;
+    color: #fff;
+    font-family: $fontDisplay;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    background: linear-gradient(135deg, $redLight, $red);
+    box-shadow: inset 0 0 0 2px rgba(244, 241, 236, 0.75), 0 6px 12px -6px #000;
+    transform: rotate(6deg);
+}
+
 .pedidos-dish-media {
     aspect-ratio: 1.2;
     overflow: hidden;
     background: radial-gradient(circle at 50% 58%, rgba(224, 57, 63, 0.3), transparent 62%);
+
+    // A photo opens whole in .pedidos-photo-dialog
+    &:is(button) {
+        @include reset-button;
+        display: block;
+        width: 100%;
+        padding: 0;
+        cursor: zoom-in;
+    }
 
     img {
         display: block;
@@ -627,7 +663,7 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 }
 
 .pedidos-sheet-title {
-    margin: 22px 0 10px;
+    margin: 30px 0 12px;
     color: $textColor2;
     font-family: $fontBody;
     font-size: 15px;
@@ -735,6 +771,114 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     &.pickup {
         @include icon($pickupIcon);
     }
+}
+
+.pedidos-pickup {
+    margin-top: 10px;
+    border-radius: 12px;
+    background-color: rgba($amber, 0.1);
+}
+
+.pedidos-pickup-place {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px 10px 12px;
+
+    p {
+        flex: 1;
+        min-width: 0;
+        color: $textColor1;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    small {
+        display: block;
+        color: $textColor4;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    button {
+        @include reset-button;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        height: 44px;
+        padding: 0 14px;
+        border-radius: 999px;
+        background-color: $amber;
+        color: $ink;
+        font-size: 13px;
+        font-weight: 700;
+        white-space: nowrap;
+
+        &[aria-expanded='true'] span {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.pedidos-pickup-pin {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    color: $amber;
+    @include icon($pinIcon);
+}
+
+.pedidos-map-apps {
+    display: grid;
+    gap: 2px;
+    padding: 0 6px 6px;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 44px;
+        padding: 0 10px;
+        border-radius: 10px;
+        background-color: $backgroundColor2;
+        color: $textColor1;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.2s;
+
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #34a853;
+        }
+
+        &.apple::before {
+            background-color: #a2aab3;
+        }
+
+        &.waze::before {
+            background-color: #33ccff;
+        }
+
+        &:hover {
+            background-color: $field;
+        }
+
+        span {
+            margin-left: auto;
+            color: $textColor4;
+        }
+    }
+}
+
+.pedidos-pickup-note {
+    margin-top: 10px;
+    color: $textColor4;
+    font-size: 12.5px;
+    line-height: 1.45;
 }
 
 .pedidos-form {
@@ -918,6 +1062,402 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     line-height: 1.5;
 }
 
+/*
+ * Photo dialog and sharing
+ */
+
+.pedidos-photo-dialog {
+    // Phone-like proportions on a computer too (the mockups' 375px screen); on short screens the square photo
+    // plus ~400px of text and sharing still fit the height, never narrower than 360px
+    width: min(400px, 100vw, max(360px, 100dvh - 400px));
+    max-width: 100vw;
+    max-height: 100dvh;
+    // The page's reset takes away the browser's margin: auto, which centers it
+    margin: auto;
+    // Room for the card's glow; a click there closes it, as on the backdrop
+    padding: 16px;
+    overflow-y: auto;
+    border: 0;
+    color: $textColor1;
+    background: none;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+body:has(.pedidos-photo-dialog[open]) {
+    overflow: hidden;
+}
+
+.pedidos-photo-dialog-card {
+    border: 1px solid $dialogLine;
+    border-radius: $radius;
+    background: linear-gradient(#1d1d21, $card 40%);
+    box-shadow: 0 0 22px -8px rgba(201, 171, 129, 0.45);
+}
+
+.pedidos-photo-dialog-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: ($radius - 1px) ($radius - 1px) 0 0;
+    background: radial-gradient(ellipse 70% 50% at 50% 25%, rgba(241, 220, 174, 0.14), transparent 70%), radial-gradient(circle at 50% 58%, rgba(224, 57, 63, 0.35), transparent 62%);
+
+    // Square, enlarged with the card's photoFit
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    // Gold corners framing the plate from below
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 14px;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        border: 0 solid $dialogLine;
+    }
+
+    &::before {
+        left: 14px;
+        border-width: 0 0 1px 1px;
+    }
+
+    &::after {
+        right: 14px;
+        border-width: 0 1px 1px 0;
+    }
+
+    // Inside the corner, since the close button takes the top right
+    .pedidos-dish-pieces {
+        top: auto;
+        right: 24px;
+        bottom: 24px;
+        padding: 8px 13px;
+        font-size: 17px;
+    }
+}
+
+.pedidos-photo-dialog-close {
+    @include reset-button;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.pedidos-photo-dialog-body {
+    padding: 4px 20px 20px;
+
+    h3 {
+        margin-top: 6px;
+        font-family: $fontDisplay;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.1;
+        background: $goldMetal;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.pedidos-photo-dialog-section {
+    color: $textColor2;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+
+    b {
+        margin-right: 8px;
+        color: $redLight;
+        font-family: $fontBrush;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+    }
+}
+
+.pedidos-photo-dialog-description {
+    margin-top: 6px;
+    color: $textColor4;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.pedidos-photo-dialog-price {
+    margin-top: 16px;
+    color: $textColor2;
+    font-family: $fontDisplay;
+    font-size: 26px;
+    line-height: 1;
+    text-align: right;
+}
+
+// A red lacquer ticket torn along the dashed line
+.pedidos-photo-dialog-share {
+    position: relative;
+    margin: 20px -20px -20px;
+    padding: 18px 20px 20px;
+    border-top: 1px dashed rgba(226, 196, 143, 0.75);
+    border-radius: 0 0 ($radius - 1px) ($radius - 1px);
+    background: linear-gradient(160deg, #b51f26, $redDark);
+
+    // The tear's half-circle notches: centered on the card's border, so they cover it and the gold line
+    // goes round them; the half outside the card is cut off
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: -11px;
+        width: 22px;
+        height: 22px;
+        box-sizing: border-box;
+        border: 1px solid $dialogLine;
+        border-radius: 50%;
+        background-color: $dialogBackdrop;
+    }
+
+    &::before {
+        left: -12px;
+        clip-path: inset(0 0 0 50%);
+    }
+
+    &::after {
+        right: -12px;
+        clip-path: inset(0 50% 0 0);
+    }
+}
+
+.pedidos-photo-dialog-share-title {
+    color: #fff;
+    font-family: $fontDisplay;
+    font-size: 22px;
+    line-height: 1;
+
+    + p {
+        margin: 6px 0 16px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 13px;
+        line-height: 1.35;
+    }
+}
+
+.pedidos-share-icon {
+    flex-shrink: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pedidos-share {
+    .whatsapp .pedidos-share-icon::before {
+        @include icon($whatsappIcon);
+    }
+
+    .instagram .pedidos-share-icon::before {
+        @include icon($instagramIcon);
+    }
+
+    .facebook .pedidos-share-icon::before {
+        @include icon($facebookIcon);
+    }
+
+    .copy .pedidos-share-icon::before {
+        @include icon($linkIcon);
+    }
+}
+
+.pedidos-share.pills .pedidos-share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    a,
+    button {
+        @include reset-button;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        height: 38px;
+        padding: 0 14px;
+        border: 1px solid rgba(244, 241, 236, 0.22);
+        border-radius: 99px;
+        color: $textColor1;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.2s, border-color 0.2s, filter 0.2s;
+
+        &:hover {
+            border-color: rgba(244, 241, 236, 0.5);
+        }
+    }
+
+    .whatsapp {
+        border-color: $whatsapp;
+        background-color: $whatsapp;
+        color: #0b2e17;
+
+        &:hover {
+            background-color: $whatsappLight;
+        }
+    }
+
+    .instagram {
+        border-color: transparent;
+        background: $instagramGradient;
+        color: #fff;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+    }
+
+    .facebook {
+        border-color: #1877f2;
+        background-color: #1877f2;
+        color: #fff;
+
+        &:hover {
+            background-color: #3b8cf5;
+        }
+    }
+
+    .pedidos-share-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+// Round icons in each network's color with a thin gold ring, the name below
+.pedidos-share.panel .pedidos-share-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    a,
+    button {
+        @include reset-button;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        width: 70px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover .pedidos-share-icon {
+            translate: 0 -2px;
+        }
+    }
+
+    .pedidos-share-icon {
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1.5px #e2c48f, 0 6px 14px -6px rgba(0, 0, 0, 0.6);
+        transition: translate 0.2s;
+
+        &::before {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    .whatsapp .pedidos-share-icon {
+        background-color: $whatsapp;
+    }
+
+    .instagram .pedidos-share-icon {
+        background: $instagramGradient;
+    }
+
+    .facebook .pedidos-share-icon {
+        background-color: #1877f2;
+    }
+
+    .copy .pedidos-share-icon {
+        background-color: $card;
+    }
+}
+
+.pedidos-share-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 6px 6px 6px 14px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.22);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+
+    span {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 13px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    button {
+        @include reset-button;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        height: 34px;
+        padding: 0 12px;
+        border-radius: 9px;
+        background: $goldMetal;
+        color: #1a1408;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .pedidos-share-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+// Above the results of a search, to send them all in one link
+.pedidos-search-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    margin-bottom: 20px;
+
+    > span {
+        color: $textColor2;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
 @media (max-width: $wideScreen - 1px) {
     body.pedidos-sheet-open {
         overflow: hidden;
@@ -957,6 +1497,13 @@ $pickupIcon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
         left: 8px;
         min-width: 28px;
         height: 28px;
+        font-size: 13px;
+    }
+
+    .pedidos-dish-pieces {
+        top: 10px;
+        right: 8px;
+        padding: 5px 9px;
         font-size: 13px;
     }
 

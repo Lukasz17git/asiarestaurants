@@ -13,7 +13,7 @@ Reggio Emilia, Ravenna and Correggio), in Spanish (`/`), Catalan (`/ca`) and Eng
 | Hosting | Vercel | Deploys, domains, build settings |
 | Domain | [Hostalia](https://www.hostalia.com/) | DNS of `asiarestaurants.es` |
 | PDF menu | [Menu maker](https://carta-menu-restaurante.vercel.app/) ([code](https://github.com/Lukasz17git/restaurant_menu_maker)) | Builds the printed menu from this site's `public/dishes/` |
-| Visits | [GoatCounter](https://asiarestaurants.goatcounter.com) | Visits per page, plus WhatsApp orders and bookings, calls, Instagram and Facebook clicks under «Events»; no cookies |
+| Visits | [GoatCounter](https://asiarestaurants.goatcounter.com) | Visits per page, plus WhatsApp orders and bookings, calls, Instagram and Facebook clicks and dishes shared (`share-…`) under «Events»; no cookies |
 | Instagram, Facebook | <https://www.instagram.com/asiavilafranca/>, [Facebook](https://www.facebook.com/profile.php?id=100082102034055) | Linked from the footer |
 | Table QR codes | `/qr` and `/qr-new` | Open the PDF menus; no navbar, out of search results |
 | Photos for Glovo | `/fotos-mejoradas-glovo` ([page](public/fotos-mejoradas-glovo.html)) | The client downloads the dishes' photos, original or compressed, named by number and name; only reached by its link, out of search results |

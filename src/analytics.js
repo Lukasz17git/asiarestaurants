@@ -7,10 +7,13 @@ export const countPage = (path) => window.goatcounter?.count?.({ path })
 // An action instead of a page, listed by its name under «Events» in GoatCounter
 export const countEvent = (name) => window.goatcounter?.count?.({ path: name, title: name, event: true })
 
+// The first link start found wins, so the Facebook share link goes before the profile's
 const eventNamesByLinkStart = [
     ['tel:', 'call'],
     ['https://wa.me/', 'whatsapp-chat'],
+    ['https://api.whatsapp.com/send', 'share-whatsapp'],
     ['https://www.instagram.com/', 'instagram'],
+    ['https://www.facebook.com/sharer/', 'share-facebook'],
     ['https://www.facebook.com/', 'facebook'],
 ]
 
