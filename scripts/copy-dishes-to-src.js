@@ -9,4 +9,15 @@ const dishSections = JSON.parse(fs.readFileSync(path.join(root, 'public/dishes/d
     const { cat, ...texts } = value
     return { ...texts, ca: cat }
 })
-fs.writeFileSync(path.join(root, 'src/pedidos/dishes.copy.json'), JSON.stringify(dishSections))
+
+// Written by scripts/fit-dish-photos.js, which runs just before
+const photoFits = JSON.parse(fs.readFileSync(path.join(root, 'public/dishes/photo-fits.json'), 'utf8'))
+
+// Gives each dish its photo's { scale, x, y }, without the hash; none for a dish without photo
+const addPhotoFit = (dish) => {
+    const { hash, ...photoFit } = photoFits[dish.photo] ?? {}
+    return photoFit.scale ? { ...dish, photoFit } : dish
+}
+
+const sectionsWithFits = dishSections.map((section) => ({ ...section, dishes: section.dishes.map(addPhotoFit) }))
+fs.writeFileSync(path.join(root, 'src/pedidos/dishes.copy.json'), JSON.stringify(sectionsWithFits))

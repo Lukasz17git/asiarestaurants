@@ -13,9 +13,9 @@
     "sass": "1.77.8"
   },
   "scripts": {
-    "prestart": "node scripts/copy-dishes-to-src.js",
+    "prestart": "node scripts/fit-dish-photos.js && node scripts/copy-dishes-to-src.js",
     "start": "react-scripts start",
-    "prebuild": "node scripts/copy-dishes-to-src.js",
+    "prebuild": "node scripts/fit-dish-photos.js && node scripts/copy-dishes-to-src.js",
     "build": "react-scripts build",
     "postbuild": "node scripts/write-page-heads.js",
     "test": "react-scripts test",
@@ -38,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }
