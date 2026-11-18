@@ -12,9 +12,13 @@ export const QuantityControl = ({ quantity, name, onChange, size }) => (
     </div>
 )
 
-// From scripts/fit-dish-photos.js: makes every plate fill the card about the same. scale as a string,
-// since React would add 'px' to the number
-const getPhotoFitStyle = (photoFit) => photoFit && { scale: String(photoFit.scale), translate: `${photoFit.x}% ${photoFit.y}%` }
+// From scripts/fit-dish-photos.js: makes every plate fill the card about the same. scale as a string, since
+// React would add 'px' to the number; --photo-ratio (height / width) only for photos that aren't square
+export const getPhotoFitStyle = (photoFit) => photoFit && {
+    scale: String(photoFit.scale),
+    translate: `${photoFit.x}% ${photoFit.y}%`,
+    '--photo-ratio': photoFit.ratio,
+}
 
 // '8 uds.', as a red seal on the card's photo and in DishPhotoDialog
 export const formatPieces = (pieces) => `${pieces} ${t({ es: 'uds.', ca: 'u.', en: 'pcs' })}`

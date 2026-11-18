@@ -1,19 +1,19 @@
 import React, { useEffect, useRef } from 'react'
 import ShareButtons from './ShareButtons'
-import { formatPieces } from './DishCard'
+import { formatPieces, getPhotoFitStyle } from './DishCard'
 import { facts, formatPrice } from '../data/facts'
 import { basename, t } from '../language'
 
 // '/ca/pedidos?buscar=117': opens the menu filtered to that dish, in the same language
 const getDishUrl = (dish) => `${window.location.origin}${basename}/pedidos?buscar=${dish.number}`
 
-// The card's photoFit in this square box: y was measured in % of the card's height, 1.2 times shorter than its
-// width. Kept within what the photo overflows, or an opaque photo's square edge would show
+// The card's photoFit in this square box, kept within what the enlarged photo overflows: the box shows it whole,
+// so at scale 1 it doesn't move
 const getSquarePhotoFitStyle = (photoFit) => {
     if (!photoFit) return undefined
     const maxShift = ((photoFit.scale - 1) / 2) * 100
-    const [x, y] = [photoFit.x, photoFit.y / 1.2].map((shift) => Math.max(-maxShift, Math.min(maxShift, shift)))
-    return { scale: String(photoFit.scale), translate: `${x}% ${y}%` }
+    const [x, y] = [photoFit.x, photoFit.y].map((shift) => Math.max(-maxShift, Math.min(maxShift, shift)))
+    return getPhotoFitStyle({ ...photoFit, x, y })
 }
 
 // The dish's photo, enlarged like on its card, with its name, price and share buttons

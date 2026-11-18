@@ -1,1496 +1,1500 @@
 {
   "alette-di-pollo": {
-    "hash": "dbc7f712f38fb6002deaac300a82589a",
+    "hash": "087be77b787103d0f6f49317d95be7f3",
     "scale": 1.25,
-    "x": 0,
-    "y": 0.1
+    "x": -0.1,
+    "y": -0.2
   },
   "almejas-plancha": {
-    "hash": "79b0e2c3e07f98bdaf3812bdfd7146e6",
+    "hash": "14429f9b1cc0c0a686be4699aeed6a59",
     "scale": 1.29,
-    "x": 0.7,
-    "y": -3.3
+    "x": 0.6,
+    "y": -2.4
   },
   "anatra-anans": {
-    "hash": "8079b93631fc9146c13775cc1df70d5e",
+    "hash": "bb428ed577d57a3bade51599f00979e9",
     "scale": 1.24,
-    "x": 0.7,
-    "y": 0.6
-  },
-  "anatra-con-funghi-e-bambu": {
-    "hash": "6d8d52023b8f051f7e6b155b8e9e7da6",
-    "scale": 1.12,
-    "x": 0,
+    "x": 0.5,
     "y": 0.4
   },
+  "anatra-con-funghi-e-bambu": {
+    "hash": "92fc493bf43d841c6e540b49728049a8",
+    "scale": 1.12,
+    "x": -0.1,
+    "y": 0.3
+  },
   "anatra-fritta": {
-    "hash": "079b84df6668f8f9e483b0eff1ec9f16",
+    "hash": "4cb2e2fd498f3bb78b070b599c8cdfb6",
     "scale": 1.19,
-    "x": -1.4,
-    "y": -1.6
+    "x": -1.5,
+    "y": -1.7
   },
   "angel-roll": {
-    "hash": "231f2893e49fcbfdd2f57c605f5baacd",
+    "hash": "3738c8e37976310c0d9dc6b75651ac4d",
     "scale": 1.12,
-    "x": 2.6,
-    "y": 0.1
+    "x": 1.3,
+    "y": 4
   },
   "anguila-roll": {
-    "hash": "88c062d25d36d55d0836a9455c471c40",
-    "scale": 1.32,
-    "x": 1,
-    "y": 3.5
+    "hash": "31942be73b2d88828e1d71d5c80f8d83",
+    "scale": 1.33,
+    "x": 0.6,
+    "y": 8.2
   },
   "banshun-sake": {
-    "hash": "244f5796bf4c420d73dd60e2e8a38536",
+    "hash": "fc84276b13bb36237fc4e27e48979748",
     "scale": 1.21,
-    "x": 0.3,
-    "y": 0
+    "x": 0.2,
+    "y": -0.3
   },
   "banshun-tori": {
-    "hash": "fa4bbbf56b0668cb74c9fd122dc10268",
+    "hash": "01ccf35c01d61a761ce03cb345d8b2b8",
     "scale": 1.22,
-    "x": 0.4,
+    "x": 0.3,
     "y": -1.8
   },
   "banshun-vegan": {
-    "hash": "a81416f74e563c1bb1afa84fddcf6e1a",
+    "hash": "83ce47471e258e64821a49dc437bffd3",
     "scale": 1.22,
-    "x": 0.3,
-    "y": -1.5
-  },
-  "baozi": {
-    "hash": "e03c3ff3161003f58e680d7efe9b0efb",
-    "scale": 1.03,
-    "x": 0,
-    "y": -5.1
-  },
-  "burrata-roll": {
-    "hash": "aa90114ffd69b69ceebe6cd5b81dc172",
-    "scale": 1.28,
-    "x": -2.3,
-    "y": 9.6
-  },
-  "calamar-pot": {
-    "hash": "b20e086a1001818444bdee8b350af84f",
-    "scale": 1.38,
-    "x": -1.5,
-    "y": -0.2
-  },
-  "calamari-fritti": {
-    "hash": "4d4dfa6308b0e4d9a268f2821edaca1b",
-    "scale": 1.26,
-    "x": 0.2,
-    "y": -0.6
-  },
-  "capesante-cantonese": {
-    "hash": "be6fe7fb60da497abc15764c5eda0b61",
-    "scale": 1.26,
-    "x": -0.8,
-    "y": -8.8
-  },
-  "carpaccio-capasanta": {
-    "hash": "32d73208285e2b6c210938162bc4cb40",
-    "scale": 1.05,
-    "x": -0.7,
-    "y": -1.3
-  },
-  "carpaccio-fantasy": {
-    "hash": "d425388f0e51716c557c6faa97a7dc87",
-    "scale": 1.1,
-    "x": -0.1,
-    "y": 1.7
-  },
-  "carpaccio-mix": {
-    "hash": "2ae2cfe14da7d5c317732552bcbb109d",
-    "scale": 1.03,
-    "x": 0.7,
-    "y": -0.1
-  },
-  "carpaccio-new-style": {
-    "hash": "15165accc526629edc9176615c42ac80",
-    "scale": 1.14,
-    "x": -0.2,
-    "y": 1.2
-  },
-  "carpaccio-ricciola": {
-    "hash": "d944e105071c1bbf5278051ae980e4c5",
-    "scale": 1.06,
-    "x": 0.7,
-    "y": 1.3
-  },
-  "carpaccio-salmone": {
-    "hash": "ab164638412800c923d502d925b8a55e",
-    "scale": 1.07,
-    "x": 0.9,
-    "y": 1.3
-  },
-  "carpaccio-tako": {
-    "hash": "7f1063da62d5fcbc187dcf53ac724bb5",
-    "scale": 1.05,
-    "x": 0.7,
-    "y": -2
-  },
-  "carpaccio-tonno": {
-    "hash": "a8c5804020e4b43b93b93a37dba2a840",
-    "scale": 1.03,
-    "x": 0,
-    "y": -0.5
-  },
-  "chirashi-misto": {
-    "hash": "a5e0271fdf894f9a54ceae3279ebdaa9",
-    "scale": 1.24,
-    "x": 0.3,
-    "y": -1.2
-  },
-  "chirashi-sake": {
-    "hash": "f31922797e9018d45def2e52db88b798",
-    "scale": 1.24,
-    "x": 1.7,
-    "y": -1
-  },
-  "chirashi-tuna": {
-    "hash": "7f4137cfcc2c51d8f4b23dc38ff0528c",
-    "scale": 1.26,
-    "x": 0,
-    "y": -1.1
-  },
-  "chirashi-vegan": {
-    "hash": "6c2fc9e217a481d6d99ad76087f1562a",
-    "scale": 1.26,
-    "x": 0.4,
-    "y": 0.1
-  },
-  "coliflor-pot": {
-    "hash": "0ecd972b7d54fa73d149bff1d54f6a96",
-    "scale": 1.35,
-    "x": 0.9,
-    "y": -0.7
-  },
-  "cotoletta-di-pollo": {
-    "hash": "24d5c9378a2bb7a4afc87f653d60dffa",
-    "scale": 1.25,
-    "x": -1,
-    "y": -0.4
-  },
-  "crispy-green": {
-    "hash": "d5492bf37515c123a61d9c3877f9ef8f",
-    "scale": 1.28,
-    "x": -0.2,
-    "y": 5.4
-  },
-  "crunchy-passion": {
-    "hash": "2e2bb87662809c3050ea603d3de17963",
-    "scale": 1.06,
-    "x": -2.8,
-    "y": -2.1
-  },
-  "crunchy-truffle-sake": {
-    "hash": "491e2188bad122de5922ad6c9d57041c",
-    "scale": 1.23,
     "x": 0.2,
     "y": -1.6
   },
-  "crunchy-truffle-tuna": {
-    "hash": "becd4858d2e82b65e8cff79e48fe282a",
-    "scale": 1.23,
-    "x": 0.1,
-    "y": 0.2
-  },
-  "curry-gohan": {
-    "hash": "adc1cd9bba8801b96962817dc820223c",
-    "scale": 1.02,
-    "x": 0.9,
-    "y": 2.9
-  },
-  "daikon-sottaceto": {
-    "hash": "1d56ece00f1bd2b0a72374e8a23a70c6",
-    "scale": 1,
-    "x": -1.9,
+  "baozi": {
+    "hash": "a78006e662d6e70786ff7a33efe69a99",
+    "scale": 1.03,
+    "x": -0.2,
     "y": -4.3
   },
-  "dynamite": {
-    "hash": "956bbb662e17aafe9a6b1d2a6e4b54ad",
-    "scale": 1.34,
-    "x": 3.6,
-    "y": 8
+  "burrata-roll": {
+    "hash": "d20dcbbdce5932429ffd0509145362e7",
+    "scale": 1.41,
+    "x": -2.7,
+    "y": 10.5
   },
-  "ebi-flower": {
-    "hash": "9c645decbae2f776712f2c3c3f0fc504",
-    "scale": 1.15,
-    "x": 1.8,
-    "y": 1.8
+  "calamar-pot": {
+    "hash": "20e49699bbe93264b4b1c3df17232349",
+    "scale": 1.39,
+    "x": -0.7,
+    "y": -0.3
   },
-  "edamame": {
-    "hash": "e4e4c02556ec0c339e111ae014e83bbc",
-    "scale": 1.26,
+  "calamari-fritti": {
+    "hash": "8b8feb033fc758faa52350d868b76fb7",
+    "scale": 1.25,
+    "x": 0.1,
+    "y": -0.8
+  },
+  "capesante-cantonese": {
+    "hash": "8d6d8ef0750c24a50fc83c068d9442b0",
+    "scale": 1.25,
+    "x": -1,
+    "y": -7.8
+  },
+  "carpaccio-capasanta": {
+    "hash": "337b811ceb114ec32f58d12c59bbf441",
+    "scale": 1.05,
+    "x": -0.8,
+    "y": -1.2
+  },
+  "carpaccio-fantasy": {
+    "hash": "c401fa0e8ed56011be86047496ddaf22",
+    "scale": 1.1,
+    "x": -0.2,
+    "y": 1.3
+  },
+  "carpaccio-mix": {
+    "hash": "c9efdbf1f71cde79128577bfb9e11eac",
+    "scale": 1.03,
+    "x": 0.5,
+    "y": -0.1
+  },
+  "carpaccio-new-style": {
+    "hash": "0673cd356b9890d8170ce2283a889a9c",
+    "scale": 1.14,
+    "x": -0.4,
+    "y": 0.9
+  },
+  "carpaccio-ricciola": {
+    "hash": "fa9aba2382ed9cc2e580dc456d4ba0e9",
+    "scale": 1.06,
+    "x": 0.4,
+    "y": 1.1
+  },
+  "carpaccio-salmone": {
+    "hash": "04d6de1e393a1bf95a60ac0d031b333b",
+    "scale": 1.07,
+    "x": 0.7,
+    "y": 1.1
+  },
+  "carpaccio-tako": {
+    "hash": "b5bb61b68b2a198314de035d4ebeebd1",
+    "scale": 1.05,
     "x": 0.6,
+    "y": -1.7
+  },
+  "carpaccio-tonno": {
+    "hash": "222bb3e20ce84a54f14a710873ff9f38",
+    "scale": 1.03,
+    "x": -0.3,
+    "y": -0.4
+  },
+  "chirashi-misto": {
+    "hash": "3075208069f1ce702a6f7b92692fa576",
+    "scale": 1.24,
+    "x": 0.2,
+    "y": -1.3
+  },
+  "chirashi-sake": {
+    "hash": "fa82f6c8ed35bd94c28358b360c312c2",
+    "scale": 1.24,
+    "x": 1.7,
+    "y": -1.1
+  },
+  "chirashi-tuna": {
+    "hash": "45f8c9ae8047e97fff436e9a62225db5",
+    "scale": 1.25,
+    "x": -0.1,
+    "y": -1.3
+  },
+  "chirashi-vegan": {
+    "hash": "77f1c1673c329306e74595688c440380",
+    "scale": 1.26,
+    "x": 0.4,
+    "y": -0.2
+  },
+  "coliflor-pot": {
+    "hash": "b46df6a240e8494dc5de396d54cb0035",
+    "scale": 1.36,
+    "x": 1,
+    "y": -0.6
+  },
+  "cotoletta-di-pollo": {
+    "hash": "13c0c13ce233171ffa6d6bf76a5ea06e",
+    "scale": 1.24,
+    "x": -1,
+    "y": -0.7
+  },
+  "crispy-green": {
+    "hash": "db9a9d7bd1420de661a2eabcbb1469f2",
+    "scale": 1.35,
+    "x": -0.7,
+    "y": 8.7
+  },
+  "crunchy-passion": {
+    "hash": "29781cdce37f9baee5db6970b426f3d8",
+    "scale": 1.06,
+    "x": -1.4,
+    "y": -2.1
+  },
+  "crunchy-truffle-sake": {
+    "hash": "9fcfb6ee1fb470181ca4c5563847eb41",
+    "scale": 1.23,
+    "x": -0.1,
+    "y": -1.5
+  },
+  "crunchy-truffle-tuna": {
+    "hash": "8a537a7c75e65e9ea52210f0340525d1",
+    "scale": 1.22,
+    "x": 0,
     "y": 0
   },
+  "curry-gohan": {
+    "hash": "b6006e53ce5fa48d2e2a66ba2681ca72",
+    "scale": 1.01,
+    "x": 0.8,
+    "y": 2.3
+  },
+  "daikon-sottaceto": {
+    "hash": "10b04d6f645d508818edefddeae12a5d",
+    "scale": 1,
+    "x": -1.3,
+    "y": -4.2
+  },
+  "dynamite": {
+    "hash": "5f07ed9a22cd391515a23df6044112af",
+    "scale": 1.42,
+    "x": 3.7,
+    "y": 9.8
+  },
+  "ebi-flower": {
+    "hash": "1e38bf61e17b9f4ed6bf742748452c56",
+    "scale": 1.22,
+    "x": 1.7,
+    "y": 4.8
+  },
+  "edamame": {
+    "hash": "a34146e2a8abd5686f0d231e8adceaf2",
+    "scale": 1.25,
+    "x": 0.4,
+    "y": -0.4
+  },
   "frutti-di-mare-curry": {
-    "hash": "44656176bead7a9f0978c2741324f1e8",
+    "hash": "729a66cb7b4e33a21a3ef45e9542a383",
     "scale": 1.26,
-    "x": 0.6,
+    "x": 0.4,
     "y": -0.8
   },
   "gamberi-curry": {
-    "hash": "b03bb262044ab43b31555b8bddbf4e66",
+    "hash": "ddcf1a3901d07194e8224c9c9a3ac5de",
     "scale": 1.24,
-    "x": 0.6,
+    "x": 0.4,
     "y": -0.4
   },
   "gamberi-funghi-e-bambu": {
-    "hash": "9b65391ebfe60227551be5d5680a013b",
+    "hash": "6b4d82f8c13d5e59a63c34123111fc26",
     "scale": 1.25,
     "x": -0.3,
-    "y": 0
+    "y": -0.1
   },
   "gamberi-limone": {
-    "hash": "4a4de9ebda7f6b148ab78584217942f4",
+    "hash": "174cf64b8b38c620793f85d261239918",
     "scale": 1.25,
-    "x": 0.1,
-    "y": 0.6
+    "x": 0,
+    "y": 0.4
   },
   "gamberi-piccanti": {
-    "hash": "124623d518b5a2dcfb6e8982b3aefd96",
+    "hash": "aa037d82eb4298d88d5403043b02101f",
+    "scale": 1.25,
+    "x": -0.3,
+    "y": 0.1
+  },
+  "gamberi-sale-e-pepe": {
+    "hash": "ef28957a9be9ddf0a81c3d48886eef47",
     "scale": 1.26,
     "x": -0.2,
     "y": 0.3
   },
-  "gamberi-sale-e-pepe": {
-    "hash": "5c5123c6ce2b281029317b196d003141",
-    "scale": 1.27,
-    "x": -0.1,
-    "y": 0.7
-  },
   "gambero-agrodolce": {
-    "hash": "f373a124e4e2242965875a5333816d5b",
+    "hash": "a7bce5f6faf63a996edc2f429d2c1b5d",
     "scale": 1.27,
     "x": 0.1,
-    "y": -0.3
+    "y": -0.4
   },
   "gamberone-salsa-thai": {
-    "hash": "263c6c2a4004c3fef2e0b07714077863",
+    "hash": "87c492377cd1f0f21eb1534ad026c5c7",
     "scale": 1.25,
-    "x": 0.4,
+    "x": 0.3,
     "y": -0.7
   },
   "gamberoni-alla-piastra": {
-    "hash": "e07476325b1ab4795680760d1625d434",
+    "hash": "d345ceb814b176aee833e95e2a7216cf",
     "scale": 1.06,
-    "x": -2.8,
-    "y": -8.2
+    "x": -2.9,
+    "y": -6.9
   },
   "gamberoni-cantonese": {
-    "hash": "59ba8a22d8d5b0ff50bad28e65363c13",
-    "scale": 1.28,
-    "x": 0,
-    "y": 1.3
+    "hash": "8ad2ca475f30d6e26eaac5f14c1e8052",
+    "scale": 1.27,
+    "x": -0.3,
+    "y": 0.6
   },
   "germogli-di-soia": {
-    "hash": "b66cc0a5b5a0a562fb981580b5e014b4",
+    "hash": "97832c00b0b87e05e41951aded765210",
     "scale": 1,
-    "x": -2.3,
-    "y": -6.2
+    "x": -0.4,
+    "y": -5.2,
+    "ratio": 0.667
   },
   "gnocchi-di-riso": {
-    "hash": "0a56c9a6720976d5e4c536b7e7e90ebb",
-    "scale": 1.24,
+    "hash": "690c92cb492b4cc03df8d811c5ba7da2",
+    "scale": 1.23,
     "x": 0,
-    "y": 0.2
+    "y": 0
   },
   "golden-ebi": {
-    "hash": "f70a72fc7a76db8b7f94a94783951774",
-    "scale": 1.24,
-    "x": 0.2,
-    "y": 0.1
+    "hash": "0bdf297ffb6a62a301084fe6ad489e3b",
+    "scale": 1.23,
+    "x": 0.1,
+    "y": -0.2
   },
   "guabao-anatra": {
-    "hash": "31288b78604d08a4bd1583c2cb5dd533",
-    "scale": 1.25,
-    "x": 0.1,
+    "hash": "5368fdb2b7e69706e9e2483d7cd4e40f",
+    "scale": 1.24,
+    "x": 0,
     "y": -2.9
   },
   "guabao-gambero-fritto": {
-    "hash": "222ede7368e1bae9452db0b301def4da",
-    "scale": 1.25,
+    "hash": "7291ec85637dad52c087faad8b8f55ae",
+    "scale": 1.24,
     "x": -0.1,
-    "y": -1.1
+    "y": -1.3
   },
   "guabao-pollo-fritto": {
-    "hash": "4ee58a9e6285d4b298c44a0d6521473e",
-    "scale": 1.23,
-    "x": -0.2,
-    "y": 0.2
+    "hash": "5b8912b5e26bcb88764652cecff2e3aa",
+    "scale": 1.22,
+    "x": -0.3,
+    "y": -0.1
   },
   "guabao-salmone": {
-    "hash": "d052c8afb8ede6b799b4244e3a84ea5e",
+    "hash": "142c6e3d19881996b9c15318a371af3b",
     "scale": 1.19,
-    "x": -1.8,
+    "x": -1.9,
     "y": -2.7
   },
   "guabao-tonno-cotto": {
-    "hash": "b8d83a9d08ec2f451c3ebaed672502fe",
+    "hash": "c58186e7fe7fee68159fa7eb30f5c3f5",
     "scale": 1.19,
-    "x": -0.3,
-    "y": 0.3
+    "x": -0.4,
+    "y": -0.3
   },
   "gunkan-sake": {
-    "hash": "0d952049094fec9d0301ac8043c5d81d",
+    "hash": "0a801f78166e3c2fd2950d6652419036",
     "scale": 1.6,
-    "x": 0.3,
-    "y": 1
+    "x": -0.1,
+    "y": 1.2
   },
   "gunkan-sake-phila": {
-    "hash": "b2d7a2fd51844e433766d8a4fe52051d",
+    "hash": "e9ee94581fc78d8f1824839662302788",
     "scale": 1.6,
-    "x": 1.2,
-    "y": -1.2
+    "x": 1.1,
+    "y": 0.4
   },
   "gunkan-sake-spicy-mayo": {
-    "hash": "57123e2d45ade2d01bb5c56dc7eb97d7",
+    "hash": "d46b1b6176de243d6335d23dcca4e8a4",
     "scale": 1.6,
-    "x": 1.3,
-    "y": 2.5
+    "x": 2.5,
+    "y": 2.3
   },
   "gunkan-tuna": {
-    "hash": "6a2f34ccdf7c72481f546f527c4772da",
+    "hash": "825851a4a7566311eba008b17c6af9be",
     "scale": 1.6,
-    "x": -0.2,
-    "y": 0.1
+    "x": 0.1,
+    "y": 0.7
   },
   "gunkan-tuna-spicy-mayo": {
-    "hash": "09ab20bb6c061dda7ebbc9d6bd0e68de",
+    "hash": "11df6a44b573fb5ec39d542fc5fad7c3",
     "scale": 1.6,
-    "x": -1.6,
-    "y": 2.6
+    "x": -2.8,
+    "y": 2.5
   },
   "guo-tie": {
-    "hash": "111283bf9b29d307a6104bd277eae005",
+    "hash": "363f58c5f2d950f92ac23c558c131703",
     "scale": 1.26,
-    "x": 0.5,
-    "y": 6.2
+    "x": -0.1,
+    "y": 6
   },
   "hosomaki-avocado": {
-    "hash": "796e08d2d8a6202c0d9068d5eb6c2eb0",
-    "scale": 1.22,
-    "x": 0.1,
-    "y": 0.8
+    "hash": "1b0af8e2563bfc939e64015e7d4c14cc",
+    "scale": 1.21,
+    "x": 0,
+    "y": 0.5
   },
   "hosomaki-ebi": {
-    "hash": "1798d39071e0ffa148ff838e27283e8c",
-    "scale": 1.23,
-    "x": 0.6,
+    "hash": "5621b783ef77e2ab87cfb00134108b6c",
+    "scale": 1.22,
+    "x": 0.4,
     "y": -0.6
   },
   "hosomaki-fry-ebi": {
-    "hash": "8a0f9b03ce965d9531a3558753f7658c",
+    "hash": "5e43a9043f78b90b09ddab581b138db1",
     "scale": 1.22,
-    "x": 0.3,
+    "x": 0.1,
     "y": -1
   },
   "hosomaki-fry-fragola": {
-    "hash": "83eacf0038e05db893513d04d36cc9cd",
+    "hash": "ac292b7c83dd48cec58b61f7e427b314",
     "scale": 1.22,
-    "x": 0.1,
-    "y": 0.6
+    "x": -0.1,
+    "y": 0.4
   },
   "hosomaki-fry-mango": {
-    "hash": "31530c9b85b1a69ef8217d14c2f7ed85",
+    "hash": "25e74123e537a73894f709345af67b7d",
     "scale": 1.22,
-    "x": -0.2,
-    "y": -0.1
+    "x": -0.3,
+    "y": -0.2
   },
   "hosomaki-fry-sake": {
-    "hash": "32f5833fc0b2ef88c4c468224346cbb0",
-    "scale": 1.23,
-    "x": 0.6,
+    "hash": "db883a99b3d79fec9b09c8255c4bd6eb",
+    "scale": 1.22,
+    "x": 0.4,
     "y": -0.8
   },
   "hosomaki-kappa": {
-    "hash": "d240c4abb4a1415050a2d230110f6742",
-    "scale": 1.24,
-    "x": 0.4,
-    "y": -1.5
+    "hash": "18d98b6941736fe50305a8ecf6e59354",
+    "scale": 1.23,
+    "x": 0.3,
+    "y": -1.4
   },
   "hosomaki-nidi-sake": {
-    "hash": "6dad4c79f9d602ed206f754708babda7",
+    "hash": "b47150e9f08ac65f769062d5ab32006d",
     "scale": 1.22,
-    "x": 0.4,
-    "y": -1.5
+    "x": 0.3,
+    "y": -1.3
   },
   "hosomaki-nidi-tuna": {
-    "hash": "8bcebca36486dd17abc85d769bda2702",
+    "hash": "773bf98f37959d71a5ea0a4e15fee152",
     "scale": 1.22,
     "x": 0.3,
     "y": -1.4
   },
   "hosomaki-sake": {
-    "hash": "1030df071f86361aa6409222f082903a",
+    "hash": "fbbfbf855d6cc35592d6bf039701d927",
     "scale": 1.23,
-    "x": -0.1,
-    "y": -1.5
+    "x": -0.3,
+    "y": -1.4
   },
   "hosomaki-tuna": {
-    "hash": "0b546085afb8e3a6b22f4e7301502fa2",
+    "hash": "62d457fc8c631f4f5df5f7a90f200807",
     "scale": 1.23,
-    "x": -0.1,
-    "y": -1.5
+    "x": -0.3,
+    "y": -1.4
   },
   "hotate": {
-    "hash": "79f85699c321dda4b63cc5dbb883305c",
-    "scale": 1.37,
-    "x": 2.5,
-    "y": 2.8
+    "hash": "778a4ccf3e638c18025eea520c023474",
+    "scale": 1.48,
+    "x": 3,
+    "y": 5.5
   },
   "image141": {
-    "hash": "e0f7b57b715a7d27d6de288936c9f496",
+    "hash": "e939e0ccfe9c275971f0be944d3121b7",
     "scale": 1.15,
-    "x": 0.4,
-    "y": -1.5
+    "x": 0.3,
+    "y": -0.9,
+    "ratio": 0.774
   },
   "image53": {
-    "hash": "20be20cb2345110cc6adeedc99e5c5eb",
+    "hash": "3ce137f991bfb98b1d57afa12f156296",
     "scale": 1.2,
     "x": 0.3,
     "y": -0.2
   },
   "image54": {
-    "hash": "d76e49a6c2885132c861c658aa2cae56",
+    "hash": "15e50da05fe5f70ec0d543314eb7e556",
     "scale": 1.2,
     "x": 0.3,
     "y": -0.2
   },
   "image85": {
-    "hash": "b6d78a0f109c3ed0ca0b4c8e3cca35fa",
-    "scale": 1.23,
-    "x": 0.6,
+    "hash": "8c3f14f36a73dbb16e80d4e17a810318",
+    "scale": 1.22,
+    "x": 0.4,
     "y": -0.6
   },
   "image97": {
-    "hash": "f1466d9ce19409e1efd7d9987dd1e3cf",
+    "hash": "97278caa5737445fa90e01c3a3937fb5",
     "scale": 1.22,
-    "x": 0.6,
+    "x": 0.5,
     "y": -0.6
   },
   "image98": {
-    "hash": "aaa93be45f855482a589c49e62ef42c1",
+    "hash": "ab6e6aa62c84ec299114fd200cc55ef6",
     "scale": 1.22,
-    "x": 0.6,
+    "x": 0.5,
     "y": -0.6
   },
   "img1": {
-    "hash": "ecb235279b84557e59b3f47e744d44d8",
+    "hash": "fe6e7d695d06914dd77ada872c8d0872",
     "scale": 1.04,
-    "x": 0.2,
-    "y": 0.4
+    "x": 0.1,
+    "y": 0.3
   },
   "img2": {
-    "hash": "4b297277ffe33986b8e09ae3ce4205c1",
+    "hash": "4cf3824ff2a18c7c52b7abced110b8dc",
     "scale": 1.6,
-    "x": -0.4,
-    "y": -5.3
+    "x": -0.9,
+    "y": -3,
+    "ratio": 0.675
   },
   "img218": {
-    "hash": "187d21ecba36554473ae8156c7358c1f",
+    "hash": "2c8ec254a050d2d4047d3a1d2018f98f",
     "scale": 1.25,
-    "x": 0.1,
-    "y": 0.1
+    "x": 0,
+    "y": 0
   },
   "img253": {
-    "hash": "dae0cd223ed475fadc44bf771089e0cd",
+    "hash": "9d4348dc5f1fba1ef192e631e805724a",
     "scale": 1.27,
-    "x": 0.2,
-    "y": -1.1
+    "x": 0.1,
+    "y": -0.9
   },
   "img259": {
-    "hash": "18a7be6eebe1c2e44a725f5059652cb3",
+    "hash": "3841956816beb8f4c3b0d3eae42edd19",
     "scale": 1.27,
-    "x": 0.2,
-    "y": -1.1
+    "x": 0.1,
+    "y": -0.9
   },
   "img260": {
-    "hash": "67687c5085e22edd296d7bd883ac3f59",
+    "hash": "9bbe5d05caead9ea21ca3ba832477359",
     "scale": 1.27,
-    "x": 0.2,
-    "y": -1.1
+    "x": 0.1,
+    "y": -0.9
   },
   "img3": {
-    "hash": "26c19c91148f83840de39372a960ed00",
-    "scale": 1.23,
-    "x": -0.2,
+    "hash": "c0ef9399b6f597c3b214bbff3848a945",
+    "scale": 1.22,
+    "x": 0,
     "y": 3.1
   },
   "img31": {
-    "hash": "d467d4f6ddace7549a35a0a3f0a8031e",
-    "scale": 1.26,
-    "x": 0.2,
-    "y": -0.1
+    "hash": "81ce54d4a134cfeb20575efaf0744fa5",
+    "scale": 1.25,
+    "x": 0.1,
+    "y": -0.4
   },
   "img32": {
-    "hash": "ba35a51ebafd561f3095058dd53eb8a1",
-    "scale": 1.26,
-    "x": 0.2,
-    "y": -0.1
+    "hash": "3d2882282cf0859d898d72834bee67d5",
+    "scale": 1.25,
+    "x": 0.1,
+    "y": -0.4
   },
   "img4": {
-    "hash": "2d05bb0649a97c8c8f3e2db4cc7eefdb",
-    "scale": 1.24,
+    "hash": "eefa5826277e08879c1c27e8a81c9569",
+    "scale": 1.23,
     "x": 0.4,
-    "y": 1
+    "y": 1.6
   },
   "img5": {
-    "hash": "9f82fc298641b95f839c5cb35cab44c5",
-    "scale": 1.23,
-    "x": 0.1,
-    "y": 3.6
+    "hash": "353b4389d94a3d8bfcfa1d9f9c2484fe",
+    "scale": 1.22,
+    "x": 0,
+    "y": 4.2
   },
   "img56": {
-    "hash": "3bd35ac3f0465b6d97f4ebd99b0b6b9a",
+    "hash": "3fbdf0b6dffc201206d6ec366bdfd286",
     "scale": 1.29,
-    "x": 0,
+    "x": -0.2,
     "y": -0.4
   },
   "insalata-mix": {
-    "hash": "2eae96a67d4841bf8d01fb20bec36819",
-    "scale": 1.48,
-    "x": -1.9,
-    "y": 0.4
+    "hash": "e5b183bef3694e3df2254c9e6eb750d5",
+    "scale": 1.49,
+    "x": -2.1,
+    "y": -0.5
   },
   "insalata-mix-mare": {
-    "hash": "7ffd87ac79fb5e039b28386fce38e2fa",
+    "hash": "66da4f9f6783fd284064d09d37864de9",
     "scale": 1.46,
-    "x": -1.2,
-    "y": 0.5
+    "x": -1,
+    "y": -0.4
   },
   "involtino-primavera": {
-    "hash": "9b4bd2918d06efc20c7b43b42e698076",
+    "hash": "deb615e9149c7af136e83c667af6138b",
+    "scale": 1.24,
+    "x": -0.2,
+    "y": -1.1
+  },
+  "involtino-vietnamita": {
+    "hash": "bc60d638eb7c19330ea53a3df2d27f0e",
+    "scale": 1.24,
+    "x": -0.2,
+    "y": -0.5
+  },
+  "ioyi-salmon": {
+    "hash": "b80d9dcf0f1a3a00e7b3b978c2991cb0",
+    "scale": 1.45,
+    "x": -1.3,
+    "y": 4.2
+  },
+  "lobster-roll": {
+    "hash": "aa3746ec045ed305a97e2fdccd42e3d7",
+    "scale": 1.17,
+    "x": 0,
+    "y": 0.1
+  },
+  "lotus": {
+    "hash": "6d4bf3c4be071955651ebfb450fa415e",
+    "scale": 1.07,
+    "x": -1.3,
+    "y": -0.4
+  },
+  "maiale-agrodolce": {
+    "hash": "3e92636c26856d3336182f8a6a9f00ee",
+    "scale": 1.23,
+    "x": -0.3,
+    "y": 0.4
+  },
+  "maiale-funghi-e-bambu": {
+    "hash": "75ed16a912de9a602875fec340ce9428",
     "scale": 1.25,
+    "x": -0.7,
+    "y": -0.4
+  },
+  "maiale-sale-e-pepe": {
+    "hash": "c3bd61609321890d69893086dd9d3565",
+    "scale": 1.24,
+    "x": 0.4,
+    "y": 0.7
+  },
+  "manzo-bambu-e-funghi": {
+    "hash": "bd5bfc0a8542876f4fce03a109b48fcd",
+    "scale": 1.24,
+    "x": 0.3,
+    "y": 0
+  },
+  "manzo-con-verdure": {
+    "hash": "03446d7faabfddd5b42a839adf6e4eb8",
+    "scale": 1.24,
+    "x": 0.2,
+    "y": 0
+  },
+  "manzo-piccante": {
+    "hash": "6b582fbd1df48d83dbdd8f345a806e07",
+    "scale": 1.22,
+    "x": 0,
+    "y": -0.4
+  },
+  "mille-foglie-sake": {
+    "hash": "26719fd3f0fb88b5e6b205ffad6b45ef",
+    "scale": 1.22,
     "x": -0.1,
     "y": -0.9
   },
-  "involtino-vietnamita": {
-    "hash": "95faa25da0e4f89527375ca11aabb0c9",
-    "scale": 1.24,
-    "x": -0.2,
-    "y": -0.2
-  },
-  "ioyi-salmon": {
-    "hash": "4fd2fbcf951c88a219d68d10aadd3c0c",
-    "scale": 1.34,
-    "x": -1.2,
-    "y": 0.5
-  },
-  "lobster-roll": {
-    "hash": "966c73bd8a4ddbbc88cc3ff980940346",
-    "scale": 1.14,
-    "x": 1.7,
-    "y": -4.9
-  },
-  "lotus": {
-    "hash": "b38da5e9c80eff574c01e71c17f35dd3",
-    "scale": 1.03,
-    "x": -0.2,
-    "y": -0.6
-  },
-  "maiale-agrodolce": {
-    "hash": "47140c9cafcabb900e9eabc8c91c149a",
-    "scale": 1.24,
-    "x": -0.2,
-    "y": 0.7
-  },
-  "maiale-funghi-e-bambu": {
-    "hash": "6f40da658bf3cf1f786f5cad72e64477",
-    "scale": 1.26,
-    "x": -0.7,
-    "y": -0.5
-  },
-  "maiale-sale-e-pepe": {
-    "hash": "74523772445e87b9cc2cdf5ea16b2f11",
-    "scale": 1.25,
-    "x": 0.5,
-    "y": 0.8
-  },
-  "manzo-bambu-e-funghi": {
-    "hash": "6496173a74c4bd65ce31d3da537e391b",
-    "scale": 1.24,
-    "x": 0.3,
-    "y": 0.2
-  },
-  "manzo-con-verdure": {
-    "hash": "db41ea8d68eabc9f56bcf9c84cd97cc6",
-    "scale": 1.24,
-    "x": 0.2,
-    "y": 0.1
-  },
-  "manzo-piccante": {
-    "hash": "97b58ce6b40d3e48330c6a7af780726e",
-    "scale": 1.22,
-    "x": 0.1,
-    "y": -0.2
-  },
-  "mille-foglie-sake": {
-    "hash": "2c7475973b3dd358b1170bab6e6d9efb",
-    "scale": 1.22,
-    "x": 0,
-    "y": -0.7
-  },
   "mille-foglie-tuna": {
-    "hash": "91449fe509db7b6715a3d1be39be70bf",
+    "hash": "2a07fddc936adb4df087bc91d6c6a6e1",
     "scale": 1.22,
-    "x": -1.1,
-    "y": -0.8
+    "x": -1,
+    "y": -0.9
   },
   "misto-mare-alla-piastra": {
-    "hash": "32a27ee0eba1def5d4fb64ca60e9ccef",
+    "hash": "5d602bb8e1bce17b09c8723176a1c075",
     "scale": 1.25,
-    "x": 0.4,
-    "y": -0.1
+    "x": 0.3,
+    "y": -0.2
   },
   "mix-tempura": {
-    "hash": "965766d2ca6afd4a23e3190175f28f4b",
-    "scale": 1.24,
-    "x": 0,
+    "hash": "77b8ef7c85c3ea10a87c9cb4dad1cf53",
+    "scale": 1.25,
+    "x": -0.2,
     "y": -0.3
   },
   "new-future": {
-    "hash": "e6df2a7c3fb2bc6a5abd462fb9626939",
-    "scale": 1.36,
-    "x": 0.1,
-    "y": 7.8
+    "hash": "5276f0baedb4248be98d0f20d558d754",
+    "scale": 1.42,
+    "x": 0.6,
+    "y": 10
   },
   "nigiri-anguilla-flambe": {
-    "hash": "012e7f8d75c611a7d6f9130b005f6188",
-    "scale": 1.5,
-    "x": 1.1,
+    "hash": "7a1764fc44c3111a9280df07dcf06f6a",
+    "scale": 1.46,
+    "x": -2.6,
     "y": 0.7
   },
   "nigiri-avocado": {
-    "hash": "e62d64cc48e8ceac1ffd79412ab53d95",
-    "scale": 1.4,
-    "x": 1.4,
-    "y": -1.7
+    "hash": "4c9daaa2d99822323e25c76ba05b4fda",
+    "scale": 1.42,
+    "x": -0.4,
+    "y": -0.9
   },
   "nigiri-crispy-mango-sake": {
-    "hash": "149bf194a2d26b9f03c5962ca2bf7e82",
-    "scale": 1.29,
-    "x": 0.1,
-    "y": -3.4
+    "hash": "dc1525151089b6252cabb9e90a9c141e",
+    "scale": 1.28,
+    "x": 0,
+    "y": -4.4
   },
   "nigiri-crispy-sake": {
-    "hash": "45925421bf7c1fb2554589e0102f0fbb",
+    "hash": "405315ab860e2cf23178e5237acda50b",
     "scale": 1.6,
-    "x": 0.4,
-    "y": -1.1
+    "x": -0.9,
+    "y": -1.6
   },
   "nigiri-de-mantequilla": {
-    "hash": "dda03028dcec0a58c2d34f067c43fa10",
+    "hash": "eced523791484932291496f073c90b71",
     "scale": 1.39,
-    "x": 0.3,
-    "y": -6.2
+    "x": -0.8,
+    "y": -1.9
   },
   "nigiri-ebi": {
-    "hash": "de8cae1909ef305bad3b7523225388e0",
-    "scale": 1.39,
-    "x": 0.2,
-    "y": -1.3
+    "hash": "447c32b5c6eb907281902a7edb843eab",
+    "scale": 1.38,
+    "x": -2.6,
+    "y": -0.1
   },
   "nigiri-flabe-sake": {
-    "hash": "79316623f8298e8568c4030e7b514d5f",
-    "scale": 1.18,
-    "x": 2.3,
-    "y": 0.9
+    "hash": "f6d9f8468c04a11b9205b65206591f32",
+    "scale": 1.17,
+    "x": 2.5,
+    "y": 1.6
   },
   "nigiri-flambe-suzuki": {
-    "hash": "e5fe12dd9fd5b4dd5f6b79333edd2867",
-    "scale": 1.44,
-    "x": -2.8,
-    "y": -2.9
+    "hash": "17965308d1781f32375e33eece0c4741",
+    "scale": 1.42,
+    "x": -4.7,
+    "y": -3.7
   },
   "nigiri-flambe-tuna": {
-    "hash": "d8ee1460590faed908e1aa8185f1fae5",
-    "scale": 1.04,
-    "x": 1.5,
-    "y": -4.6
+    "hash": "cda0f2b450c0bcc3d88686a27cd18389",
+    "scale": 1.09,
+    "x": 4.8,
+    "y": -4.7
   },
   "nigiri-kani": {
-    "hash": "3a65dea65304529bf06a643b418c6677",
-    "scale": 1.55,
-    "x": -2.1,
-    "y": -0.1
+    "hash": "dc40435afd168b29a23f8e18a1274cd3",
+    "scale": 1.6,
+    "x": -6.4,
+    "y": -3.6
   },
   "nigiri-sake": {
-    "hash": "f6db2c2ea45e844c0972b263ee83b81f",
+    "hash": "3299deef1afebaabca33ffd1fb9f40bb",
     "scale": 1.39,
-    "x": 0.6,
-    "y": 1.2
+    "x": 0,
+    "y": 2
   },
   "nigiri-sake-mango": {
-    "hash": "490ceaf7e9b88485480e2e391145ba57",
-    "scale": 1.28,
-    "x": -2.2,
-    "y": -4.8
+    "hash": "0e114bb53b3cb517302d511f75fca044",
+    "scale": 1.27,
+    "x": -1,
+    "y": -4.5
   },
   "nigiri-suzuki": {
-    "hash": "8b180200c084cf7d485d7602901c72b3",
-    "scale": 1.51,
-    "x": 0.7,
-    "y": 1.7
+    "hash": "ebd2bf6031e2798c9065eddb79c05b6e",
+    "scale": 1.5,
+    "x": -0.1,
+    "y": 2.1
   },
   "nigiri-tako": {
-    "hash": "01bd906d045b554b745c409749cb171a",
+    "hash": "9520c3d6f5c3e8171f39469a0cddecd5",
     "scale": 1.55,
-    "x": 0,
-    "y": -2.9
+    "x": -0.8,
+    "y": -3.6
   },
   "nigiri-tuna": {
-    "hash": "1999eab228e12c42d0d447c684f722b8",
+    "hash": "bb10c1da6802cf50c81f7bc87fddec3f",
     "scale": 1.39,
-    "x": -1.8,
-    "y": -0.4
-  },
-  "no-image": {
-    "hash": "54f43ea10982bfe7e2a863b7f4f6daa9",
-    "scale": 1.6,
-    "x": -0.1,
+    "x": -1.2,
     "y": 0.8
   },
+  "no-image": {
+    "hash": "1c90a31ee0f690c0a91d6907202857e4",
+    "scale": 1.6,
+    "x": 0.2,
+    "y": 0
+  },
   "nuvolette-di-gamberi": {
-    "hash": "ba93f84385cda459c4d3a9f84a2d096b",
-    "scale": 1.26,
-    "x": -0.2,
-    "y": -1.2
+    "hash": "6b96f684354a8cc7b0df95046ecf1531",
+    "scale": 1.25,
+    "x": -0.3,
+    "y": -1.4
   },
   "onigiri": {
-    "hash": "cc10adc2f7b3c185faa5d599e05cac46",
+    "hash": "a1dcfde636c2eff8f3630b7c98c6fc90",
     "scale": 1.08,
-    "x": 0.3,
-    "y": -7.2
+    "x": 0.1,
+    "y": -2.2
   },
   "padthai": {
-    "hash": "0185f3fb22a373ce0d2ae6324bba4444",
+    "hash": "fdf1471b76c2b43df63cdf8f504f6cda",
     "scale": 1.12,
-    "x": 0.1,
-    "y": 1.5
+    "x": 0,
+    "y": 1.1
   },
   "pane-cinese": {
-    "hash": "ca03647e06117ad5be921a90b08f3b10",
+    "hash": "18dbbfd1fa4b99162d0021234ad42294",
     "scale": 1.02,
-    "x": 0.2,
-    "y": -1.8
+    "x": 0.1,
+    "y": -1.9
   },
   "patata-pimiento": {
-    "hash": "c8d66740751807b13017ca5028938138",
+    "hash": "cc5836a98a7f9536aa9ac353536a1b65",
     "scale": 1.32,
-    "x": -4.4,
-    "y": 0.1
-  },
-  "patata-pot": {
-    "hash": "066cece86cec500b9c30cb485d091ed0",
-    "scale": 1.38,
-    "x": -1.6,
-    "y": 4.2
-  },
-  "patatine-fritte": {
-    "hash": "14131af2f79e3a46ee3c9ce3ae22e8cd",
-    "scale": 1.26,
-    "x": -0.2,
+    "x": -3.6,
     "y": -0.1
   },
+  "patata-pot": {
+    "hash": "e56ac1340ceaa0a44d27f59c6388131f",
+    "scale": 1.39,
+    "x": -0.5,
+    "y": 3.4
+  },
+  "patatine-fritte": {
+    "hash": "c0c4627aba9e097097da5e1dd702c028",
+    "scale": 1.25,
+    "x": -0.3,
+    "y": -0.4
+  },
   "pepite-di-pollo": {
-    "hash": "a3b7c1982fe85dd2a14b80c189e88823",
+    "hash": "8383ca9bb9f4c031a8267fcb2a016efa",
     "scale": 1.26,
     "x": 0.2,
-    "y": -0.6
+    "y": -0.8
   },
   "poke-salmone": {
-    "hash": "507ddf715ead63c5ee43e3e5ae33ff4f",
+    "hash": "39506dc0ff9672c92853a80c72b522d2",
     "scale": 1.07,
-    "x": -0.1,
-    "y": -1.8
+    "x": -0.3,
+    "y": -1.6
   },
   "poke-tonno": {
-    "hash": "6d2ad1f2bb30606fcc764b917016351d",
-    "scale": 1.07,
-    "x": 0.6,
+    "hash": "beb59aae7858f1c6edeb942eb50896a2",
+    "scale": 1.06,
+    "x": 0.5,
     "y": -0.5
   },
   "poke-vegan": {
-    "hash": "cf181c0502b04fa8f00bc45224473453",
+    "hash": "7289b47962bb23c500e34ae9fa440bf7",
     "scale": 1.09,
     "x": 0.3,
     "y": -0.4
   },
   "pollo-agrodolce": {
-    "hash": "633ce332309524380b9eda003cdd8e39",
+    "hash": "c18b479ef382b832879e346de0485ba1",
     "scale": 1.27,
     "x": 0.2,
-    "y": 0.5
+    "y": 0.2
   },
   "pollo-con-mandorle": {
-    "hash": "8a968191647b0c4f3e71b7b76d1cb24d",
-    "scale": 1.24,
-    "x": -0.1,
-    "y": -0.7
+    "hash": "6149774a5481986f31d86bbbbc12fae9",
+    "scale": 1.23,
+    "x": -0.3,
+    "y": -0.8
   },
   "pollo-con-verdure": {
-    "hash": "e75c888a2e9335819351c0b1dcac82ae",
+    "hash": "2b2271e8d9d950ba242076df3e042bab",
     "scale": 1.24,
-    "x": 0,
-    "y": 0
+    "x": -0.1,
+    "y": -0.1
   },
   "pollo-curry": {
-    "hash": "b2a83bc1bcf049c08fbeb9bf46f1200d",
+    "hash": "5df44e29ae8e574f60b5e0243a454ecc",
     "scale": 1.24,
-    "x": 0.2,
-    "y": 0.4
+    "x": 0.1,
+    "y": 0.2
   },
   "pollo-limone": {
-    "hash": "32a5fd25c6edcddb0e94ec9f47ced057",
+    "hash": "a5f7616bcb5a92b326b6cecfb3611b87",
     "scale": 1.25,
-    "x": 0.3,
-    "y": 1.1
+    "x": 0.2,
+    "y": 0.8
   },
   "pollo-piccante": {
-    "hash": "b5c31ed6edfbd8c02503fddb5169d4ca",
+    "hash": "af72e5bfa044ab6627c785da5e49e168",
     "scale": 1.25,
-    "x": -0.1,
+    "x": -0.3,
     "y": -0.1
   },
   "pot-marisco": {
-    "hash": "648e2aa97fc5567a53ef71b9d569c12f",
+    "hash": "a58688283c28a28a06f0460a8779e8d6",
     "scale": 1.17,
-    "x": -0.5,
+    "x": -0.2,
     "y": 3.2
   },
   "pulpito": {
-    "hash": "20dce08eaa4a4d262cb5adc3e86386ed",
+    "hash": "bfb38267753878c4a7dee0a7705400ce",
     "scale": 1.32,
-    "x": 0,
-    "y": 0.1
-  },
-  "ramen-beef": {
-    "hash": "a296ca912d450c1b702e03f10d6830aa",
-    "scale": 1.21,
-    "x": 0.1,
-    "y": -1.4
-  },
-  "ramen-ebi": {
-    "hash": "6a242f270c8d1dc0a0a1d3a6ce530b97",
-    "scale": 1.09,
-    "x": 0,
-    "y": 2.6
-  },
-  "ravioli-carne": {
-    "hash": "c7e3047a2d81742d22c012ea2bc5b3da",
-    "scale": 1.26,
-    "x": -2,
-    "y": 1.7
-  },
-  "ravioli-di-cristallo": {
-    "hash": "973384519f0afa5322ed4588afb61ab8",
-    "scale": 1.2,
-    "x": -1.4,
-    "y": -0.4
-  },
-  "ravioli-misti": {
-    "hash": "e6affe3034939c759660108d882d1838",
-    "scale": 1,
-    "x": 1.3,
-    "y": 1.9
-  },
-  "ravioli-shaomai": {
-    "hash": "45275eeb5b6518426c554bf96f5c253f",
-    "scale": 1.23,
-    "x": -1.9,
+    "x": -0.1,
     "y": 0
   },
-  "ravioli-vegan": {
-    "hash": "64cb338465a72c7dbbaec6884f64de83",
-    "scale": 1.04,
-    "x": 0.5,
-    "y": -1.2
-  },
-  "riso-bianco": {
-    "hash": "3587f649b836e35547c1f27ae2a36517",
-    "scale": 1.26,
-    "x": -0.3,
-    "y": -0.3
-  },
-  "riso-cantonese": {
-    "hash": "25d23cc402d1d927c19171a4bf43d5d7",
-    "scale": 1.24,
-    "x": 0.4,
-    "y": -0.2
-  },
-  "riso-con-pollo": {
-    "hash": "551847743215b4de051d54b9a4147455",
-    "scale": 1.21,
-    "x": 0.9,
-    "y": -2.2
-  },
-  "riso-frutti-di-mare": {
-    "hash": "08b10693d12d5397c52f8ca8e4c96dbd",
-    "scale": 1.24,
-    "x": -0.1,
-    "y": 1.2
-  },
-  "riso-manzo": {
-    "hash": "cb4f83f1f5482591dfb2bb17d532e55b",
-    "scale": 1.24,
-    "x": 0.1,
-    "y": 0.5
-  },
-  "riso-thai": {
-    "hash": "3826c5755dee231f19bdc498e8e68528",
+  "ramen-beef": {
+    "hash": "d893eb85c0707af302e79ba60300da3a",
     "scale": 1.22,
-    "x": -0.2,
+    "x": -0.1,
+    "y": -1.8
+  },
+  "ramen-ebi": {
+    "hash": "c4ba04504c3c6d6230b89e33ece46a84",
+    "scale": 1.15,
+    "x": -0.1,
+    "y": 1.4
+  },
+  "ravioli-carne": {
+    "hash": "05baaba1a958ac07476a12f5f7e23529",
+    "scale": 1.26,
+    "x": -2,
     "y": 0.9
   },
-  "riso-verdure": {
-    "hash": "8a0f25f727c01ef9afbf76714a537aa8",
-    "scale": 1.23,
-    "x": -0.5,
-    "y": 0.3
+  "ravioli-di-cristallo": {
+    "hash": "811872203cfda5195673e1ad831ff3d4",
+    "scale": 1.2,
+    "x": -1.5,
+    "y": -0.8
   },
-  "salmone-alla-piasra": {
-    "hash": "db999a437d72ca98031cc9f10a3e4e27",
-    "scale": 1.24,
-    "x": -0.1,
-    "y": -1
+  "ravioli-misti": {
+    "hash": "dee89747d8b5ff60387ac4231a92075e",
+    "scale": 1.34,
+    "x": 2.7,
+    "y": 1.5,
+    "ratio": 0.667
   },
-  "samba-roll": {
-    "hash": "3eb3eb8693a0f14dace0fc6b6e321a83",
-    "scale": 1.31,
-    "x": 3.9,
-    "y": 6.5
+  "ravioli-shaomai": {
+    "hash": "45a2c32165303d1cac7100fffca9a2b1",
+    "scale": 1.22,
+    "x": -1.9,
+    "y": -0.4
   },
-  "samurai-stick": {
-    "hash": "0ea2c302f8d2a2c9f02832802ada917a",
+  "ravioli-vegan": {
+    "hash": "9eea6d1d35f617229afda94d0edfc563",
+    "scale": 1.04,
+    "x": 0.4,
+    "y": -1.6
+  },
+  "riso-bianco": {
+    "hash": "8523e43b77a023cf79fe0691bf898d6c",
+    "scale": 1.25,
+    "x": -0.3,
+    "y": -0.5
+  },
+  "riso-cantonese": {
+    "hash": "e986f016216276bf9b714de57340059e",
     "scale": 1.24,
     "x": 0.4,
-    "y": 0.5
+    "y": 0.7
+  },
+  "riso-con-pollo": {
+    "hash": "94bae37acb791e9b558762b82aff4af3",
+    "scale": 1.21,
+    "x": 1,
+    "y": -1.9
+  },
+  "riso-frutti-di-mare": {
+    "hash": "a613a7951d5f70e4111cfa07eebbbfe6",
+    "scale": 1.23,
+    "x": -0.1,
+    "y": 1.3
+  },
+  "riso-manzo": {
+    "hash": "511aeb1829c3a82c0599134a2565f3df",
+    "scale": 1.24,
+    "x": 0,
+    "y": 1.1
+  },
+  "riso-thai": {
+    "hash": "f9bf430e1a8d3aaad89fe29d29dcb7f9",
+    "scale": 1.22,
+    "x": -0.2,
+    "y": 0.7
+  },
+  "riso-verdure": {
+    "hash": "f678bcd4a3a793f5f33f038b712eebac",
+    "scale": 1.22,
+    "x": -0.5,
+    "y": 0.7
+  },
+  "salmone-alla-piasra": {
+    "hash": "7cca81407f9784c371dfef02bd6eb8cc",
+    "scale": 1.24,
+    "x": -0.2,
+    "y": -0.9
+  },
+  "samba-roll": {
+    "hash": "6f087b734e6ecbf6840132b5c9aeacbe",
+    "scale": 1.4,
+    "x": 4.9,
+    "y": 8.9
+  },
+  "samurai-stick": {
+    "hash": "bf2ec85432b34ccf685268d3fd252128",
+    "scale": 1.23,
+    "x": 0.3,
+    "y": 0.1
   },
   "sashimi-mix": {
-    "hash": "a7fc77acd50222e57f765304b24ab063",
-    "scale": 1.23,
-    "x": 1.5,
-    "y": 0.5
+    "hash": "8cc40547f75096dd2246f5d4bc160d12",
+    "scale": 1.25,
+    "x": 1.4,
+    "y": 0.2
   },
   "sashimi-plus": {
-    "hash": "ea126d95ddd99d755a5c4040b79b675f",
+    "hash": "12833c5d27d534e2d17b2c5e649a61fc",
     "scale": 1.24,
-    "x": 0.9,
+    "x": 1,
     "y": -2.6
   },
   "sashimi-ricciola": {
-    "hash": "c1be0733d22533d477a59c90e0cbe422",
+    "hash": "90a862c0ae821c6ca26e68f249da97a2",
     "scale": 1.25,
-    "x": -0.3,
-    "y": -0.3
+    "x": -0.4,
+    "y": -0.6
   },
   "sashimi-salmone": {
-    "hash": "e8e95999d69a7a363a4f13e4632daad7",
-    "scale": 1.23,
-    "x": 0.8,
-    "y": -0.2
-  },
-  "sashimi-tonno": {
-    "hash": "e564599532bea068d1c5821a7323d4f7",
+    "hash": "26f4289b990680c8965582bb060b5b85",
     "scale": 1.25,
-    "x": 0.8,
+    "x": 0.1,
     "y": 0.7
   },
+  "sashimi-tonno": {
+    "hash": "43fcd2db4dcd6ed6c4ab7ced46c113bd",
+    "scale": 1.25,
+    "x": 0.5,
+    "y": 0.6
+  },
   "soy-maki-sake": {
-    "hash": "8bdd3a688afee88fc77540236bfa88af",
+    "hash": "0672b8cc681b01c0c2f68a5094888cd5",
     "scale": 1.22,
-    "x": 0.4,
+    "x": 0.2,
     "y": -1.1
   },
   "soy-maki-tuna": {
-    "hash": "df658da5dad47659e4411f3ed843fbec",
+    "hash": "dab08160e4318cb0b9e8696a4ee61078",
     "scale": 1.22,
-    "x": 0.3,
+    "x": 0.1,
     "y": -0.5
   },
   "spaghetti-di-riso": {
-    "hash": "2dc1ad51e01bfc49fb332fc76301c2f8",
+    "hash": "12f758ee53dc325455bbd9c3ea8516b8",
     "scale": 1.1,
     "x": -0.2,
-    "y": 1.4
+    "y": 1
   },
   "spaghetti-di-soia": {
-    "hash": "398d30dec589916a19b08efb03c62cb8",
+    "hash": "c6947f913e653a74dd7d8f5989498549",
     "scale": 1.12,
-    "x": 0.1,
-    "y": 1.5
+    "x": 0,
+    "y": 1.1
   },
   "spaghetti-di-soia-piccante": {
-    "hash": "7f1dc628d8b11f245f271ef0d8cc340b",
+    "hash": "9cd0fdf5be3fc43ba2b6a58c8134d134",
     "scale": 1.12,
-    "x": 0.1,
-    "y": 1.5
+    "x": -0.1,
+    "y": 1.1
   },
   "sweet-hot": {
-    "hash": "a367be403e6ff93f45315288831837cd",
-    "scale": 1.2,
-    "x": 0.4,
-    "y": 3.5
+    "hash": "e047677e874cc8a1a843ee1407d8bf38",
+    "scale": 1.25,
+    "x": 4.5,
+    "y": 6.7
   },
   "tacos-sake": {
-    "hash": "4fed72b4e61153a2108c78d888b11c8a",
+    "hash": "43efb97125ae863544464491ff32af1e",
     "scale": 1.24,
-    "x": 0.5,
+    "x": 0.4,
     "y": -2
   },
   "tacos-tuna": {
-    "hash": "818dcdcc2aa70b03a0e1fa69dd123845",
+    "hash": "fde199cb6a8231356c8a228e610ed76e",
     "scale": 1.23,
-    "x": 0,
+    "x": -0.1,
     "y": -1.4
   },
   "takoyaki": {
-    "hash": "868c2d502d54bea8355a5f79319db76f",
+    "hash": "ed7133dad6750f980c7b22876f3ef08d",
     "scale": 1.25,
-    "x": 0.2,
-    "y": -0.1
+    "x": 0.1,
+    "y": -0.4
   },
   "tartare-amaebi": {
-    "hash": "03b6b33fea9f4f660f4d231fb6322fb2",
-    "scale": 1.13,
-    "x": -0.4,
-    "y": -0.1
+    "hash": "a2f421a6080e48e7d380ab0f4e3c0356",
+    "scale": 1.12,
+    "x": -0.5,
+    "y": -0.2
   },
   "tartare-di-salmone": {
-    "hash": "4e2098e56d501a17c1464fc64850a5f6",
+    "hash": "8cb831e67acd57c211d8ef4cfee0a71a",
     "scale": 1.18,
-    "x": 0.6,
-    "y": -5
+    "x": 0.4,
+    "y": -4.3
   },
   "tartare-manzo": {
-    "hash": "9b9f1718d5ee7edd6af015ff23bf8c7f",
-    "scale": 1.15,
-    "x": -0.4,
-    "y": 1.5
+    "hash": "564b09a44b56a0d3ba14b114c47f77bf",
+    "scale": 1.16,
+    "x": -0.5,
+    "y": 1.2
   },
   "tartare-mix": {
-    "hash": "03b867664f0972aa9cfa3ea2c22cbee8",
+    "hash": "01f2962159eccb20fdb351e7a19de8c6",
     "scale": 1.26,
-    "x": 0.4,
-    "y": -0.1
+    "x": 0.3,
+    "y": -0.2
   },
   "tartare-salmone-uovo-quaglia": {
-    "hash": "b3d4f3b9a4537e5356020e5d26422340",
+    "hash": "0206e9bbe7d0711cad2563786ba2ee5e",
     "scale": 1.24,
     "x": 0.2,
-    "y": 0
+    "y": -0.1
   },
   "tartare-tuna": {
-    "hash": "634c27723276f43df518b28109e76129",
+    "hash": "5bc0fe288cc0e058871009623fe5c225",
     "scale": 1.2,
     "x": 0.3,
     "y": -0.2
   },
   "tataki-sake": {
-    "hash": "69f68c2106bbd335b42cde85858d1c22",
-    "scale": 1.02,
-    "x": 0.5,
-    "y": 1
+    "hash": "d9124c25bd82e0dafde2a1df249afcc2",
+    "scale": 1.01,
+    "x": 0.4,
+    "y": 0.8
   },
   "tataki-sake-new-style": {
-    "hash": "ac0f7d1d257a70620a6cd3ab862c5a6f",
-    "scale": 1.09,
-    "x": -0.2,
-    "y": 0.7
+    "hash": "f983e34b8b70d04c87fcbe7ac624a34c",
+    "scale": 1.08,
+    "x": -0.3,
+    "y": 0.5
   },
   "tataki-tuna": {
-    "hash": "213753a5e060ce53ae759766762ca698",
+    "hash": "8d0d268d7050fa5102342e70bdede8d2",
     "scale": 1.04,
-    "x": 0.2,
-    "y": 0.4
+    "x": 0.1,
+    "y": 0.3
   },
   "tataki-tuna-new-style": {
-    "hash": "f2c27a01bca2fef4597e257d6d803369",
-    "scale": 1.11,
-    "x": 0.1,
-    "y": 0.2
+    "hash": "25299aca5b84d38c648bb85aab47f084",
+    "scale": 1.1,
+    "x": 0,
+    "y": 0
   },
   "temaki-anguilla": {
-    "hash": "7d45c0d353eeacfbb24d3d877610ddab",
+    "hash": "66cadb1214047b03e55495017eb2d95a",
     "scale": 1.45,
-    "x": 1.2,
-    "y": -10.8
+    "x": -3,
+    "y": -9.9
   },
   "temaki-california": {
-    "hash": "60d804e4712b5e6890475a66147e6a2f",
+    "hash": "4bae896da781644b07ca128a23cbb4a6",
     "scale": 1.6,
-    "x": 5.9,
-    "y": -0.5
+    "x": 0.5,
+    "y": -2.8
   },
   "temaki-crunchy-sake": {
-    "hash": "86b93a456c4ad681d7e4f957890c8563",
+    "hash": "04ac9fe0f5aa89ddd25454c2ad264032",
     "scale": 1.6,
-    "x": 0.8,
-    "y": 0.2
+    "x": -2.8,
+    "y": -1.1
   },
   "temaki-crunchy-tonno": {
-    "hash": "4a83baad5b42ca122ff210f8da125714",
+    "hash": "c6a763d0bc75d69c6446a90a11e9aa5e",
     "scale": 1.6,
-    "x": 1.4,
-    "y": -0.1
+    "x": -2.5,
+    "y": -1.5
   },
   "temaki-ebiten": {
-    "hash": "e530ccd964b340689744001c786d1678",
-    "scale": 1.45,
-    "x": 3.3,
-    "y": -1
+    "hash": "d3dfab1d88f756992c8f15c1e9d10068",
+    "scale": 1.47,
+    "x": -1.8,
+    "y": -3.1
   },
   "temaki-sake": {
-    "hash": "5657dd3f6d9ae158dce20219cb81ed85",
+    "hash": "2d61987f1ada2eff482204628b31e0ec",
     "scale": 1.44,
-    "x": 4.5,
-    "y": 6.8
+    "x": 0.7,
+    "y": 4.6
   },
   "temaki-sake-phila": {
-    "hash": "30d05825f5621c3876d10add72ff7ac2",
+    "hash": "ca1eb0ffe4b3c1c1a7ffb04b1332bcea",
     "scale": 1.38,
-    "x": 4.3,
+    "x": -1,
     "y": -11.1
   },
   "temaki-sake-spicy-mayo": {
-    "hash": "234fa2fcc81176b2fc7c18d567f9cace",
-    "scale": 1.44,
-    "x": 4.6,
-    "y": 4.2
-  },
-  "temaki-tuna": {
-    "hash": "64821fa3be99170550e6ec86bdc28683",
-    "scale": 1.33,
-    "x": 10.9,
-    "y": 3.8
-  },
-  "temaki-tuna-spicy-mayo": {
-    "hash": "25a026a9b79f977d85a1a06e54474873",
-    "scale": 1.43,
-    "x": 7.4,
-    "y": 1.7
-  },
-  "temaki-vegan": {
-    "hash": "76b0bca2673cda71138dc341d5e3bfdb",
-    "scale": 1.46,
-    "x": 4.4,
-    "y": -2.8
-  },
-  "tempura-di-gamberi": {
-    "hash": "aab990cbba93ba894430dabbfc9ffbed",
-    "scale": 1.23,
-    "x": 0.3,
-    "y": -0.2
-  },
-  "tempura-yasai": {
-    "hash": "0567c4f6ce51c00e9f948119f721fae3",
-    "scale": 1.26,
-    "x": 0.2,
-    "y": -1
-  },
-  "teppantori-pollo": {
-    "hash": "2eb11aff8012f03e33af25cb0b3c62e1",
-    "scale": 1.32,
-    "x": 0,
-    "y": 0.2
-  },
-  "ternera-pot": {
-    "hash": "75694f2ad28891457c8a5b9535012ace",
-    "scale": 1.29,
-    "x": -0.6,
-    "y": 0.3
-  },
-  "tofu-con-verdure": {
-    "hash": "f344cbe41ad9f92459574403e190ab6f",
-    "scale": 1.25,
-    "x": 0.6,
-    "y": 0
-  },
-  "tofu-piccante": {
-    "hash": "c1abde16e5e8c508e396a71d638e8f9d",
-    "scale": 1.24,
-    "x": -0.2,
-    "y": -1
-  },
-  "tonno-alla-piastra": {
-    "hash": "0b9b8525ce61f356c7652b333060c9ed",
-    "scale": 1.26,
-    "x": -0.2,
-    "y": 0.3
-  },
-  "toufu-bambu": {
-    "hash": "95492cfa935bc42065783e08b2038b76",
-    "scale": 1.25,
-    "x": -0.1,
-    "y": -0.2
-  },
-  "uramaki-7": {
-    "hash": "ffc0978c3e7347ec9e01d44ea472c899",
-    "scale": 1.22,
-    "x": 0.1,
-    "y": -0.7
-  },
-  "uramaki-arcoiris": {
-    "hash": "43495cb416dfa265acad263bce48df06",
+    "hash": "be387abcc318b8f0aaba9ebe38877429",
     "scale": 1.43,
     "x": 0.1,
-    "y": -1.3
-  },
-  "uramaki-asia-roll": {
-    "hash": "96a9d833cd30191ccb3a08eb8ed23ffa",
-    "scale": 1.23,
-    "x": 0.9,
-    "y": 11.4
-  },
-  "uramaki-beef": {
-    "hash": "0a7fdbca3e17b49b546936be513d165e",
-    "scale": 1.25,
-    "x": -0.3,
-    "y": -1.2
-  },
-  "uramaki-black-ebi": {
-    "hash": "21b1b361500d99632f7db0845f70a468",
-    "scale": 1.6,
-    "x": -0.8,
-    "y": -4.8
-  },
-  "uramaki-black-sake": {
-    "hash": "2787113cb67da4a4ef45cfd9c52d7cde",
-    "scale": 1.6,
-    "x": 0.9,
-    "y": -1.2
-  },
-  "uramaki-black-sweet": {
-    "hash": "43052cf7d22dd286fda650a3f6861867",
-    "scale": 1.6,
-    "x": -0.8,
-    "y": 0.1
-  },
-  "uramaki-black-tiger": {
-    "hash": "2300f4f6561899b637fd385a3966c110",
-    "scale": 1.6,
-    "x": 0,
-    "y": -1.2
-  },
-  "uramaki-black-tuna": {
-    "hash": "b427513bd75f2711a327d5b39db34fdd",
-    "scale": 1.6,
-    "x": 2.1,
-    "y": -2.4
-  },
-  "uramaki-california": {
-    "hash": "9ff214f53b28262b538025d093a44b33",
-    "scale": 1.6,
-    "x": 0.3,
-    "y": -0.4
-  },
-  "uramaki-crispy-asparago": {
-    "hash": "4210cc877b55c064de7d8edcdef1e97c",
-    "scale": 1.24,
-    "x": 0.1,
-    "y": -2.3
-  },
-  "uramaki-dragon": {
-    "hash": "dc025399ceb47a58b91d5ed2973659a3",
-    "scale": 1.6,
-    "x": 0.3,
-    "y": 3.3
-  },
-  "uramaki-ebiten": {
-    "hash": "01dfaa09c90adb0f745bdcf81930a1d4",
-    "scale": 1.6,
-    "x": 0.7,
-    "y": 1.7
-  },
-  "uramaki-ebiten-philadelphia": {
-    "hash": "eed1d604f21a43a29d113bd97498888d",
-    "scale": 1.6,
-    "x": -0.4,
-    "y": 1
-  },
-  "uramaki-flambe-roll": {
-    "hash": "ca5d99bd991bd2bff53b88a0b97b42d5",
-    "scale": 1.26,
-    "x": 0.8,
-    "y": 4.3
-  },
-  "uramaki-ioyi-style": {
-    "hash": "00746347c66fd5fa49b72d2ef40115d2",
-    "scale": 1.23,
-    "x": 0,
     "y": 1.6
   },
-  "uramaki-mexican": {
-    "hash": "ad4f217bf2e60e15edde0589cc88ad6a",
-    "scale": 1.6,
-    "x": -0.2,
-    "y": 1.4
+  "temaki-tuna": {
+    "hash": "c6e39c99fad090be6968ba492b54effd",
+    "scale": 1.34,
+    "x": 5.6,
+    "y": 2.3
   },
-  "uramaki-miami": {
-    "hash": "1b5db1d8000adc100477ad678ead7682",
-    "scale": 1.17,
-    "x": 0.2,
-    "y": -3.5
+  "temaki-tuna-spicy-mayo": {
+    "hash": "4818a42102ba9c1c3b493dcd7baec7b3",
+    "scale": 1.44,
+    "x": 2,
+    "y": -2.6
   },
-  "uramaki-miura": {
-    "hash": "79aa558f2d379a8a1224c57c63acd423",
-    "scale": 1.6,
+  "temaki-vegan": {
+    "hash": "76275b560b1b2a9fa89f27337da66194",
+    "scale": 1.46,
+    "x": -1.3,
+    "y": -3.6
+  },
+  "tempura-di-gamberi": {
+    "hash": "d6ef53283c95ade131429cf50d5e21d4",
+    "scale": 1.23,
     "x": 0.1,
-    "y": 5.1
+    "y": -0.3
   },
-  "uramaki-rainbow": {
-    "hash": "8c1473ddc2e2f368407937bf91d7f8b4",
-    "scale": 1.6,
+  "tempura-yasai": {
+    "hash": "8a9860fc84ecef62be001c9968b724ae",
+    "scale": 1.26,
+    "x": 0,
+    "y": -1.3
+  },
+  "teppantori-pollo": {
+    "hash": "eb3ae8d1750dab090c43bdbed22bd9be",
+    "scale": 1.32,
+    "x": -0.1,
+    "y": 0
+  },
+  "ternera-pot": {
+    "hash": "cbc5f7eabcae919782d1fca39d32f67f",
+    "scale": 1.29,
+    "x": -1.6,
+    "y": 0
+  },
+  "tofu-con-verdure": {
+    "hash": "8e37e9442e0319bfdda71676ca734cc6",
+    "scale": 1.24,
+    "x": 0.4,
+    "y": -0.1
+  },
+  "tofu-piccante": {
+    "hash": "b78eb4909c890135cf6e0d9e75b5b6e4",
+    "scale": 1.24,
     "x": -0.3,
     "y": -0.9
   },
-  "uramaki-sake-philadelphia": {
-    "hash": "2d356f3773aaa117fa0df251afe29fb0",
+  "tonno-alla-piastra": {
+    "hash": "d13db329fd29b2e94cf0ea0c3a835e4f",
+    "scale": 1.26,
+    "x": -0.2,
+    "y": 0.2
+  },
+  "toufu-bambu": {
+    "hash": "0651ee1cd0888522edc896f50b6bc240",
+    "scale": 1.25,
+    "x": -0.2,
+    "y": -0.2
+  },
+  "uramaki-7": {
+    "hash": "cf0024892b6b0c1f64ff02500579c169",
+    "scale": 1.22,
+    "x": 0.1,
+    "y": -0.8
+  },
+  "uramaki-arcoiris": {
+    "hash": "a1f3281dac4437cc003c9e2dafe76512",
+    "scale": 1.43,
+    "x": 0.2,
+    "y": -0.4
+  },
+  "uramaki-asia-roll": {
+    "hash": "079ef6aa5bccb586f3adf3bbb3017b24",
+    "scale": 1.29,
+    "x": 1.4,
+    "y": 13.1
+  },
+  "uramaki-beef": {
+    "hash": "3044e8f1c450fe6888149d4b4ee0967a",
+    "scale": 1.25,
+    "x": -0.3,
+    "y": -0.9
+  },
+  "uramaki-black-ebi": {
+    "hash": "77429fe7a7f1ecf6e6f4d9a5d43a00f7",
     "scale": 1.6,
-    "x": 1.1,
+    "x": -0.5,
+    "y": -2.5
+  },
+  "uramaki-black-sake": {
+    "hash": "8705e433a7540d499576732218518716",
+    "scale": 1.6,
+    "x": 0.9,
+    "y": 0.1
+  },
+  "uramaki-black-sweet": {
+    "hash": "71c47088d913b0b4a26c3c258742939b",
+    "scale": 1.6,
+    "x": -0.8,
+    "y": 0.8
+  },
+  "uramaki-black-tiger": {
+    "hash": "858d87c157432e27de74375d4aef53d5",
+    "scale": 1.6,
+    "x": -0.1,
+    "y": -0.7
+  },
+  "uramaki-black-tuna": {
+    "hash": "0f49f88cd1fb027090bd63b0ee396252",
+    "scale": 1.6,
+    "x": 1.7,
+    "y": -0.8
+  },
+  "uramaki-california": {
+    "hash": "71d3b2ac14d805ef7a5d2234653d5b39",
+    "scale": 1.6,
+    "x": 0.1,
     "y": -0.3
   },
-  "uramaki-salmone": {
-    "hash": "b92b3d8ba50a301d6285575b36429001",
+  "uramaki-crispy-asparago": {
+    "hash": "4db21379f5b8f2af7063e276be277801",
+    "scale": 1.24,
+    "x": 0,
+    "y": -2
+  },
+  "uramaki-dragon": {
+    "hash": "25be40485233e2df66fb5a48c7b6997b",
     "scale": 1.6,
+    "x": 0.1,
+    "y": 2.9
+  },
+  "uramaki-ebiten": {
+    "hash": "b09b17cf10c99ba4a587dc116363fd12",
+    "scale": 1.6,
+    "x": 0.9,
+    "y": 3.1
+  },
+  "uramaki-ebiten-philadelphia": {
+    "hash": "4ae7afdceb12064d70aa6a5d36f6d1ca",
+    "scale": 1.6,
+    "x": -0.9,
+    "y": 2.5
+  },
+  "uramaki-flambe-roll": {
+    "hash": "5a7e9885d16d6f0cd5e3e52d57269663",
+    "scale": 1.37,
+    "x": 0.9,
+    "y": 6.4
+  },
+  "uramaki-ioyi-style": {
+    "hash": "baf61b737d8a673beb3ff38ffa08052f",
+    "scale": 1.23,
     "x": -0.2,
-    "y": -3
+    "y": 1.5
+  },
+  "uramaki-mexican": {
+    "hash": "6fce133047cb1976fb7ed6892f406ecd",
+    "scale": 1.6,
+    "x": -0.4,
+    "y": 1.7
+  },
+  "uramaki-miami": {
+    "hash": "8bad58869ac6897799a82df93941fe41",
+    "scale": 1.16,
+    "x": 0.1,
+    "y": -2.6
+  },
+  "uramaki-miura": {
+    "hash": "542e5d59836e3a83061b2a50b2d67f5c",
+    "scale": 1.6,
+    "x": 0.1,
+    "y": 6.1
+  },
+  "uramaki-rainbow": {
+    "hash": "57789d291cb114f633aa5b490d736261",
+    "scale": 1.6,
+    "x": -0.4,
+    "y": -0.1
+  },
+  "uramaki-sake-philadelphia": {
+    "hash": "dd5bff2a803df3b606af47f1295d9127",
+    "scale": 1.6,
+    "x": 1.2,
+    "y": 0.8
+  },
+  "uramaki-salmone": {
+    "hash": "1c90f2d31c98cf375d409dbfbf826d62",
+    "scale": 1.6,
+    "x": -0.3,
+    "y": -2
   },
   "uramaki-special-burn": {
-    "hash": "45b5558d30fa86e808c62632f615d3d9",
+    "hash": "b98b94fc9f7f0f45a858eeea7738b18a",
     "scale": 1.22,
-    "x": -0.1,
-    "y": 1.6
+    "x": 0,
+    "y": 1.2
   },
   "uramaki-spicy-salmone": {
-    "hash": "a1cab02ffe8b6dd0e2b7b4569e02f447",
+    "hash": "fdb1c9c759c74a7c2ffdd93689a95634",
     "scale": 1.6,
-    "x": -1.9,
-    "y": -2.8
+    "x": -2.3,
+    "y": -1.5
   },
   "uramaki-spicy-tuna": {
-    "hash": "cd878524e2df625a8b2ab15aec192189",
+    "hash": "1e8930d8112a9f1f55270827d1119a64",
     "scale": 1.6,
-    "x": 0.1,
-    "y": 1.1
+    "x": 0,
+    "y": 1.7
   },
   "uramaki-tiger": {
-    "hash": "7d0ce4c259eb66be02fcc77608c8bd04",
+    "hash": "8ff4983ec6a1efa609013d50ad736514",
     "scale": 1.6,
     "x": 0.4,
-    "y": 4.6
+    "y": 4.4
   },
   "uramaki-tori": {
-    "hash": "80946f70aded1c9e5849e8b2e5259d6d",
-    "scale": 1.6,
-    "x": 0.5,
-    "y": 3.3
-  },
-  "uramaki-torre-elefeel": {
-    "hash": "79ae4778738ce68c4b4cd3124c481fb3",
-    "scale": 1.25,
-    "x": 1,
-    "y": 10.8
-  },
-  "uramaki-tuna": {
-    "hash": "00423cacb0231579295b8f6dd03324e0",
-    "scale": 1.6,
-    "x": -1.6,
-    "y": -2.9
-  },
-  "uramaki-tuna-philadelphia": {
-    "hash": "2056436d200dc3347c59021ccd47494d",
-    "scale": 1.6,
-    "x": 0.2,
-    "y": 3.9
-  },
-  "uramaki-vegetarian": {
-    "hash": "af0b9c9098f9ab74e8c05e07513daea9",
+    "hash": "bdf8fbc062d3042e99248567a76356d9",
     "scale": 1.6,
     "x": 0.1,
-    "y": 0.5
+    "y": 4.3
+  },
+  "uramaki-torre-elefeel": {
+    "hash": "425a706082b32272517bc5be4beddbdc",
+    "scale": 1.48,
+    "x": 0.9,
+    "y": 9.3
+  },
+  "uramaki-tuna": {
+    "hash": "c0f19f27948e2150e9c773aaad9544a8",
+    "scale": 1.6,
+    "x": -1.9,
+    "y": -2
+  },
+  "uramaki-tuna-philadelphia": {
+    "hash": "50e81243530535297359b0747e7bbe8f",
+    "scale": 1.6,
+    "x": -0.4,
+    "y": 5.2
+  },
+  "uramaki-vegetarian": {
+    "hash": "1a34be7466e810e4607bc807899a9579",
+    "scale": 1.6,
+    "x": -0.3,
+    "y": 0.9
   },
   "uramaki-vintage": {
-    "hash": "e5fe742f0bc4304891bbf6cb4fa56a98",
-    "scale": 1.23,
-    "x": 0,
-    "y": -1.4
+    "hash": "448aeb8abd3bf16b0090c5d2cf1f6962",
+    "scale": 1.22,
+    "x": -0.2,
+    "y": -1.5
   },
   "verdure-alla-piastra": {
-    "hash": "28cf8fa7bbc1e7647b7857642eba1601",
+    "hash": "ca52e0c585e3d2acee67e5bee38e3374",
     "scale": 1.24,
-    "x": -0.2,
+    "x": -0.4,
     "y": -0.3
   },
   "verdure-miste": {
-    "hash": "2f9c39ad809ff5fb5c44e1e7ecc735a5",
-    "scale": 1.24,
-    "x": 0,
-    "y": 0.5
+    "hash": "ec0e2206906972a0e3645a885d34a0b1",
+    "scale": 1.23,
+    "x": -0.1,
+    "y": 0.3
   },
   "wakame": {
-    "hash": "f8c2a384c53a5623d71de28704d419ca",
-    "scale": 1.26,
-    "x": 0.2,
-    "y": -0.1
-  },
-  "white-tiger": {
-    "hash": "ff77132c6cab775a049595fe9db3a60b",
-    "scale": 1.22,
-    "x": -0.3,
-    "y": 4.5
-  },
-  "yaki-soba": {
-    "hash": "36ad105d1f9ab6006ab52e24bfb52f0a",
-    "scale": 1.12,
-    "x": -0.1,
-    "y": 2
-  },
-  "yaki-udon": {
-    "hash": "4101117925c03df58a605f6a43692e35",
-    "scale": 1.08,
-    "x": 0,
-    "y": 1.8
-  },
-  "yakitori": {
-    "hash": "517f3d08d98b6657a463396b2f86509f",
-    "scale": 1.26,
-    "x": 0,
-    "y": 0.4
-  },
-  "yakitori-ebi": {
-    "hash": "b982af8333c42f1df4c21c46d588e106",
-    "scale": 1.26,
+    "hash": "a7bb88af09bf96f1904f9bb82f41081b",
+    "scale": 1.25,
     "x": 0.1,
-    "y": -0.5
-  },
-  "zuppa-di-miso": {
-    "hash": "3b3e7d4658dcd3d0b3cf9b1be282b6b2",
-    "scale": 1.36,
-    "x": -1.7,
-    "y": -3.4
-  },
-  "zuppa-osumashi": {
-    "hash": "5cf1ded8809d3ed3bd758a39879a5429",
-    "scale": 1.45,
-    "x": 1.6,
-    "y": -1.6
-  },
-  "zuppa-pecchinese": {
-    "hash": "1da84a6155f35a33c46e02dee92e26d5",
-    "scale": 1.4,
-    "x": -1.2,
     "y": -0.4
   },
-  "zuppa-pollo-e-mais": {
-    "hash": "e2db12bba409b9c4d023c035073e7b1b",
+  "white-tiger": {
+    "hash": "d095cad19ebf020cff93e198aa382e43",
+    "scale": 1.28,
+    "x": 3.9,
+    "y": 8
+  },
+  "yaki-soba": {
+    "hash": "974c2a88177b6cf90c594f9a49cfa644",
+    "scale": 1.12,
+    "x": -0.3,
+    "y": 1.5
+  },
+  "yaki-udon": {
+    "hash": "dbdf93b893681ef31e2f365a87c2ccbe",
+    "scale": 1.08,
+    "x": -0.1,
+    "y": 1.3
+  },
+  "yakitori": {
+    "hash": "95ab2ac8b415a41fab5079290088fae8",
+    "scale": 1.25,
+    "x": 0.1,
+    "y": 0.2
+  },
+  "yakitori-ebi": {
+    "hash": "2491a5cd7d26293d9ee6e604246f61ae",
+    "scale": 1.25,
+    "x": -0.1,
+    "y": -0.6
+  },
+  "zuppa-di-miso": {
+    "hash": "598acf10320e44d317e05bb906c53bfd",
+    "scale": 1.37,
+    "x": -1.8,
+    "y": -3.9
+  },
+  "zuppa-osumashi": {
+    "hash": "88d019c800732ede20b05b6da7f62e87",
+    "scale": 1.48,
+    "x": 1.7,
+    "y": -2.6
+  },
+  "zuppa-pecchinese": {
+    "hash": "c829f9bdbc3afc850fb825e917694ca8",
     "scale": 1.42,
-    "x": 1.1,
-    "y": -1.1
+    "x": -1.1,
+    "y": -1.3
+  },
+  "zuppa-pollo-e-mais": {
+    "hash": "2df83e4ff5c18aefe8c6074c50778c3e",
+    "scale": 1.45,
+    "x": 1,
+    "y": -1.9
   }
 }
