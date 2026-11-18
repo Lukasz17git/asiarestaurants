@@ -106,11 +106,12 @@ const getFit = (plateWeights) => {
     const scale = lowScale
     let x = -scale * (platePixels.centerX - 0.5) * 100
     let y = -scale * (platePixels.centerY - 0.5) * boxRatio * 100
-    // An opaque photo can't move further than it overflows the box, or its background square would show an edge
+    // An opaque photo moves at most what scale enlarges the img past the box, or its edge shows: object-fit: cover
+    // clips the photo to the img, so the strips it crops above and below give no room
     if (!plateWeights.hasAlpha) {
-        const [maxX, maxY] = [((scale - 1) / 2) * 100, ((scale * boxRatio - 1) / 2) * 100]
-        x = Math.max(-maxX, Math.min(maxX, x))
-        y = Math.max(-maxY, Math.min(maxY, y))
+        const maxShift = ((scale - 1) / 2) * 100
+        x = Math.max(-maxShift, Math.min(maxShift, x))
+        y = Math.max(-maxShift, Math.min(maxShift, y))
     }
     return { scale: round(scale, 2), x: round(x, 1), y: round(y, 1) }
 }
