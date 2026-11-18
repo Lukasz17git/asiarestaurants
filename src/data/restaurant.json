@@ -22,10 +22,10 @@
     "Sunday": { "lunch": "12:30-16:30", "dinner": "20:00-23:30" }
   },
   "legal": {
-    "companyName": "",
-    "taxId": "",
-    "registeredAddress": "",
-    "registry": "",
+    "companyName": "IOYI VILAFRANCA SL",
+    "taxId": "B75241521",
+    "registeredAddress": "Raval de la Font, 4, 08720 Vilafranca del Penedès (Barcelona)",
+    "registry": "Registro Mercantil de Barcelona, hoja B-623176, inscripción 1ª",
     "email": ""
   }
 }

@@ -58,15 +58,16 @@ Primero lo tuyo, luego lo del cliente: varias cosas dependen de lo que conteste.
    [ ] Preguntar al cliente si se siguen sirviendo
    [ ] Si no: quitarlos de dishes.json y de la carta PDF
 
-7. DATOS DE LA EMPRESA Y EMAIL                                           CLIENTE
+7. CONFIRMAR LOS DATOS DE LA EMPRESA Y EMAIL                             CLIENTE
 ────────────────────────────────────────────────────────────────────────────────
-   La ley (LSSI) pide en /legal el titular, su CIF, domicilio, registro y un
-   email; mientras falten, la build avisa con "legal... still empty". No se
-   encontró la empresa; el BORME da a IOYI VILAFRANCA SL la misma dirección
-   (Carrer de la Font, 4).
-   [ ] Pedir al cliente el nombre de la empresa, el CIF, el domicilio social, el
-       registro y un email
-   [ ] Ponerlos en legal de src/data/restaurant.json
+   /legal pone ya los de IOYI VILAFRANCA SL (CIF B75241521, hoja B-623176), los
+   mismos que ioyiramen.es: el BORME de su constitución le da la dirección de
+   Asia (Carrer de la Font, 4). Falta el email: la build avisa con "legal.email
+   still empty".
+   [ ] Preguntar al cliente si es el titular de Asia, y cuál es el domicilio
+       social
+   [ ] Pedir un email y ponerlo en legal.email de src/data/restaurant.json
+   [ ] Corregir legal en src/data/restaurant.json si algo cambia
 
 8. ALÉRGENOS DE CADA PLATO                                               CLIENTE
 ────────────────────────────────────────────────────────────────────────────────
