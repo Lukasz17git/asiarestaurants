@@ -3,9 +3,10 @@ import ShareButtons from './ShareButtons'
 import { formatPieces, getPhotoFitStyle } from './DishCard'
 import { facts, formatPrice } from '../data/facts'
 import { basename, t } from '../language'
+import './pedidos.scss'
 
-// '/ca/pedidos?buscar=117': opens the menu filtered to that dish, in the same language
-const getDishUrl = (dish) => `${window.location.origin}${basename}/pedidos?buscar=${dish.number}`
+// '/ca/pedidos?index=117': opens the menu with only that dish, in the same language
+const getDishUrl = (dish) => `${window.location.origin}${basename}/pedidos?index=${dish.number}`
 
 // The card's photoFit in this square box, kept within what the enlarged photo overflows: the box shows it whole,
 // so at scale 1 it doesn't move
@@ -16,8 +17,9 @@ const getSquarePhotoFitStyle = (photoFit) => {
     return getPhotoFitStyle({ ...photoFit, x, y })
 }
 
-// The dish's photo, enlarged like on its card, with its name, price and share buttons
-const DishPhotoDialog = ({ dish, section, onClose }) => {
+// The dish's photo, enlarged like on its card, with its name, price and share ticket. isCompact leaves out the price
+// and the ticket, for /pedidos: there the card already shows the price and the customer is ordering
+const DishPhotoDialog = ({ dish, section, isCompact = false, onClose }) => {
     const dialogRef = useRef(null)
     const name = t(dish.name)
     const shareText = `${dish.number}. ${name} (${formatPrice(dish.priceInCents)}) ${t({ es: 'en', ca: 'a', en: 'at' })} ${facts.name}`
@@ -47,12 +49,16 @@ const DishPhotoDialog = ({ dish, section, onClose }) => {
                     </p>
                     <h3>{name}</h3>
                     {dish.description && <p className='pedidos-photo-dialog-description'>{dish.description}</p>}
-                    <p className='pedidos-photo-dialog-price'>{formatPrice(dish.priceInCents)}</p>
-                    <div className='pedidos-photo-dialog-share'>
-                        <p className='pedidos-photo-dialog-share-title'>{t({ es: 'Comparte con tus amigos', ca: 'Comparteix amb els teus amics', en: 'Share with your friends' })}</p>
-                        <p>{t({ es: 'Les llega el plato con su enlace para pedirlo', ca: 'Els arriba el plat amb el seu enllaç per demanar-lo', en: 'They get the dish with its link to order it' })}</p>
-                        <ShareButtons text={shareText} url={getDishUrl(dish)} variant='panel' />
-                    </div>
+                    {!isCompact && (
+                        <>
+                            <p className='pedidos-photo-dialog-price'>{formatPrice(dish.priceInCents)}</p>
+                            <div className='pedidos-photo-dialog-share'>
+                                <p className='pedidos-photo-dialog-share-title'>{t({ es: 'Comparte con tus amigos', ca: 'Comparteix amb els teus amics', en: 'Share with your friends' })}</p>
+                                <p>{t({ es: 'Les llega el plato con su enlace para pedirlo', ca: 'Els arriba el plat amb el seu enllaç per demanar-lo', en: 'They get the dish with its link to order it' })}</p>
+                                <ShareButtons text={shareText} url={getDishUrl(dish)} variant='panel' />
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
         </dialog>

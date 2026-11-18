@@ -7,17 +7,20 @@ import { formatPieces } from '../pedidos/DishCard'
 // After the 12th dish they all come in together, so a long section doesn't take seconds to appear
 const maxDelayedDishes = 12
 
-const Dish = ({ dish, index }) => {
+// The photo opens the dish in DishPhotoDialog; its button covers the whole card
+const Dish = ({ dish, index, onOpen }) => {
     const { number, name, description, priceInCents, pieces, photoUrl, isVegan, isSpicy } = dish
     const animationDelay = `${Math.min(index, maxDelayedDishes) * 0.05}s`
 
     return (
         <article className='dish-container' style={{ animationDelay }}>
-            <div className='photo'>
-                {photoUrl
-                    ? <img alt={t(name)} src={photoUrl} loading='lazy' />
-                    : <span className='photo-placeholder' aria-hidden='true'>{number}</span>}
-            </div>
+            {photoUrl
+                ? (
+                    <button type='button' className='photo' onClick={onOpen} aria-label={`${t({ es: 'Ver', ca: 'Veure', en: 'See' })} ${t(name)}`}>
+                        <img alt={t(name)} src={photoUrl} loading='lazy' />
+                    </button>
+                )
+                : <div className='photo'><span className='photo-placeholder' aria-hidden='true'>{number}</span></div>}
             <div className='dish-body'>
                 <h3 className='name'>{t(name)}</h3>
                 {description && <p className='dish-description'>{description}</p>}

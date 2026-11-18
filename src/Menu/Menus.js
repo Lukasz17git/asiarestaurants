@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { lazy, Suspense, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Menu.scss'
 import Dish from './Dish'
@@ -22,6 +22,9 @@ import beefPhoto from '../images/home/home14.webp'
 import dessertsPhoto from '../images/menus/cartaDulces.webp'
 import winesPhoto from '../images/menus/cartaVinos.webp'
 
+// Loaded on the first click, with pedidos.scss, so /menu doesn't load the order page's styles up front
+const DishPhotoDialog = lazy(() => import('../pedidos/DishPhotoDialog'))
+
 const allYouCanEatPhotos = [allYouCanEatPhoto1, sushiPhoto, allYouCanEatPhoto2, blackRicePhoto, allYouCanEatPhoto3, tempuraPhoto, allYouCanEatPhoto4, beefPhoto]
 
 const sides = [
@@ -44,6 +47,7 @@ const sides = [
 
 const Menus = () => {
     const pageRef = useRef(null)
+    const [openedDish, setOpenedDish] = useState(null)
     const [sectionId, setSectionId] = useState(menuSections[0].id)
     useReveal(pageRef)
 
@@ -142,8 +146,11 @@ const Menus = () => {
                 </div>
                 {visibleSection.note && <p className='meals-note'>{visibleSection.note}</p>}
                 <div key={sectionId} className='meals-grid'>
-                    {visibleSection.dishes.map((dish, index) => <Dish key={dish.number} dish={dish} index={index} />)}
+                    {visibleSection.dishes.map((dish, index) => <Dish key={dish.number} dish={dish} index={index} onOpen={() => setOpenedDish(dish)} />)}
                 </div>
+                <Suspense fallback={null}>
+                    {openedDish && <DishPhotoDialog dish={openedDish} section={visibleSection} onClose={() => setOpenedDish(null)} />}
+                </Suspense>
                 <p className='meals-allergens'>
                     {t({
                         es: <>¿Alergias o intolerancias? Pregúntanos por los alérgenos de cada plato, en el local o al <a href={facts.phoneUrl}>{facts.phoneWithoutPrefix}</a>.</>,

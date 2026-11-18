@@ -23,8 +23,11 @@ const getCartItems = (quantities) => Object.entries(quantities)
     .sort((a, b) => a.dish.number - b.dish.number)
 
 const Pedidos = () => {
-    // In the URL (?buscar=117,122), so a shared link opens the same dishes
-    const search = useSearchParams()[0].get('buscar') ?? ''
+    // In the URL (?buscar=117,122), so a shared link opens the same dishes. A dish's link (?index=117) opens only
+    // that dish, as the search '117,' does
+    const searchParams = useSearchParams()[0]
+    const sharedIndex = searchParams.get('index')
+    const search = searchParams.get('buscar') ?? (sharedIndex ? `${sharedIndex},` : '')
     const navigate = useNavigate()
     // Keeps ',' as is (encodeURIComponent writes '%2C'), so the link reads '?buscar=117,122'
     const setSearch = (value) => navigate({ search: value ? `?buscar=${encodeURIComponent(value).replaceAll('%2C', ',')}` : '' }, { replace: true })
@@ -147,7 +150,7 @@ const Pedidos = () => {
                         <span className='pedidos-cart-price'>{formatPrice(subtotalInCents)}</span>
                     </button>
                 )}
-                {openedPhoto && <DishPhotoDialog dish={openedPhoto.dish} section={openedPhoto.section} onClose={() => setOpenedPhoto(null)} />}
+                {openedPhoto && <DishPhotoDialog dish={openedPhoto.dish} section={openedPhoto.section} isCompact onClose={() => setOpenedPhoto(null)} />}
             </div>
             <Footer />
         </>

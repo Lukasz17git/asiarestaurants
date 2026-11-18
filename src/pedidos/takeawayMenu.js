@@ -37,8 +37,10 @@ export const filterSections = (search) => {
     const normalizedSearch = normalizeSearch(search)
     if (!normalizedSearch) return menuSections
     const numbers = getSearchedNumbers(normalizedSearch)
-    // Several numbers show exactly those dishes; one is searched as text, so '11' also finds 110 to 119
-    const isDishFound = numbers.length > 1
+    // Several numbers, or one with a comma ('11,'), show exactly those dishes; a lone number is searched as text,
+    // so '11' also finds 110 to 119
+    const isNumberList = numbers.length > 1 || (numbers.length === 1 && normalizedSearch.includes(','))
+    const isDishFound = isNumberList
         ? (dish) => numbers.includes(String(dish.number))
         : (dish, section) => normalizeSearch(`${dish.number} ${t(dish.name)} ${dish.description} ${section.name}`).includes(numbers[0] ?? normalizedSearch)
     return menuSections
